@@ -18,15 +18,9 @@
             font-family: var(--font-main);
         }
 
-        /* FIX CRÍTICO: Asegura que el canvas de la cámara sea visible */
-        canvas {
-            width: 100% !important;
-            height: 100% !important;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
+        /* Este estilo asegura que el video de la cámara sea el fondo de todo */
+        .mindar-ui-overlay { z-index: 10; }
+        
         #start-screen {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: #0a0a0a;
@@ -112,41 +106,40 @@
       const startBtn = document.querySelector('#start-btn');
       const scene = document.querySelector('a-scene');
       const video = document.querySelector('#ar-video');
+      const uiOverlay = document.querySelector('#ui-overlay');
+      const guide = document.querySelector('#scanning-guide');
+      const target = document.querySelector('#ar-target');
 
       startBtn.addEventListener('click', () => {
-        // Desbloquear audio
-        video.play().then(() => video.pause()).catch(e => console.error(e));
+        // 1. Desbloqueamos el video (necesario para navegadores móviles)
+        video.play().then(() => video.pause());
 
+        // 2. Efecto visual de salida
         startScreen.style.opacity = '0';
         
         setTimeout(() => {
             startScreen.style.display = 'none';
-            document.querySelector('#ui-overlay').style.display = 'flex';
-            document.querySelector('#scanning-guide').style.display = 'block';
+            uiOverlay.style.display = 'flex';
+            guide.style.display = 'block';
 
-            // FORZAR INICIO DE CÁMARA
+            // 3. ACTIVACIÓN MANUAL DE LA CÁMARA Y AR
             const arSystem = scene.systems["mindar-image-system"];
-            arSystem.start(); 
-
-            // Pequeño hack de refresco para móviles
-            setTimeout(() => {
-                window.dispatchEvent(new Event('resize'));
-            }, 200);
+            arSystem.start(); // Aquí es donde se enciende la cámara y busca la tarjeta
 
         }, 600);
       });
 
-      const target = document.querySelector('#ar-target');
+      // 4. INTEGRACIÓN: Qué pasa cuando la cámara reconoce la tarjeta física
       target.addEventListener("targetFound", () => {
-        document.querySelector('#scanning-guide').style.display = "none";
+        guide.style.display = "none";
         document.querySelectorAll('.ar-button').forEach(b => b.style.display = 'flex');
-        video.play();
+        video.play(); // El video se reproduce sobre la tarjeta
       });
 
       target.addEventListener("targetLost", () => {
-        document.querySelector('#scanning-guide').style.display = "block";
+        guide.style.display = "block";
         document.querySelectorAll('.ar-button').forEach(b => b.style.display = 'none');
-        video.pause();
+        video.pause(); // El video se detiene si dejas de apuntar
       });
     </script>
 </body>
