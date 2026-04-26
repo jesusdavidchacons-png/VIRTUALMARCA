@@ -2,15 +2,32 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Marca País AR</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
     
     <style>
-        body { margin: 0; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
+        /* Forzar que nada se salga de la pantalla */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
 
-        /* PANTALLA DE INICIO (El "Truco") */
+        /* Asegurar que la escena de A-Frame ocupe todo */
+        a-scene {
+            width: 100% !important;
+            height: 100% !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Pantalla de Inicio */
         #start-screen {
             position: fixed;
             top: 0;
@@ -22,7 +39,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            z-index: 2000;
+            z-index: 3000; /* Prioridad máxima */
             color: white;
             transition: opacity 0.5s ease;
         }
@@ -33,27 +50,28 @@
         }
 
         #start-btn {
-            padding: 15px 40px;
+            padding: 18px 45px;
             background: white;
             color: #0056b3;
             border: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 1.1em;
+            font-size: 1.2em;
             cursor: pointer;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            text-transform: uppercase;
         }
 
-        /* UI de Escaneo */
+        /* UI de botones y guía */
         #ui-overlay {
             position: fixed;
             bottom: 40px;
             width: 100%;
-            display: none; /* Se activa al iniciar */
+            display: none;
             flex-direction: column;
             align-items: center;
             gap: 15px;
-            z-index: 100;
+            z-index: 1000;
             pointer-events: none;
         }
 
@@ -67,7 +85,9 @@
             text-decoration: none;
             font-weight: bold;
             pointer-events: auto;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            min-width: 220px;
+            justify-content: center;
         }
 
         #web-btn { background: #004a99; color: white; }
@@ -75,12 +95,14 @@
 
         #scanning-guide {
             position: fixed;
-            top: 20px;
+            top: 30px;
             width: 100%;
             text-align: center;
             color: white;
-            z-index: 100;
+            z-index: 1000;
             display: none;
+            font-family: sans-serif;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
     </style>
 </head>
@@ -88,11 +110,11 @@
 
     <div id="start-screen">
         <img src="https://i.postimg.cc/PJWH8MRj/azul-menu-(1).png" alt="Logo">
-        <button id="start-btn">ENTRAR A LA EXPERIENCIA</button>
-        <p style="margin-top: 20px; font-size: 0.8em; opacity: 0.8;">Permite el acceso a la cámara cuando se solicite</p>
+        <button id="start-btn">ENTRAR</button>
+        <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.7;">Escanea la tarjeta para ver el video</p>
     </div>
 
-    <div id="scanning-guide">APUNTA A TU TARJETA</div>
+    <div id="scanning-guide">APUNTA A LA TARJETA</div>
 
     <div id="ui-overlay">
         <a id="web-btn" class="ar-button" href="https://marcapais.com.ve/" target="_blank">
@@ -104,15 +126,15 @@
         </a>
     </div>
 
-    <a-scene mindar-image="imageTargetSrc: ./targets.mind; autoStart: false;" 
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind; autoStart: false; uiScanning: no;" 
              embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" 
              vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       
       <a-assets>
-          <video id="ar-video" src="video.mp4" loop="true" crossorigin="anonymous" playsinline></video>
+        <video id="ar-video" src="video.mp4" loop="true" crossorigin="anonymous" playsinline></video>
       </a-assets>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-camera position="0 0 0" look-controls="enabled: false" zoom="1"></a-camera>
 
       <a-entity id="ar-target" mindar-image-target="targetIndex: 0">
         <a-video src="#ar-video" width="1" height="0.56" position="0 0 0"></a-video>
@@ -128,20 +150,24 @@
       const guide = document.querySelector('#scanning-guide');
       const target = document.querySelector('#ar-target');
 
-      // EL TRUCO: Al hacer clic aquí, desbloqueamos TODO
       startBtn.addEventListener('click', () => {
+        // Desbloqueamos el audio del video con un play/pause inmediato
+        video.play().then(() => {
+            video.pause();
+        }).catch(e => console.log("Audio lock:", e));
+
         startScreen.style.opacity = '0';
+        
         setTimeout(() => {
             startScreen.style.display = 'none';
             uiOverlay.style.display = 'flex';
             guide.style.display = 'block';
             
-            // Iniciamos la escena y el motor de AR
+            // Iniciamos MindAR manualmente
             scene.systems["mindar-image-system"].start(); 
             
-            // Intentamos un play/pause rápido para asegurar el canal de audio
-            video.play();
-            video.pause();
+            // Refrescar tamaño para asegurar pantalla completa
+            window.dispatchEvent(new Event('resize'));
         }, 500);
       });
 
