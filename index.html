@@ -3,20 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Experience - Marca País</title>
+    <title>Marca País AR</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
     
     <style>
-        body { margin: 0; overflow: hidden; }
+        body { margin: 0; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
 
-        /* Contenedor de botones */
+        /* PANTALLA DE INICIO (El "Truco") */
+        #start-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, #0056b3, #002d5f);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            color: white;
+            transition: opacity 0.5s ease;
+        }
+
+        #start-screen img {
+            width: 150px;
+            margin-bottom: 30px;
+        }
+
+        #start-btn {
+            padding: 15px 40px;
+            background: white;
+            color: #0056b3;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* UI de Escaneo */
         #ui-overlay {
             position: fixed;
             bottom: 40px;
-            left: 0;
             width: 100%;
-            display: flex;
+            display: none; /* Se activa al iniciar */
             flex-direction: column;
             align-items: center;
             gap: 15px;
@@ -25,41 +58,20 @@
         }
 
         .ar-button {
-            display: none; /* Oculto hasta detectar tarjeta */
+            display: none; 
             align-items: center;
-            justify-content: center;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 30px;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            pointer-events: auto;
-            min-width: 220px;
-            transition: transform 0.2s;
-        }
-
-        .ar-button:active { transform: scale(0.95); }
-
-        /* Botón Web con Logo */
-        #web-btn {
-            background-color: #004a99; /* Azul institucional */
-            color: white;
-            display: none; /* Se maneja por JS */
-            flex-direction: row;
-        }
-
-        #web-btn img {
-            height: 25px;
-            margin-right: 12px;
-        }
-
-        /* Botón Descarga */
-        #download-btn {
-            background-color: #ffffff;
+            background: white;
             color: #333;
-            font-size: 0.9em;
+            text-decoration: none;
+            font-weight: bold;
+            pointer-events: auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
+
+        #web-btn { background: #004a99; color: white; }
+        #web-btn img { height: 20px; margin-right: 10px; }
 
         #scanning-guide {
             position: fixed;
@@ -67,37 +79,37 @@
             width: 100%;
             text-align: center;
             color: white;
-            font-family: sans-serif;
-            background: rgba(0,0,0,0.5);
-            padding: 12px 0;
             z-index: 100;
-            letter-spacing: 1px;
+            display: none;
         }
     </style>
 </head>
 <body>
 
-    <div id="scanning-guide">ESCANEANDO TARJETA MARCA PAÍS...</div>
+    <div id="start-screen">
+        <img src="https://i.postimg.cc/PJWH8MRj/azul-menu-(1).png" alt="Logo">
+        <button id="start-btn">ENTRAR A LA EXPERIENCIA</button>
+        <p style="margin-top: 20px; font-size: 0.8em; opacity: 0.8;">Permite el acceso a la cámara cuando se solicite</p>
+    </div>
+
+    <div id="scanning-guide">APUNTA A TU TARJETA</div>
 
     <div id="ui-overlay">
         <a id="web-btn" class="ar-button" href="https://marcapais.com.ve/" target="_blank">
             <img src="https://i.postimg.cc/PJWH8MRj/azul-menu-(1).png" alt="Logo">
             MARCA PAÍS WEB
         </a>
-        
-        <a id="download-btn" class="ar-button" href="video.mp4" download="video_marcapais.mp4">
+        <a id="download-btn" class="ar-button" href="video.mp4" download>
             📥 GUARDAR VIDEO
         </a>
     </div>
 
-    <a-scene mindar-image="imageTargetSrc: ./targets.mind; autoStart: true; uiLoading: no; uiScanning: no;" 
-             color-space="sRGB" 
-             renderer="colorManagement: true, physicallyCorrectLights" 
-             vr-mode-ui="enabled: false" 
-             device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind; autoStart: false;" 
+             embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" 
+             vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       
       <a-assets>
-        <video id="ar-video" src="video.mp4" loop="true" crossorigin="anonymous" playsinline></video>
+          <video id="ar-video" src="video.mp4" loop="true" crossorigin="anonymous" playsinline></video>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -105,27 +117,43 @@
       <a-entity id="ar-target" mindar-image-target="targetIndex: 0">
         <a-video src="#ar-video" width="1" height="0.56" position="0 0 0"></a-video>
       </a-entity>
-      
     </a-scene>
 
     <script>
+      const startScreen = document.querySelector('#start-screen');
+      const startBtn = document.querySelector('#start-btn');
+      const scene = document.querySelector('a-scene');
       const video = document.querySelector('#ar-video');
-      const webBtn = document.querySelector('#web-btn');
-      const downloadBtn = document.querySelector('#download-btn');
-      const targetEntity = document.querySelector('#ar-target');
+      const uiOverlay = document.querySelector('#ui-overlay');
       const guide = document.querySelector('#scanning-guide');
+      const target = document.querySelector('#ar-target');
 
-      targetEntity.addEventListener("targetFound", event => {
+      // EL TRUCO: Al hacer clic aquí, desbloqueamos TODO
+      startBtn.addEventListener('click', () => {
+        startScreen.style.opacity = '0';
+        setTimeout(() => {
+            startScreen.style.display = 'none';
+            uiOverlay.style.display = 'flex';
+            guide.style.display = 'block';
+            
+            // Iniciamos la escena y el motor de AR
+            scene.systems["mindar-image-system"].start(); 
+            
+            // Intentamos un play/pause rápido para asegurar el canal de audio
+            video.play();
+            video.pause();
+        }, 500);
+      });
+
+      target.addEventListener("targetFound", () => {
         guide.style.display = "none";
-        webBtn.style.display = "flex"; // Usamos flex para alinear logo y texto
-        downloadBtn.style.display = "flex";
+        document.querySelectorAll('.ar-button').forEach(b => b.style.display = 'flex');
         video.play();
       });
 
-      targetEntity.addEventListener("targetLost", event => {
+      target.addEventListener("targetLost", () => {
         guide.style.display = "block";
-        webBtn.style.display = "none";
-        downloadBtn.style.display = "none";
+        document.querySelectorAll('.ar-button').forEach(b => b.style.display = 'none');
         video.pause();
       });
     </script>
