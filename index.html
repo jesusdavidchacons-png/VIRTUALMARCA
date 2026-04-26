@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Realidad Aumentada</title>
+    <!-- Librerías de A-Frame y MindAR -->
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    
+    <style>
+        /* Estilo para el botón de descarga */
+        #ui-container {
+            position: fixed;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        #download-btn {
+            background-color: #25d366; /* Color llamativo */
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: none; /* Se oculta inicialmente */
+            pointer-events: auto;
+        }
+
+        /* Pantalla de carga */
+        #scanning-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            z-index: 999;
+            pointer-events: none;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="scanning-overlay">Encuadra la tarjeta con la cámara...</div>
+    
+    <div id="ui-container">
+        <!-- Reemplaza "video.mp4" con el nombre exacto de tu archivo -->
+        <a id="download-btn" href="video.mp4" download="mi_video_ar.mp4">
+            📥 DESCARGAR VIDEO
+        </a>
+    </div>
+
+    <!-- Escena AR -->
+    <!-- Importante: imageTargetSrc debe ser el nombre de tu archivo .mind -->
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" 
+             color-space="sRGB" 
+             renderer="colorManagement: true, physicallyCorrectLights" 
+             vr-mode-ui="enabled: false" 
+             device-orientation-permission-ui="enabled: false">
+      
+      <a-assets>
+        <!-- Tu archivo de video -->
+        <video id="vid" src="video.mp4" loop="true" crossorigin="anonymous" playsinline></video>
+      </a-assets>
+
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <!-- El objeto que aparece sobre la tarjeta -->
+      <a-entity id="ar-target" mindar-image-target="targetIndex: 0">
+        <!-- Puedes ajustar width y height (proporción 16:9 es 1 y 0.56) -->
+        <a-video src="#vid" width="1" height="0.56" position="0 0 0"></a-video>
+      </a-entity>
+    </a-scene>
+
+    <script>
+      const downloadBtn = document.querySelector('#download-btn');
+      const overlay = document.querySelector('#scanning-overlay');
+      const targetEntity = document.querySelector('#ar-target');
+      const video = document.querySelector('#vid');
+
+      // Detectar cuando la cámara ve la tarjeta
+      targetEntity.addEventListener("targetFound", event => {
+        overlay.style.display = "none";
+        downloadBtn.style.display = "block";
+        video.play();
+      });
+
+      // Detectar cuando se deja de ver la tarjeta
+      targetEntity.addEventListener("targetLost", event => {
+        overlay.style.display = "flex";
+        downloadBtn.style.display = "none";
+        video.pause();
+      });
+    </script>
+</body>
+</html>
