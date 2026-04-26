@@ -13,24 +13,27 @@
         :root { --font-main: 'Montserrat', sans-serif; }
         html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; font-family: var(--font-main); }
 
-        /* Pantalla de Inicio */
+        /* PANTALLA DE INICIO - Encima de todo */
         #start-screen {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: #0a0a0a; display: flex; flex-direction: column;
-            align-items: center; justify-content: center; z-index: 9999; color: white;
+            background: radial-gradient(circle, #0056b3, #002d5f); 
+            display: flex; flex-direction: column; align-items: center;
+            justify-content: center; z-index: 9999; color: white;
+            transition: opacity 0.8s ease;
         }
 
         #start-btn {
-            padding: 14px 40px; background: transparent; color: white;
-            border: 1px solid rgba(255,255,255,0.4); border-radius: 2px;
-            letter-spacing: 3px; cursor: pointer; text-transform: uppercase;
+            padding: 16px 45px; background: white; color: #004a99;
+            border: none; border-radius: 4px; font-family: var(--font-main);
+            font-weight: 600; letter-spacing: 2px; cursor: pointer; text-transform: uppercase;
         }
 
-        /* UI de Escaneo */
+        /* UI DE BOTONES */
         #ui-overlay {
             position: fixed; bottom: 50px; width: 100%;
-            display: none; flex-direction: column; align-items: center;
+            display: flex; flex-direction: column; align-items: center;
             gap: 12px; z-index: 1000; pointer-events: none;
+            visibility: hidden; /* Ocultos hasta el clic */
         }
 
         .ar-button {
@@ -38,7 +41,7 @@
             padding: 12px 30px; border-radius: 4px; background: white;
             color: #1a1a1a; text-decoration: none; font-weight: 500;
             font-size: 0.8em; letter-spacing: 1.5px; text-transform: uppercase;
-            pointer-events: auto; min-width: 240px;
+            pointer-events: auto; min-width: 240px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         #web-btn { background: #004a99; color: white; }
@@ -46,16 +49,20 @@
 
         #scanning-guide {
             position: fixed; top: 40px; width: 100%; text-align: center;
-            color: white; z-index: 1000; display: none;
-            font-weight: 300; font-size: 0.75em; letter-spacing: 4px; text-transform: uppercase;
+            color: white; z-index: 1000; font-weight: 300; letter-spacing: 3px;
+            text-transform: uppercase; visibility: hidden;
         }
+
+        /* Ajuste para que la cámara no se desfase */
+        .mindar-ui-overlay { display: none !important; }
     </style>
 </head>
 <body>
 
     <div id="start-screen">
-        <img src="https://i.postimg.cc/PJWH8MRj/azul-menu-(1).png" alt="Logo" style="width:120px; margin-bottom:40px;">
+        <img src="https://i.postimg.cc/PJWH8MRj/azul-menu-(1).png" alt="Logo" style="width:130px; margin-bottom:40px;">
         <button id="start-btn">Comenzar</button>
+        <p style="margin-top:20px; font-size:0.7em; letter-spacing:1px; opacity:0.8;">Habilita la cámara al entrar</p>
     </div>
 
     <div id="scanning-guide">Escaneando Tarjeta</div>
@@ -69,8 +76,7 @@
     </div>
 
     <a-scene 
-        mindar-image="imageTargetSrc: ./targets.mind; autoStart: false; uiScanning: no;" 
-        embedded
+        mindar-image="imageTargetSrc: ./targets.mind; autoStart: true; uiScanning: no; uiLoading: no;" 
         color-space="sRGB" 
         renderer="colorManagement: true, physicallyCorrectLights" 
         vr-mode-ui="enabled: false" 
@@ -88,39 +94,37 @@
     </a-scene>
 
     <script>
+      const startScreen = document.querySelector('#start-screen');
       const startBtn = document.querySelector('#start-btn');
-      const sceneEl = document.querySelector('a-scene');
       const video = document.querySelector('#ar-video');
+      const uiOverlay = document.querySelector('#ui-overlay');
+      const guide = document.querySelector('#scanning-guide');
 
       startBtn.addEventListener('click', () => {
-        // 1. Desbloqueamos el video
+        // Desbloquear video
         video.play().then(() => video.pause());
 
-        // 2. Quitamos la pantalla de inicio
-        document.querySelector('#start-screen').style.display = 'none';
-        document.querySelector('#ui-overlay').style.display = 'flex';
-        document.querySelector('#scanning-guide').style.display = 'block';
-
-        // 3. FIX MAESTRO: Arrancar MindAR y forzar el resize del canvas
-        // Sin esto, la cámara se queda negra porque el canvas no tiene dimensiones
-        const arSystem = sceneEl.systems["mindar-image-system"];
-        arSystem.start(); 
-
-        // Forzamos a A-Frame a que despierte y ajuste la cámara al tamaño de la pantalla
+        // Ocultar pantalla azul
+        startScreen.style.opacity = '0';
         setTimeout(() => {
+            startScreen.style.display = 'none';
+            uiOverlay.style.visibility = 'visible';
+            guide.style.visibility = 'visible';
+            
+            // Forzar resize para que el canvas de la cámara se ajuste
             window.dispatchEvent(new Event('resize'));
-        }, 300);
+        }, 800);
       });
 
       const target = document.querySelector('#ar-target');
       target.addEventListener("targetFound", () => {
-        document.querySelector('#scanning-guide').style.display = "none";
+        guide.style.visibility = "hidden";
         document.querySelectorAll('.ar-button').forEach(b => b.style.display = 'flex');
         video.play();
       });
 
       target.addEventListener("targetLost", () => {
-        document.querySelector('#scanning-guide').style.display = "block";
+        guide.style.visibility = "visible";
         document.querySelectorAll('.ar-button').forEach(b => b.style.display = 'none');
         video.pause();
       });
