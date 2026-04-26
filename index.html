@@ -25,28 +25,40 @@
         }
 
         .ar-button {
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-family: sans-serif;
+            display: none; /* Oculto hasta detectar tarjeta */
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-family: 'Segoe UI', Arial, sans-serif;
             font-weight: bold;
             text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            display: none; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             pointer-events: auto;
-            min-width: 200px;
-            text-align: center;
+            min-width: 220px;
+            transition: transform 0.2s;
         }
 
-        /* Botón Web - Azul Marca País */
+        .ar-button:active { transform: scale(0.95); }
+
+        /* Botón Web con Logo */
         #web-btn {
-            background-color: #0056b3;
+            background-color: #004a99; /* Azul institucional */
             color: white;
+            display: none; /* Se maneja por JS */
+            flex-direction: row;
         }
 
-        /* Botón Descarga - Blanco/Gris */
+        #web-btn img {
+            height: 25px;
+            margin-right: 12px;
+        }
+
+        /* Botón Descarga */
         #download-btn {
             background-color: #ffffff;
             color: #333;
+            font-size: 0.9em;
         }
 
         #scanning-guide {
@@ -56,20 +68,23 @@
             text-align: center;
             color: white;
             font-family: sans-serif;
-            background: rgba(0,0,0,0.4);
-            padding: 10px 0;
+            background: rgba(0,0,0,0.5);
+            padding: 12px 0;
             z-index: 100;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
-    <div id="scanning-guide">Escaneando tarjeta Marca País...</div>
+    <div id="scanning-guide">ESCANEANDO TARJETA MARCA PAÍS...</div>
 
     <div id="ui-overlay">
         <a id="web-btn" class="ar-button" href="https://marcapais.com.ve/" target="_blank">
-            🌐 VISITAR WEB
+            <img src="https://i.postimg.cc/PJWH8MRj/azul-menu-(1).png" alt="Logo">
+            MARCA PAÍS WEB
         </a>
+        
         <a id="download-btn" class="ar-button" href="video.mp4" download="video_marcapais.mp4">
             📥 GUARDAR VIDEO
         </a>
@@ -83,19 +98,12 @@
       
       <a-assets>
         <video id="ar-video" src="video.mp4" loop="true" crossorigin="anonymous" playsinline></video>
-        <img id="logo-img" src="https://i.postimg.cc/PJWH8MRj/azul-menu-(1).png" crossorigin="anonymous">
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity id="ar-target" mindar-image-target="targetIndex: 0">
-        
         <a-video src="#ar-video" width="1" height="0.56" position="0 0 0"></a-video>
-
-        <a-image src="#logo-img" width="0.4" height="0.4" position="0 0.6 0.1"
-                 animation="property: position; to: 0 0.65 0.1; dir: alternate; dur: 2000; loop: true; easing: easeInOutSine">
-        </a-image>
-
       </a-entity>
       
     </a-scene>
@@ -109,8 +117,8 @@
 
       targetEntity.addEventListener("targetFound", event => {
         guide.style.display = "none";
-        webBtn.style.display = "block";
-        downloadBtn.style.display = "block";
+        webBtn.style.display = "flex"; // Usamos flex para alinear logo y texto
+        downloadBtn.style.display = "flex";
         video.play();
       });
 
