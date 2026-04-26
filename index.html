@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Marca País AR</title>
+    <title>Marca País AR - Fix Cámara</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
@@ -11,24 +11,30 @@
     
     <style>
         :root { --font-main: 'Montserrat', sans-serif; }
-        html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #000; font-family: var(--font-main); }
+        
+        /* IMPORTANTE: El fondo debe ser transparente para ver la cámara */
+        html, body { 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            overflow: hidden; font-family: var(--font-main);
+            background-color: transparent !important;
+        }
 
-        /* PANTALLA DE INICIO - Actúa como una cortina sobre la cámara */
+        /* Pantalla de Inicio (La Cortina) */
         #start-screen {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle, #0056b3, #002d5f); 
+            background: #004a99; /* Azul sólido */
             display: flex; flex-direction: column; align-items: center;
             justify-content: center; z-index: 9999; color: white;
-            transition: opacity 0.8s ease, visibility 0.8s;
+            transition: opacity 0.5s ease;
         }
 
         #start-btn {
             padding: 16px 45px; background: white; color: #004a99;
-            border: none; border-radius: 4px; font-family: var(--font-main);
-            font-weight: 600; letter-spacing: 2px; cursor: pointer; text-transform: uppercase;
+            border: none; border-radius: 4px; font-weight: 600;
+            letter-spacing: 2px; cursor: pointer; text-transform: uppercase;
         }
 
-        /* UI DE BOTONES */
+        /* UI de Escaneo */
         #ui-overlay {
             position: fixed; bottom: 50px; width: 100%;
             display: flex; flex-direction: column; align-items: center;
@@ -47,27 +53,21 @@
         #web-btn { background: #004a99; color: white; }
         #web-btn img { height: 18px; margin-right: 12px; filter: brightness(0) invert(1); }
 
-        #download-btn {
-            background: rgba(0, 0, 0, 0.7); color: white;
-            border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(5px);
-        }
-
         #scanning-guide {
             position: fixed; top: 40px; width: 100%; text-align: center;
             color: white; z-index: 1000; font-weight: 300; letter-spacing: 3px;
             text-transform: uppercase; visibility: hidden;
         }
 
-        /* Ocultamos la interfaz de carga de MindAR para que no se vea sobre nuestra pantalla azul */
+        /* Ocultar elementos internos de MindAR que puedan tapar */
         .mindar-ui-loading, .mindar-ui-scanning { display: none !important; }
     </style>
 </head>
 <body>
 
     <div id="start-screen">
-        <img src="https://i.postimg.cc/PJWH8MRj/azul-menu-(1).png" alt="Logo" style="width:130px; margin-bottom:40px;">
+        <img src="https://i.postimg.cc/PJWH8MRj/azul-menu-(1).png" alt="Logo" style="width:120px; margin-bottom:40px;">
         <button id="start-btn">Comenzar</button>
-        <p style="margin-top:20px; font-size:0.7em; letter-spacing:1px; opacity:0.8;">Habilita la cámara para continuar</p>
     </div>
 
     <div id="scanning-guide">Escaneando Tarjeta</div>
@@ -81,9 +81,10 @@
     </div>
 
     <a-scene 
-        mindar-image="imageTargetSrc: ./targets.mind; autoStart: true; uiScanning: no; uiLoading: no;" 
+        mindar-image="imageTargetSrc: ./targets.mind; autoStart: true; uiScanning: no;" 
+        embedded
         color-space="sRGB" 
-        renderer="colorManagement: true, physicallyCorrectLights" 
+        renderer="colorManagement: true, physicallyCorrectLights, alpha: true" 
         vr-mode-ui="enabled: false" 
         device-orientation-permission-ui="enabled: false">
       
@@ -106,19 +107,19 @@
       const guide = document.querySelector('#scanning-guide');
 
       startBtn.addEventListener('click', () => {
-        // Desbloqueamos el audio del video
+        // Desbloqueamos el audio
         video.play().then(() => video.pause()).catch(e => console.log(e));
 
-        // Desvanecemos la cortina
+        // Desvanecer cortina azul
         startScreen.style.opacity = '0';
         setTimeout(() => {
             startScreen.style.display = 'none';
             uiOverlay.style.visibility = 'visible';
             guide.style.visibility = 'visible';
             
-            // Forzamos al navegador a recalcular el tamaño para que se vea el entorno
+            // FORZAR REDIBUJADO DE CÁMARA
             window.dispatchEvent(new Event('resize'));
-        }, 800);
+        }, 500);
       });
 
       const target = document.querySelector('#ar-target');
