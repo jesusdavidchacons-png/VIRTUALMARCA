@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Iconos Font Awesome 6 -->
+    <!-- Iconografía Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <script>
@@ -54,7 +54,7 @@
         ::-webkit-scrollbar-thumb:hover { background: #F59E0B; }
 
         .glass-panel {
-            background: rgba(15, 17, 23, 0.85);
+            background: rgba(15, 17, 23, 0.88);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -77,7 +77,7 @@
 <body class="bg-[#08090C] text-slate-100 font-sans min-h-screen flex flex-col selection:bg-amber-400 selection:text-black">
 
     <!-- ========================================================================= -->
-    <!-- BARRA DE NAVEGACIÓN CORPORATIVA & SELECTOR DE ESCALA (16 VS 32) -->
+    <!-- BARRA SUPERIOR CON SELECTOR DE ESCALA (16 VS 32 PARTICIPANTES) -->
     <!-- ========================================================================= -->
     <header class="sticky top-0 z-50 w-full glass-panel border-b border-fest-border px-4 md:px-8 py-3.5 transition-all">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
@@ -92,12 +92,12 @@
                         FESTIVAL OFICIAL
                     </span>
                     <span class="text-[10px] md:text-[11px] font-mono text-amber-400 uppercase tracking-widest block font-semibold">
-                        Dossier Técnico & Presupuesto Broadcast
+                        Propuesta Corporativa & Producción Broadcast
                     </span>
                 </div>
             </div>
 
-            <!-- Selector de Escala Táctil (16 vs 32 Participantes) -->
+            <!-- Selector de Escala Táctil -->
             <div class="flex items-center gap-2 sm:gap-3 bg-black/60 p-1 rounded-2xl border border-fest-border">
                 <span class="text-[10px] font-mono uppercase text-slate-400 px-2 hidden lg:inline">Escala del Evento:</span>
                 
@@ -114,11 +114,11 @@
 
             <!-- Accesos rápidos -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="#modulo-tech" class="text-xs text-slate-300 hover:text-amber-400 transition-colors font-medium">Plataforma Tech</a>
-                <a href="#modulo-audiovisual" class="text-xs text-slate-300 hover:text-amber-400 transition-colors font-medium">Audiovisual</a>
+                <a href="#modulo-tech" class="text-xs text-slate-300 hover:text-amber-400 transition-colors font-medium">Mitigación & Aforo</a>
+                <a href="#modulo-audiovisual" class="text-xs text-slate-300 hover:text-amber-400 transition-colors font-medium">Ruta Barquisimeto</a>
                 <a href="#modulo-streaming" class="text-xs text-slate-300 hover:text-amber-400 transition-colors font-medium">Streaming 4K</a>
-                <a href="#desglose-presupuesto" class="px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-amber-400 hover:text-black border border-white/20 text-xs font-mono font-bold transition-all text-white">
-                    Ver Presupuesto ↓
+                <a href="#inversion-total" class="px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-amber-400 hover:text-black border border-white/20 text-xs font-mono font-bold transition-all text-white">
+                    Inversión Total ↓
                 </a>
             </div>
 
@@ -127,7 +127,7 @@
 
 
     <!-- ========================================================================= -->
-    <!-- HERO SECTION: IMPACTO CORPORATIVO & VISIÓN GLOBAL -->
+    <!-- HERO SECTION: IMPACTO & ENFOQUE ESTRATÉGICO -->
     <!-- ========================================================================= -->
     <section class="relative pt-12 pb-16 md:pt-20 md:pb-24 px-4 md:px-8 overflow-hidden">
         <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-amber-500/20 via-pink-500/15 to-cyan-500/20 blur-[130px] rounded-full pointer-events-none"></div>
@@ -138,73 +138,74 @@
                 <div class="max-w-3xl">
                     <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-300 text-xs font-mono tracking-wider uppercase mb-5">
                         <span class="w-2 h-2 rounded-full bg-amber-400 animate-live"></span>
-                        PRODUCCIÓN BROADCAST & EVENT-TECH INTEGRAL
+                        PRODUCCIÓN BROADCAST & GESTIÓN DE ACCESO
                     </div>
 
                     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white tracking-tight leading-[1.1] uppercase mb-5">
-                        Solución Tecnológica & Audiovisual de <span class="bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-400 bg-clip-text text-transparent">Nivel Corporativo</span>
+                        Solución Corporativa Llave en Mano para <span class="bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-400 bg-clip-text text-transparent">Grandes Escenarios</span>
                     </h1>
 
                     <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal mb-8 max-w-2xl">
-                        Ecosistema llave en mano para el festival: arquitectura web transaccional blindada (Ticketing, Seat Mapping, Check-In y Votación masiva en vivo) combinada con despliegue cinematográfico 4K, videoclip grupal de integración y transmisión en vivo multicámara con redundancia satelital Starlink.
+                        Ecosistema integral diseñado para blindar la gala: plataforma de boletos gratuitos para control estricto de aforo y mitigación de riesgos, rodajes cinematográficos en los monumentos icónicos de Barquisimeto (Capital Musical de Venezuela), votación online protegida y transmisión en vivo multicámara con redundancia Starlink.
                     </p>
 
+                    <!-- Botones de Acción -->
                     <div class="flex flex-wrap items-center gap-3.5">
-                        <a href="#desglose-presupuesto" class="px-7 py-3.5 rounded-xl bg-amber-400 text-black font-display font-bold text-xs uppercase tracking-wider hover:bg-amber-300 hover:scale-105 active:scale-95 transition-all shadow-glow-gold flex items-center gap-2">
+                        <a href="#inversion-total" class="px-7 py-3.5 rounded-xl bg-amber-400 text-black font-display font-bold text-xs uppercase tracking-wider hover:bg-amber-300 hover:scale-105 active:scale-95 transition-all shadow-glow-gold flex items-center gap-2">
                             <i class="fa-solid fa-file-invoice-dollar text-sm"></i>
-                            <span>Revisar Presupuesto (<span id="heroParticipantsBadge">16 Participantes</span>)</span>
+                            <span>Ver Inversión Total (<span id="heroParticipantsBadge">16 Participantes</span>)</span>
                         </a>
 
-                        <button onclick="toggleModal('modalTechDetails')" class="px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-700 hover:border-amber-400/50 text-slate-200 text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer">
-                            <i class="fa-solid fa-shield-halved text-amber-400"></i>
-                            <span>Ficha de Seguridad & Anti-Fraude</span>
+                        <button onclick="toggleModal('modalRiskDetails')" class="px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-700 hover:border-cyan-400/50 text-slate-200 text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer">
+                            <i class="fa-solid fa-shield-halved text-cyan-400"></i>
+                            <span>Protocolo de Mitigación de Riesgos</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Tarjeta Flotante con Resumen Ejecutivo en Vivo -->
+                <!-- Tarjeta Resumen con Precio Final Directo (Sin desgloses) -->
                 <div class="w-full lg:w-[380px] shrink-0">
                     <div class="gradient-border-gold">
                         <div class="bg-fest-card rounded-[1.45rem] p-6 text-left relative overflow-hidden">
                             <div class="flex items-center justify-between pb-4 border-b border-fest-border">
-                                <span class="text-xs font-mono uppercase text-slate-400">Escenario Seleccionado:</span>
+                                <span class="text-xs font-mono uppercase text-slate-400">Modalidad Activa:</span>
                                 <span id="summaryBadge" class="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30">
                                     16 Finalistas
                                 </span>
                             </div>
 
-                            <div class="py-5 space-y-4">
+                            <div class="py-5 space-y-3.5">
                                 <div class="flex items-center justify-between text-xs">
-                                    <span class="text-slate-400">Plataforma Tecnológica:</span>
-                                    <span class="font-mono font-semibold text-white">6 Módulos Seguros</span>
+                                    <span class="text-slate-400">Control de Aforo & Registro:</span>
+                                    <span class="font-mono font-semibold text-emerald-400">Boletería Gratuita 100%</span>
                                 </div>
                                 <div class="flex items-center justify-between text-xs">
-                                    <span class="text-slate-400">Cápsulas de Finalistas:</span>
-                                    <span id="summaryCapsulesCount" class="font-mono font-semibold text-amber-400">16 Videos de Antesala</span>
+                                    <span class="text-slate-400">Ruta Videoclip Coral:</span>
+                                    <span class="font-mono font-semibold text-pink-400">Iconos de Barquisimeto</span>
                                 </div>
                                 <div class="flex items-center justify-between text-xs">
-                                    <span class="text-slate-400">Video Musical Grupal:</span>
-                                    <span id="summaryMusicVideo" class="font-mono font-semibold text-pink-400">16 Artistas en Set</span>
+                                    <span class="text-slate-400">Cápsulas de Antesala:</span>
+                                    <span id="summaryCapsulesCount" class="font-mono font-semibold text-amber-400">16 Perfiles Cine 4K</span>
                                 </div>
                                 <div class="flex items-center justify-between text-xs">
-                                    <span class="text-slate-400">Streaming Broadcast:</span>
+                                    <span class="text-slate-400">Transmisión en Vivo:</span>
                                     <span class="font-mono font-semibold text-cyan-400">4 Cámaras + Starlink</span>
                                 </div>
                             </div>
 
-                            <!-- Costo Global Destacado -->
-                            <div class="pt-4 border-t border-fest-border bg-black/40 -mx-6 -mb-6 p-6">
-                                <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-1">Inversión Total Llave en Mano:</span>
-                                <div class="flex items-baseline justify-between">
-                                    <div class="text-2xl sm:text-3xl font-display font-extrabold text-white">
-                                        <span id="summaryFinalPrice">$26.730</span> <span class="text-xs font-mono text-slate-400 font-normal">USD</span>
-                                    </div>
-                                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded">
-                                        -10% Pack Completo
+                            <!-- Total Cerrado -->
+                            <div class="pt-4 border-t border-fest-border bg-black/50 -mx-6 -mb-6 p-6">
+                                <div class="flex items-center justify-between mb-1.5">
+                                    <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400">Inversión Total Paquete Completo:</span>
+                                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded font-bold">
+                                        10% Descuento Aplicado
                                     </span>
                                 </div>
-                                <span id="summaryRegularPrice" class="text-[11px] text-slate-500 line-through font-mono block mt-0.5">
-                                    Subtotal: $29.700 USD
+                                <div class="text-3xl sm:text-4xl font-display font-extrabold text-amber-400">
+                                    <span id="summaryFinalPrice">$26.730</span> <span class="text-xs font-mono text-slate-400 font-normal">USD</span>
+                                </div>
+                                <span class="text-[10px] font-mono text-slate-500 block mt-1">
+                                    Tarifa neta cerrada · Sin costos ocultos
                                 </span>
                             </div>
                         </div>
@@ -217,7 +218,7 @@
 
 
     <!-- ========================================================================= -->
-    <!-- MÓDULO 1: ARQUITECTURA TECNOLÓGICA & EVENT-TECH (6 SISTEMAS) -->
+    <!-- MÓDULO 1: SISTEMAS TECH - CONTROL DE AFORO GRATUITO & MITIGACIÓN DE RIESGOS -->
     <!-- ========================================================================= -->
     <section id="modulo-tech" class="py-16 px-4 md:px-8 border-t border-fest-border bg-[#0B0D12]">
         <div class="max-w-7xl mx-auto">
@@ -225,145 +226,126 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
                 <div>
                     <div class="flex items-center gap-2 text-cyan-400 text-xs font-mono tracking-widest uppercase mb-1">
-                        <i class="fa-solid fa-code"></i> Infraestructura Digital Blindada
+                        <i class="fa-solid fa-shield-halved"></i> Seguridad Operativa & Logística
                     </div>
                     <h2 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight uppercase">
-                        1. Plataforma Tecnológica Centralizada
+                        1. Plataforma de Mitigación de Riesgos & Control de Aforo
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-400 max-w-2xl mt-1.5">
-                        Arquitectura web desacoplada de alto rendimiento, optimizada para picos de tráfico masivo y transacciones venezolanas e internacionales en bolívares y divisas.
+                        El sistema de tickets es <strong>100% gratuito</strong>. Su único propósito es organizar los accesos, prevenir sobrecupo, evitar estampidas en puertas y asegurar que cada asistente tenga una butaca asignada bajo normas de seguridad.
                     </p>
                 </div>
 
                 <div class="px-4 py-2 rounded-xl bg-cyan-950/40 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
-                    <i class="fa-solid fa-server mr-1.5"></i> Capacidad: 25.000+ Conexiones Simultáneas
+                    <i class="fa-solid fa-user-shield mr-1.5"></i> Protocolo Anti-Aglomeraciones
                 </div>
             </div>
 
-            <!-- Grilla de los 6 Sistemas Tecnológicos -->
+            <!-- Grilla de los Sistemas -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- 1. Sistema de Inscripción -->
-                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border hover:border-cyan-400/50 transition-all flex flex-col justify-between group">
+                <!-- 1. Inscripción de Finalistas -->
+                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4">
                             <i class="fa-solid fa-user-check"></i>
                         </div>
-                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">Módulo TECH-01</span>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Sistema de Inscripción de Finalistas</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Portal autogestionable con validación de datos, subida de recaudos en alta resolución (fotos, pistas de audio, videos de audición) y panel de jurado calificador con métricas tabuladas.
+                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">SISTEMA TECH-01</span>
+                        <h3 class="font-display font-bold text-lg text-white mb-2">Inscripción & Validación de Participantes</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Portal seguro para recepción de recaudos, fotografías, pistas y autorizaciones legales. Panel de evaluación tabulado para el jurado calificador.
                         </p>
                     </div>
-                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                        <span class="text-slate-400">Panel Admin + Filtros</span>
-                        <span class="text-cyan-400 font-bold">$1.200 USD</span>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 text-[11px] font-mono text-cyan-400 font-semibold">
+                        ✓ Incluido en el Paquete Integral
                     </div>
                 </div>
 
-                <!-- 2. Plataforma de Ticketing -->
-                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border hover:border-cyan-400/50 transition-all flex flex-col justify-between group">
+                <!-- 2. Registro de Boletos Gratuitos -->
+                <div class="p-6 rounded-2xl bg-fest-card border-2 border-emerald-500/40 flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
-                            <i class="fa-solid fa-ticket"></i>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-4">
+                            <i class="fa-solid fa-ticket-simple"></i>
                         </div>
-                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">Módulo TECH-02</span>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Plataforma de Ticketing & Pagos</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Generación de entradas digitales con código QR criptográfico único (anti-clonación). Pasarelas integradas a la realidad del país: Pago Móvil C2P automatizado, Zelle, Binance Pay y tarjetas internacionales.
+                        <span class="text-[10px] font-mono uppercase text-emerald-400 tracking-widest block mb-1">SISTEMA TECH-02 · GRATUITO</span>
+                        <h3 class="font-display font-bold text-lg text-white mb-2">Boletería Digital para Mitigación de Riesgos</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Emisión de pases de entrada gratuitos con código QR criptográfico nominativo e intransferible. Limita el número de accesos al aforo exacto autorizado por bomberos y protección civil, impidiendo el colapso perimetral.
                         </p>
                     </div>
-                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                        <span class="text-slate-400">Cero Comisión Externa</span>
-                        <span class="text-cyan-400 font-bold">$2.200 USD</span>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 text-[11px] font-mono text-emerald-400 font-semibold">
+                        ✓ Cero Cobro · Control Preventivo de Seguridad
                     </div>
                 </div>
 
                 <!-- 3. Asignación de Puestos -->
-                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border hover:border-cyan-400/50 transition-all flex flex-col justify-between group">
+                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4">
                             <i class="fa-solid fa-couch"></i>
                         </div>
-                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">Módulo TECH-03</span>
+                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">SISTEMA TECH-03</span>
                         <h3 class="font-display font-bold text-lg text-white mb-2">Asignación de Puestos (Seat Map 2D)</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Diagramación interactiva del aforo del recinto (Palcos, VIP, General, Prensa). Bloqueo de asientos en tiempo real para evitar compras simultáneas y asignación automática en la entrada emitida.
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Mapeo interactivo de butacas del teatro o recinto. Cada boleto gratuito lleva asignada fila y asiento exacto, eliminando disputas de puestos y carreras del público al abrir puertas.
                         </p>
                     </div>
-                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                        <span class="text-slate-400">Render SVG Vectorial</span>
-                        <span class="text-cyan-400 font-bold">$1.800 USD</span>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 text-[11px] font-mono text-cyan-400 font-semibold">
+                        ✓ Descongestión de Pasillos & Puertas
                     </div>
                 </div>
 
-                <!-- 4. Sistema de Check-in -->
-                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border hover:border-cyan-400/50 transition-all flex flex-col justify-between group">
+                <!-- 4. Check-in y Validación en Puertas -->
+                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4">
                             <i class="fa-solid fa-qrcode"></i>
                         </div>
-                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">Módulo TECH-04</span>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Sistema de Check-In & Aforo en Puertas</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Aplicación web táctica para los operadores de puerta. Lectura óptica de QR por cámara en menos de 0.8 segundos, validación cruzada y modo offline en caso de micro-cortes de internet en locación.
+                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">SISTEMA TECH-04</span>
+                        <h3 class="font-display font-bold text-lg text-white mb-2">Check-In de Alta Velocidad (Offline Ready)</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Lectura óptica de boletos en menos de 0.8 segundos por operador. Funciona de manera autónoma incluso ante caídas de red móvil local para no detener el ingreso del público.
                         </p>
                     </div>
-                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                        <span class="text-slate-400">Offline-Sync Ready</span>
-                        <span class="text-cyan-400 font-bold">$1.000 USD</span>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 text-[11px] font-mono text-cyan-400 font-semibold">
+                        ✓ Ingreso Fluido · Monitoreo de Aforo en Tiempo Real
                     </div>
                 </div>
 
-                <!-- 5. Sistema de Votación Online -->
-                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border hover:border-cyan-400/50 transition-all flex flex-col justify-between group">
+                <!-- 5. Votación Online Blindada -->
+                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4">
                             <i class="fa-solid fa-square-poll-vertical"></i>
                         </div>
-                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">Módulo TECH-05</span>
+                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">SISTEMA TECH-05</span>
                         <h3 class="font-display font-bold text-lg text-white mb-2">Votación Online Masiva Blindada</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Motor anti-fraude con limitación de 1 voto por usuario (autenticación por WhatsApp/OTP o vinculación al número de boleto). Dashboard en vivo para emitir gráficos y porcentajes a pantalla gigante en la gala.
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Módulo de votación con protección anti-bots (Cloudflare + OTP único por WhatsApp o número de boleto). Genera gráficos en vivo para proyectar en pantallas gigantes de la tarima.
                         </p>
                     </div>
-                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                        <span class="text-slate-400">Feed en Vivo para Switcher</span>
-                        <span class="text-cyan-400 font-bold">$2.500 USD</span>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 text-[11px] font-mono text-cyan-400 font-semibold">
+                        ✓ 1 Voto por Persona · Transparencia Pública
                     </div>
                 </div>
 
-                <!-- 6. Canal Oficial de Streaming -->
-                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border hover:border-cyan-400/50 transition-all flex flex-col justify-between group">
+                <!-- 6. Canal de Transmisión -->
+                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border flex flex-col justify-between">
                     <div>
-                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-4">
                             <i class="fa-solid fa-tower-broadcast"></i>
                         </div>
-                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">Módulo TECH-06</span>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Canal Oficial & Landing de Streaming</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Página de transmisión corporativa con reproductor CDN optimizado, opción de chat público moderado en tiempo real y arquitectura de acceso configurable (abierto o exclusivo con código de boleto).
+                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">SISTEMA TECH-06</span>
+                        <h3 class="font-display font-bold text-lg text-white mb-2">Canal Oficial & Landing del Festival</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Portal web institucional para transmitir el evento a nivel global con reproductor CDN optimizado de baja latencia y chat moderado para la audiencia internacional.
                         </p>
                     </div>
-                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                        <span class="text-slate-400">Baja Latencia (CMAF)</span>
-                        <span class="text-cyan-400 font-bold">$1.200 USD</span>
+                    <div class="pt-4 mt-4 border-t border-slate-800/80 text-[11px] font-mono text-cyan-400 font-semibold">
+                        ✓ Difusión Global Sin Fronteras
                     </div>
                 </div>
 
-            </div>
-
-            <!-- Resumen Subtotal Tech -->
-            <div class="mt-8 p-5 rounded-2xl bg-slate-950/80 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-microchip text-cyan-400 text-xl"></i>
-                    <span class="text-xs text-slate-300 font-mono">
-                        Subtotal Módulo Tecnológico Completo (Propiedad Perpetua del Festival):
-                    </span>
-                </div>
-                <div class="font-mono text-xl font-bold text-cyan-400">
-                    $9.900 USD
-                </div>
             </div>
 
         </div>
@@ -371,7 +353,7 @@
 
 
     <!-- ========================================================================= -->
-    <!-- MÓDULO 2: PRODUCCIÓN AUDIOVISUAL CINEMATOGRÁFICA -->
+    <!-- MÓDULO 2: PRODUCCIÓN AUDIOVISUAL · HOMENAJE A BARQUISIMETO -->
     <!-- ========================================================================= -->
     <section id="modulo-audiovisual" class="py-16 px-4 md:px-8 border-t border-fest-border bg-[#08090C]">
         <div class="max-w-7xl mx-auto">
@@ -379,155 +361,117 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
                 <div>
                     <div class="flex items-center gap-2 text-pink-400 text-xs font-mono tracking-widest uppercase mb-1">
-                        <i class="fa-solid fa-clapperboard"></i> Cinematografía & Contenido Oficial
+                        <i class="fa-solid fa-music"></i> Homenaje a la Capital Musical
                     </div>
                     <h2 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight uppercase">
-                        2. Producción Audiovisual de Gran Escala
+                        2. Producción Cinematográfica en Barquisimeto
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-400 max-w-2xl mt-1.5">
-                        Rodajes cinematográficos con óptica prime, iluminación publicitaria de alto contraste, dirección de arte y postproducción de color (DaVinci Resolve).
+                        El video musical coral une a los participantes en los escenarios más representativos de la ciudad musical de Venezuela, construyendo identidad, orgullo y proyección nacional.
                     </p>
                 </div>
 
                 <div class="px-4 py-2 rounded-xl bg-pink-950/40 border border-pink-500/30 text-pink-300 text-xs font-mono">
-                    <i class="fa-solid fa-film mr-1.5"></i> Estándar: Cine Digital 4K / Redes & TV
+                    <i class="fa-solid fa-location-dot mr-1.5"></i> Monumentos Emblemáticos de Lara
                 </div>
             </div>
 
-            <!-- Items Audiovisuales -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Campaña de Intriga -->
-                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border hover:border-pink-500/50 transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-xl mb-4">
-                            <i class="fa-solid fa-fire"></i>
-                        </div>
-                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">AV-01</span>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Campaña de Intriga (3 Teasers)</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            3 piezas de impacto (15s a 20s) con diseño sonoro agresivo, misterio visual y motion graphics. Adaptadas a formatos verticales (9:16) para TikTok/Instagram Reels y horizontal (16:9).
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                        <span class="text-slate-400">3 Cápsulas Dinámicas</span>
-                        <span class="text-pink-400 font-bold">$1.200 USD</span>
-                    </div>
-                </div>
-
-                <!-- Video Promocional Oficial -->
-                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border hover:border-pink-500/50 transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-xl mb-4">
-                            <i class="fa-solid fa-bullhorn"></i>
-                        </div>
-                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">AV-02</span>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Spot Promocional Master (45-60s)</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Comercial insignia para pauta publicitaria, televisión y redes. Locución profesional institucional, animación 3D del logo del festival, musicalización original y llamado masivo a la compra de entradas.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                        <span class="text-slate-400">Master 4K + Cortes Redes</span>
-                        <span class="text-pink-400 font-bold">$2.500 USD</span>
-                    </div>
-                </div>
-
-                <!-- Videos Antesala de Cada Finalista (DINÁMICO 16 vs 32) -->
-                <div class="p-6 rounded-2xl bg-fest-card border-2 border-amber-500/40 hover:border-amber-400 transition-all flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-3 right-3">
-                        <span id="badgeDynamicCapsules" class="text-[9px] font-mono uppercase px-2 py-0.5 rounded bg-amber-400/20 text-amber-300 border border-amber-400/30 font-bold">
-                            16 Cápsulas
+            <!-- Gran Tarjeta Destacada: El Videoclip en Barquisimeto -->
+            <div class="rounded-3xl bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border-2 border-pink-500/40 p-6 md:p-8 mb-8 relative overflow-hidden shadow-glow-accent">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <div class="max-w-3xl">
+                        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-xs font-mono uppercase mb-3">
+                            <i class="fa-solid fa-clapperboard"></i> Producción Insignia del Festival
                         </span>
-                    </div>
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-4">
-                            <i class="fa-solid fa-id-card-clip"></i>
-                        </div>
-                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">AV-03 · ESCALABLE</span>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Videos Antesala de Presentación</h3>
-                        <p id="descDynamicCapsules" class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Perfiles individuales cinematográficos (16 participantes): entrevista íntima, planos de belleza artística y demostración de talento para reproducir antes de que cada finalista suba al escenario en la gala.
+                        <h3 class="text-2xl sm:text-3xl font-display font-bold text-white mb-2">
+                            Video Musical Coral: "La Voz de la Capital Musical"
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                            Producción audiovisual de alto nivel rodada con todos los finalistas en locaciones icónicas de Barquisimeto: <strong>El Monumento Manto de María Divina Pastora, La Flor de Venezuela, el histórico Teatro Juares y el Obelisco</strong>. Los participantes interpretan en conjunto el tema himno del certamen, combinando tomas cinematográficas con drones, iluminación artística de atardecer y sincronización labial en 4K.
                         </p>
+                        <div class="flex flex-wrap gap-2 text-[11px] font-mono">
+                            <span class="px-2.5 py-1 rounded-lg bg-black/60 border border-pink-500/30 text-pink-300">Monumento Manto de María</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-black/60 border border-pink-500/30 text-pink-300">La Flor de Venezuela</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-black/60 border border-pink-500/30 text-pink-300">Teatro Juares</span>
+                            <span class="px-2.5 py-1 rounded-lg bg-black/60 border border-pink-500/30 text-pink-300">El Obelisco</span>
+                        </div>
                     </div>
-                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                        <span id="unitPriceCapsules" class="text-slate-400">$300 USD c/u (16 uds)</span>
-                        <span id="totalPriceCapsules" class="text-amber-400 font-bold">$4.800 USD</span>
-                    </div>
-                </div>
 
-                <!-- Video Musical de Integración Grupal (DINÁMICO 16 vs 32) -->
-                <div class="p-6 rounded-2xl bg-fest-card border-2 border-pink-500/40 hover:border-pink-400 transition-all flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute top-3 right-3">
-                        <span id="badgeDynamicMusicVideo" class="text-[9px] font-mono uppercase px-2 py-0.5 rounded bg-pink-400/20 text-pink-300 border border-pink-400/30 font-bold">
+                    <div class="shrink-0 p-5 rounded-2xl bg-black/80 border border-fest-border text-center min-w-[240px]">
+                        <span class="text-[10px] font-mono uppercase text-slate-400 block mb-1">Elenco Participante:</span>
+                        <span id="badgeMusicVideoParticipants" class="text-2xl font-display font-extrabold text-pink-400 block">
                             16 Artistas en Set
                         </span>
-                    </div>
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-xl mb-4">
-                            <i class="fa-solid fa-music"></i>
-                        </div>
-                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">AV-04 · PRODUCCIÓN CORAL</span>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Video Musical de Integración</h3>
-                        <p id="descDynamicMusicVideo" class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Videoclip musical oficial con la participación coral de los 16 finalistas cantando/actuando el tema himno del festival. Set de filmación con iluminación robótica, playback sincronizado y dirección coreográfica.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                        <span id="daysMusicVideo" class="text-slate-400">2 Jornadas de Rodaje</span>
-                        <span id="totalPriceMusicVideo" class="text-pink-400 font-bold">$4.500 USD</span>
+                        <span class="text-[11px] font-mono text-slate-400 block mt-1">
+                            Plan de Rodaje Completo en Locación
+                        </span>
                     </div>
                 </div>
-
-                <!-- Video Resumen del Evento (Aftermovie) -->
-                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border hover:border-pink-500/50 transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-xl mb-4">
-                            <i class="fa-solid fa-compact-disc"></i>
-                        </div>
-                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">AV-05</span>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Aftermovie Oficial (Resumen de Gala)</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Pieza cinematográfica (3 a 4 min) que documenta la euforia del público, los momentos más emocionantes en tarima, backstages, jurado calificador y coronación de ganadores. Registro de legado institucional.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                        <span class="text-slate-400">Montaje Rítmico 4K</span>
-                        <span id="totalPriceAftermovie" class="text-pink-400 font-bold">$1.800 USD</span>
-                    </div>
-                </div>
-
-                <!-- Banco Fotográfico Industrial & Backstage -->
-                <div class="p-6 rounded-2xl bg-fest-card border border-fest-border hover:border-pink-500/50 transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-xl mb-4">
-                            <i class="fa-solid fa-camera-retro"></i>
-                        </div>
-                        <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">AV-06</span>
-                        <h3 class="font-display font-bold text-lg text-white mb-2">Banco Fotográfico en Alta Resolución</h3>
-                        <p id="descDynamicPhoto" class="text-xs text-slate-400 leading-relaxed mb-4">
-                            Sesión de fotos en estudio para cada uno de los 16 finalistas (fotos oficiales de prensa y votación) más cobertura fotográfica de la gala en vivo para distribución inmediata a medios de comunicación.
-                        </p>
-                    </div>
-                    <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono">
-                        <span class="text-slate-400">Retoque Editorial RAW</span>
-                        <span id="totalPricePhotos" class="text-pink-400 font-bold">$1.000 USD</span>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Resumen Subtotal Audiovisual -->
-            <div class="mt-8 p-5 rounded-2xl bg-slate-950/80 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-video text-pink-400 text-xl"></i>
-                    <span class="text-xs text-slate-300 font-mono">
-                        Subtotal Producción Audiovisual (<span id="subtotalAvLabel">16 Participantes</span>):
-                    </span>
+            <!-- Rejilla de Entregables Audiovisuales Complementarios -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="p-5 rounded-2xl bg-fest-card border border-fest-border flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-lg mb-3">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <h4 class="font-display font-bold text-white text-base mb-1">Campaña de Intriga</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            3 teasers (15-20s) con diseño sonoro de alta tensión y motion graphics para Instagram Reels, TikTok y estados.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-3 border-t border-slate-800 text-[10px] font-mono text-pink-400 font-semibold">
+                        ✓ 3 Cortes Verticales y Horizontales
+                    </div>
                 </div>
-                <div class="font-mono text-xl font-bold text-pink-400">
-                    <span id="subtotalAvPrice">$14.800 USD</span>
+
+                <div class="p-5 rounded-2xl bg-fest-card border border-fest-border flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-lg mb-3">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h4 class="font-display font-bold text-white text-base mb-1">Spot Promocional Master</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Comercial principal (45-60s) con locución institucional, logo animado y llamado al registro gratuito de boletos.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-3 border-t border-slate-800 text-[10px] font-mono text-pink-400 font-semibold">
+                        ✓ Formato Televisivo & Redes
+                    </div>
                 </div>
+
+                <div class="p-5 rounded-2xl bg-fest-card border border-fest-border flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400 text-lg mb-3">
+                            <i class="fa-solid fa-id-card-clip"></i>
+                        </div>
+                        <h4 class="font-display font-bold text-white text-base mb-1">Videos de Antesala</h4>
+                        <p id="descBeforeVideos" class="text-xs text-slate-400 leading-relaxed">
+                            Cápsulas cinematográficas individuales para proyectar antes de que cada uno de los 16 finalistas suba al escenario.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-3 border-t border-slate-800 text-[10px] font-mono text-amber-400 font-semibold">
+                        <span id="badgeBeforeVideosCount">✓ 16 Perfiles Cinematográficos</span>
+                    </div>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-fest-card border border-fest-border flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-lg mb-3">
+                            <i class="fa-solid fa-compact-disc"></i>
+                        </div>
+                        <h4 class="font-display font-bold text-white text-base mb-1">Aftermovie & Fotos</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Video resumen oficial de la noche final (3-4 min) más banco fotográfico en estudio y cobertura en vivo para prensa.
+                        </p>
+                    </div>
+                    <div class="pt-3 mt-3 border-t border-slate-800 text-[10px] font-mono text-pink-400 font-semibold">
+                        ✓ Memoria Oficial del Certamen
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -535,7 +479,7 @@
 
 
     <!-- ========================================================================= -->
-    <!-- MÓDULO 3: LIVE STREAMING MULTICÁMARA BROADCAST -->
+    <!-- MÓDULO 3: LIVE STREAMING MULTICÁMARA CON ENLACE STARLINK -->
     <!-- ========================================================================= -->
     <section id="modulo-streaming" class="py-16 px-4 md:px-8 border-t border-fest-border bg-[#0B0D12]">
         <div class="max-w-7xl mx-auto">
@@ -543,22 +487,21 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
                 <div>
                     <div class="flex items-center gap-2 text-amber-400 text-xs font-mono tracking-widest uppercase mb-1">
-                        <i class="fa-solid fa-satellite-dish"></i> Transmisión en Vivo Sin Caídas
+                        <i class="fa-solid fa-satellite-dish"></i> Estándar Televisivo Internacional
                     </div>
                     <h2 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight uppercase">
-                        3. Live Streaming Multicámara con Redundancia
+                        3. Transmisión en Vivo Multicámara (Gala Final)
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-400 max-w-2xl mt-1.5">
-                        Despliegue tipo concierto / televisora nacional para la noche final, diseñado específicamente para garantizar transmisión ininterrumpida en el contexto de conectividad de Venezuela.
+                        Despliegue broadcast con 4 cámaras de cine digital, mezcla en vivo con vMix, audio limpio de consola y conexión satelital redundante.
                     </p>
                 </div>
 
                 <div class="px-4 py-2 rounded-xl bg-amber-950/40 border border-amber-500/30 text-amber-300 text-xs font-mono">
-                    <i class="fa-solid fa-wifi mr-1.5"></i> Enlace Starlink + Fibra Óptica Dual
+                    <i class="fa-solid fa-wifi mr-1.5"></i> Cero Interrupciones de Conectividad
                 </div>
             </div>
 
-            <!-- Arquitectura del Streaming -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <div class="p-5 rounded-2xl bg-fest-card border border-fest-border">
@@ -567,7 +510,7 @@
                     </div>
                     <h4 class="font-display font-bold text-white text-base mb-1">Circuito de 4 Cámaras</h4>
                     <p class="text-xs text-slate-400 leading-relaxed">
-                        Cámara 1 (Fija Master), Cámara 2 (Primeros Planos), Cámara 3 (Gimbal / Steady inalámbrica en tarima) y Cámara 4 (Público / Jurado).
+                        Cámara máster general, cámara de primeros planos para intérpretes, cámara móvil steady en escenario y cámara para el público/jurado.
                     </p>
                 </div>
 
@@ -575,9 +518,9 @@
                     <div class="w-10 h-10 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400 text-base mb-3">
                         <i class="fa-solid fa-sliders"></i>
                     </div>
-                    <h4 class="font-display font-bold text-white text-base mb-1">Switcher & Gráficos VMIX</h4>
+                    <h4 class="font-display font-bold text-white text-base mb-1">Switcher & Gráficos vMix</h4>
                     <p class="text-xs text-slate-400 leading-relaxed">
-                        Mesa de mezcla digital, inserción de placas de patrocinantes, zócalos con nombres de finalistas y sincronización en vivo con la votación web.
+                        Conmutación digital, inserción de patrocinantes, zócalos con nombres de participantes y conexión directa al sistema de votación.
                     </p>
                 </div>
 
@@ -587,7 +530,7 @@
                     </div>
                     <h4 class="font-display font-bold text-white text-base mb-1">Audio Matriz de Consola</h4>
                     <p class="text-xs text-slate-400 leading-relaxed">
-                        Envío de mezcla estéreo dedicada e independiente desde la consola del show para evitar distorsiones y garantizar sonido limpio en vivo.
+                        Captura directa desde la consola de sonido del espectáculo para transmitir señal estéreo limpia y libre de ruidos ambientales.
                     </p>
                 </div>
 
@@ -595,25 +538,12 @@
                     <div class="w-10 h-10 rounded-xl bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400 text-base mb-3">
                         <i class="fa-solid fa-satellite"></i>
                     </div>
-                    <h4 class="font-display font-bold text-white text-base mb-1">Enlace Satelital Starlink</h4>
+                    <h4 class="font-display font-bold text-white text-base mb-1">Enlace Starlink Dedicado</h4>
                     <p class="text-xs text-slate-400 leading-relaxed">
-                        Antena dedicada de alta velocidad combinada con fibra óptica en balanceador para tolerancia a fallas. Cero interrupciones de señal.
+                        Conexión satelital propia que no depende del internet del recinto ni sufre saturación por los teléfonos del público asistente.
                     </p>
                 </div>
 
-            </div>
-
-            <!-- Resumen Subtotal Streaming -->
-            <div class="mt-8 p-5 rounded-2xl bg-slate-950/80 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-broadcast-tower text-amber-400 text-xl"></i>
-                    <span class="text-xs text-slate-300 font-mono">
-                        Subtotal Operación Live Streaming Broadcast (Jornada Gala Final):
-                    </span>
-                </div>
-                <div class="font-mono text-xl font-bold text-amber-400">
-                    <span id="subtotalStreamingPrice">$5.000 USD</span>
-                </div>
             </div>
 
         </div>
@@ -621,183 +551,157 @@
 
 
     <!-- ========================================================================= -->
-    <!-- DESGLOSE ECONÓMICO DETALLADO: COMPARATIVA (16 VS 32 PARTICIPANTES) -->
+    <!-- INVERSIÓN TOTAL CERRADA (SIN DESGLOSE DE PRECIOS INDIVIDUALES) -->
     <!-- ========================================================================= -->
-    <section id="desglose-presupuesto" class="py-20 px-4 md:px-8 border-t border-fest-border bg-[#08090C]">
+    <section id="inversion-total" class="py-20 px-4 md:px-8 border-t border-fest-border bg-[#08090C]">
         <div class="max-w-7xl mx-auto">
             
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
                 <div>
                     <div class="flex items-center gap-2 text-amber-400 text-xs font-mono tracking-widest uppercase mb-1">
-                        <i class="fa-solid fa-calculator"></i> Presupuesto Oficial Cerrado
+                        <i class="fa-solid fa-receipt"></i> Propuesta Económica Unificada
                     </div>
                     <h2 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight uppercase">
-                        Presupuesto & Desglose de Inversión
+                        Inversión Total del Proyecto
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-400 max-w-2xl mt-1.5">
-                        Estructura comercial detallada por renglón. Cambie de escala para comparar el costo con 16 o 32 participantes en tiempo real.
+                        Propuesta cerrada llave en mano con el 10% de descuento incluido. Seleccione la escala de participantes para visualizar el monto total definitivo.
                     </p>
                 </div>
 
-                <!-- Botones Switcher de la tabla -->
+                <!-- Selector de Escala de la Sección Económica -->
                 <div class="flex items-center gap-2 bg-slate-900 p-1.5 rounded-2xl border border-fest-border self-start md:self-auto">
-                    <button onclick="setScale(16)" id="tabTable16" class="px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all bg-amber-400 text-black">
+                    <button onclick="setScale(16)" id="tabEconomic16" class="px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all bg-amber-400 text-black cursor-pointer">
                         16 Finalistas
                     </button>
-                    <button onclick="setScale(32)" id="tabTable32" class="px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all text-slate-400 hover:text-white">
+                    <button onclick="setScale(32)" id="tabEconomic32" class="px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all text-slate-400 hover:text-white cursor-pointer">
                         32 Finalistas
                     </button>
                 </div>
             </div>
 
-            <!-- Gran Tarjeta de Presupuesto con Tabla Detallada -->
-            <div class="rounded-3xl bg-fest-card border border-fest-border overflow-hidden shadow-2xl mb-10">
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-xs">
-                        <thead class="bg-black/80 text-slate-400 font-mono uppercase text-[10px] border-b border-fest-border">
-                            <tr>
-                                <th class="p-4 sm:p-5">Renglón / Componente</th>
-                                <th class="p-4 sm:p-5">Alcance Técnico & Formato</th>
-                                <th class="p-4 sm:p-5 text-center">Unidades / Días</th>
-                                <th class="p-4 sm:p-5 text-right">Inversión</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-800/80 text-slate-300">
-                            
-                            <!-- SECCIÓN TECNOLOGÍA -->
-                            <tr class="bg-cyan-950/20 font-mono text-cyan-300 font-bold text-[11px]">
-                                <td colspan="4" class="p-3.5 px-5">
-                                    <i class="fa-solid fa-laptop-code mr-1.5"></i> MÓDULO 1: INFRAESTRUCTURA TECNOLÓGICA (SOFTWARE)
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 font-semibold text-white">TECH-01: Inscripción & Selección</td>
-                                <td class="p-4 text-slate-400">Portal web con validación de recaudos y panel administrativo</td>
-                                <td class="p-4 text-center font-mono">1 Sistema</td>
-                                <td class="p-4 text-right font-mono font-semibold text-white">$1.200 USD</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 font-semibold text-white">TECH-02: Ticketing & Pasarelas</td>
-                                <td class="p-4 text-slate-400">Generación de QR cifrado + Pago Móvil, Zelle y Tarjetas</td>
-                                <td class="p-4 text-center font-mono">1 Plataforma</td>
-                                <td class="p-4 text-right font-mono font-semibold text-white">$2.200 USD</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 font-semibold text-white">TECH-03: Asignación de Puestos</td>
-                                <td class="p-4 text-slate-400">Mapa interactivo 2D de asientos con bloqueo anti-duplicados</td>
-                                <td class="p-4 text-center font-mono">1 Mapa Completo</td>
-                                <td class="p-4 text-right font-mono font-semibold text-white">$1.800 USD</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 font-semibold text-white">TECH-04: Check-In en Puertas</td>
-                                <td class="p-4 text-slate-400">App web táctica de escaneo en 0.8s con soporte offline</td>
-                                <td class="p-4 text-center font-mono">Multidispositivo</td>
-                                <td class="p-4 text-right font-mono font-semibold text-white">$1.000 USD</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 font-semibold text-white">TECH-05: Votación Online Blindada</td>
-                                <td class="p-4 text-slate-400">Control de voto único (OTP/WhatsApp) y feed en vivo para pantalla</td>
-                                <td class="p-4 text-center font-mono">1 Motor Blindado</td>
-                                <td class="p-4 text-right font-mono font-semibold text-white">$2.500 USD</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 font-semibold text-white">TECH-06: Canal Oficial Streaming</td>
-                                <td class="p-4 text-slate-400">Landing corporativa con reproductor CDN y chat en vivo moderado</td>
-                                <td class="p-4 text-center font-mono">1 Landing CDN</td>
-                                <td class="p-4 text-right font-mono font-semibold text-white">$1.200 USD</td>
-                            </tr>
+            <!-- Gran Tarjeta con Lista de Entregables Incluidos (Sin Precios Unitarios) -->
+            <div class="rounded-3xl bg-fest-card border-2 border-brand-gold/60 overflow-hidden shadow-2xl mb-10">
+                
+                <!-- Encabezado de la Tarjeta -->
+                <div class="p-6 md:p-8 bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border-b border-fest-border flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div>
+                        <span class="text-xs font-mono uppercase text-amber-400 tracking-wider block font-bold mb-1">
+                            COBERTURA COMPLETA LLAVE EN MANO
+                        </span>
+                        <h3 class="text-2xl sm:text-3xl font-display font-extrabold text-white">
+                            Paquete Maestro Broadcast: <span id="labelPackageScale">16 Finalistas</span>
+                        </h3>
+                        <p class="text-xs text-slate-400 mt-1 max-w-xl">
+                            Incluye el 100% del desarrollo tecnológico de mitigación de aforo, rodajes en Barquisimeto, cobertura fotográfica y streaming satelital de la gala final.
+                        </p>
+                    </div>
 
-                            <!-- SECCIÓN AUDIOVISUAL -->
-                            <tr class="bg-pink-950/20 font-mono text-pink-300 font-bold text-[11px]">
-                                <td colspan="4" class="p-3.5 px-5">
-                                    <i class="fa-solid fa-clapperboard mr-1.5"></i> MÓDULO 2: PRODUCCIÓN AUDIOVISUAL CINEMATOGRÁFICA
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 font-semibold text-white">AV-01: Campaña de Intriga</td>
-                                <td class="p-4 text-slate-400">3 Teasers de alto impacto (15-20s) en 9:16 y 16:9 con motion graphics</td>
-                                <td class="p-4 text-center font-mono">3 Piezas</td>
-                                <td class="p-4 text-right font-mono font-semibold text-white">$1.200 USD</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 font-semibold text-white">AV-02: Spot Promocional Oficial</td>
-                                <td class="p-4 text-slate-400">Comercial master (45-60s) con locución, logo 3D y llamado a taquilla</td>
-                                <td class="p-4 text-center font-mono">1 Spot Master</td>
-                                <td class="p-4 text-right font-mono font-semibold text-white">$2.500 USD</td>
-                            </tr>
-                            <tr class="bg-amber-400/[0.04]">
-                                <td class="p-4 font-semibold text-amber-300">AV-03: Videos de Antesala (Finalistas)</td>
-                                <td class="p-4 text-slate-300">
-                                    Cápsulas individuales cinematográficas de presentación en tarima
-                                </td>
-                                <td id="tableRowCapsulesQty" class="p-4 text-center font-mono font-bold text-amber-300">16 Videos</td>
-                                <td id="tableRowCapsulesPrice" class="p-4 text-right font-mono font-bold text-amber-300">$4.800 USD</td>
-                            </tr>
-                            <tr class="bg-pink-400/[0.04]">
-                                <td class="p-4 font-semibold text-pink-300">AV-04: Video Musical de Integración</td>
-                                <td id="tableRowMusicVideoDesc" class="p-4 text-slate-300">
-                                    Videoclip grupal con los 16 participantes, iluminación robótica y playback
-                                </td>
-                                <td id="tableRowMusicVideoDays" class="p-4 text-center font-mono font-bold text-pink-300">2 Jornadas</td>
-                                <td id="tableRowMusicVideoPrice" class="p-4 text-right font-mono font-bold text-pink-300">$4.500 USD</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 font-semibold text-white">AV-05: Aftermovie Oficial</td>
-                                <td class="p-4 text-slate-400">Video resumen (3-4 min) en 4K con mejores momentos, gala y premiación</td>
-                                <td class="p-4 text-center font-mono">1 Aftermovie</td>
-                                <td class="p-4 text-right font-mono font-semibold text-white" id="tableRowAftermoviePrice">$1.800 USD</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 font-semibold text-white">AV-06: Sesión Fotográfica & Prensa</td>
-                                <td id="tableRowPhotoDesc" class="p-4 text-slate-400">Fotografía editorial de finalistas en estudio + cobertura de la gala</td>
-                                <td id="tableRowPhotoQty" class="p-4 text-center font-mono">16 Retratos + Gala</td>
-                                <td class="p-4 text-right font-mono font-semibold text-white" id="tableRowPhotoPrice">$1.000 USD</td>
-                            </tr>
-
-                            <!-- SECCIÓN STREAMING -->
-                            <tr class="bg-amber-950/20 font-mono text-amber-300 font-bold text-[11px]">
-                                <td colspan="4" class="p-3.5 px-5">
-                                    <i class="fa-solid fa-satellite-dish mr-1.5"></i> MÓDULO 3: LIVE STREAMING MULTICÁMARA BROADCAST
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 font-semibold text-white">LIVE-01: Transmisión Multicámara</td>
-                                <td class="p-4 text-slate-400">4 Cámaras Cine + Switcher vMix + Lower thirds + Enlace Dual Starlink</td>
-                                <td class="p-4 text-center font-mono">Gala Final (Full Day)</td>
-                                <td id="tableRowStreamingPrice" class="p-4 text-right font-mono font-semibold text-white">$5.000 USD</td>
-                            </tr>
-
-                        </tbody>
-
-                        <!-- TOTALES Y DESCUENTOS -->
-                        <tfoot class="bg-black font-mono text-xs border-t-2 border-fest-border divide-y divide-slate-800">
-                            <tr>
-                                <td colspan="3" class="p-4 sm:p-5 text-right font-semibold text-slate-400">
-                                    Subtotal Nominal por Contratación Individual:
-                                </td>
-                                <td class="p-4 sm:p-5 text-right font-bold text-slate-300 text-sm">
-                                    <span id="tableSubtotalNominal">$29.700</span> USD
-                                </td>
-                            </tr>
-                            <tr class="text-emerald-400 bg-emerald-950/10">
-                                <td colspan="3" class="p-4 sm:p-5 text-right font-bold">
-                                    <i class="fa-solid fa-gift mr-1"></i> Descuento Institucional Paquete Completo (-10%):
-                                </td>
-                                <td class="p-4 sm:p-5 text-right font-bold text-sm">
-                                    <span id="tableDiscountAmount">-$2.970</span> USD
-                                </td>
-                            </tr>
-                            <tr class="text-white bg-slate-950">
-                                <td colspan="3" class="p-5 text-right font-display font-extrabold uppercase tracking-wider text-amber-400 text-sm sm:text-base">
-                                    INVERSIÓN FINAL CERRADA (<span id="tableFooterScaleLabel">16 FINALISTAS</span>):
-                                </td>
-                                <td class="p-5 text-right font-display font-extrabold text-amber-400 text-xl sm:text-2xl">
-                                    <span id="tableFinalTotal">$26.730</span> USD
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
+                    <!-- Gran Caja de Precio Total (Con Descuento ya Aplicado) -->
+                    <div class="p-6 rounded-2xl bg-black border border-amber-400/50 text-left md:text-right shrink-0 min-w-[280px]">
+                        <span class="text-[10px] font-mono uppercase text-emerald-400 font-bold block mb-1">
+                            ✓ Incluye 10% Descuento Institucional
+                        </span>
+                        <div class="text-3xl sm:text-5xl font-display font-extrabold text-amber-400">
+                            <span id="displayFinalPrice">$26.730</span> <span class="text-xs font-mono text-slate-400 font-normal">USD</span>
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-500 block mt-1">
+                            Monto Total Cerrado del Proyecto
+                        </span>
+                    </div>
                 </div>
+
+                <!-- Lista de Alcance Técnico Incluido (Checklist) -->
+                <div class="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-black/40 text-xs">
+                    
+                    <div class="space-y-3">
+                        <span class="font-mono text-cyan-400 font-bold text-xs uppercase block tracking-wider pb-1 border-b border-slate-800">
+                            <i class="fa-solid fa-code mr-1"></i> Tecnología & Aforo (Gratuito)
+                        </span>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Sistema de inscripción y filtro para jurado calificador.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Boletería digital gratuita con QR cifrado para mitigación de riesgos.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Seat Mapping 2D interactivo con asignación exacta de butacas.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>App táctica de check-in rápido (0.8s) con soporte offline.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Votación masiva blindada contra bots con salida gráfica a tarima.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Landing oficial con reproductor CDN de alta capacidad.</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <span class="font-mono text-pink-400 font-bold text-xs uppercase block tracking-wider pb-1 border-b border-slate-800">
+                            <i class="fa-solid fa-clapperboard mr-1"></i> Cine & Ruta Barquisimeto
+                        </span>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span id="checkListMusicVideo">Videoclip coral con 16 finalistas en Manto de María, La Flor, Teatro Juares y Obelisco.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Campaña de intriga con 3 piezas de alto impacto (9:16 y 16:9).</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Spot promocional master oficial con locución institucional y logo 3D.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span id="checkListBeforeVideos">16 cápsulas cinematográficas de antesala para la gala.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Aftermovie cinematográfico oficial (3-4 min) en 4K.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Sesión fotográfica en estudio + cobertura de prensa de la gala.</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <span class="font-mono text-amber-400 font-bold text-xs uppercase block tracking-wider pb-1 border-b border-slate-800">
+                            <i class="fa-solid fa-tower-broadcast mr-1"></i> Streaming & Transmisión
+                        </span>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Circuito cerrado de 4 cámaras de cine digital en vivo.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Mesa de conmutación vMix con inserción gráfica y patrocinantes.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Captura estéreo directa desde la consola de sala del show.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Enlace satelital Starlink dedicado para emisión sin caídas.</span>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-slate-300">
+                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
+                            <span>Respaldo eléctrico con baterías UPS de grado online.</span>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
             <!-- Esquema de Pagos por Hitos -->
@@ -811,7 +715,7 @@
                         $13.365 USD
                     </div>
                     <p class="text-slate-400 text-[11px] leading-relaxed">
-                        Despliegue de servidores, programación de ticketing/inscripción, elaboración de guiones y preproducción de rodajes.
+                        Despliegue de servidores, configuración de boletería gratuita con seat mapping, guiones y preproducción de rodajes en Barquisimeto.
                     </p>
                 </div>
 
@@ -823,7 +727,7 @@
                         $8.019 USD
                     </div>
                     <p class="text-slate-400 text-[11px] leading-relaxed">
-                        Al finalizar las jornadas de filmación de las antesalas individuales, videoclip musical y pruebas de carga del sistema de votación.
+                        Al finalizar las jornadas de filmación del videoclip coral en los monumentos de Barquisimeto y las cápsulas de antesala de los finalistas.
                     </p>
                 </div>
 
@@ -835,20 +739,20 @@
                         $5.346 USD
                     </div>
                     <p class="text-slate-400 text-[11px] leading-relaxed">
-                        Ejecución del streaming en vivo, operación del check-in en puertas, soporte del sistema de votación y entrega del aftermovie final.
+                        Ejecución del streaming 4K, operación del check-in en puertas, soporte del sistema de votación y entrega del aftermovie final.
                     </p>
                 </div>
 
             </div>
 
-            <!-- Botón de Formalización -->
+            <!-- Botón de Aprobación -->
             <div class="text-center">
                 <button onclick="toggleModal('modalApproval')" class="px-10 py-4 rounded-2xl bg-amber-400 text-black font-display font-extrabold text-xs uppercase tracking-widest hover:bg-amber-300 hover:scale-105 active:scale-95 transition-all shadow-glow-gold cursor-pointer inline-flex items-center gap-3">
                     <i class="fa-solid fa-signature text-sm"></i>
                     <span>Formalizar Propuesta Técnica & Contratación</span>
                 </button>
                 <span class="text-[11px] font-mono text-slate-500 block mt-2.5">
-                    Cotización válida por 30 días continuos · Emisión de Factura Fiscal disponible
+                    Cotización formal con validez de 30 días continuos · Facturación fiscal disponible
                 </span>
             </div>
 
@@ -857,56 +761,56 @@
 
 
     <!-- ========================================================================= -->
-    <!-- MODAL 1: FICHA DE SEGURIDAD & INFRAESTRUCTURA TÉCNICA -->
+    <!-- MODAL 1: PROTOCOLO DE MITIGACIÓN DE RIESGOS (TICKETS GRATUITOS) -->
     <!-- ========================================================================= -->
-    <div id="modalTechDetails" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div id="modalRiskDetails" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="relative w-full max-w-2xl bg-fest-surface border border-fest-border rounded-3xl p-6 md:p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
-            <button onclick="toggleModal('modalTechDetails')" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-900 border border-slate-800 text-slate-400 hover:text-white flex items-center justify-center cursor-pointer">
+            <button onclick="toggleModal('modalRiskDetails')" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-900 border border-slate-800 text-slate-400 hover:text-white flex items-center justify-center cursor-pointer">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
             <div class="flex items-center gap-3 mb-2">
-                <div class="w-8 h-8 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-sm">
+                <div class="w-8 h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-sm">
                     <i class="fa-solid fa-shield-halved"></i>
                 </div>
-                <span class="text-xs font-mono uppercase text-cyan-400 tracking-wider">Protocolo de Ciberseguridad & Conectividad</span>
+                <span class="text-xs font-mono uppercase text-emerald-400 tracking-wider">Plan de Mitigación de Riesgos & Seguridad</span>
             </div>
-            <h3 class="text-xl md:text-2xl font-display font-bold text-white mb-2">Garantías para Eventos en Venezuela</h3>
-            <p class="text-xs text-slate-400 mb-6">Arquitectura preventiva contra fallas eléctricas y saturación de datos en recintos de espectáculos.</p>
+            <h3 class="text-xl md:text-2xl font-display font-bold text-white mb-2">¿Por Qué Boletos Gratuitos?</h3>
+            <p class="text-xs text-slate-400 mb-6">El software no es un punto de venta comercial; es una herramienta estricta de seguridad perimetral.</p>
 
             <div class="space-y-4 text-xs text-slate-300">
                 <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
                     <h4 class="font-display font-bold text-white mb-1 flex items-center gap-2">
-                        <i class="fa-solid fa-satellite text-amber-400"></i>
-                        Redundancia de Internet de Doble Anillo (Failover)
+                        <i class="fa-solid fa-ban text-emerald-400"></i>
+                        1. Prevención de Sobreaforo y Estampidas
                     </h4>
                     <p class="text-slate-400 text-[11px] leading-relaxed">
-                        Instalamos en la zona técnica un enlace satelital Starlink acoplado a un balanceador Peplink junto a fibra óptica local. Si la fibra del recinto colapsa por la densidad del público, la transmisión conmuta en milisegundos a Starlink sin interrumpir la emisión en vivo ni el check-in.
+                        Los eventos con entrada libre sin registro suelen atraer el doble del aforo permitido, provocando desbordamientos de seguridad y clausura por autoridades. El sistema limita la emisión al número exacto de butacas disponibles.
                     </p>
                 </div>
 
                 <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
                     <h4 class="font-display font-bold text-white mb-1 flex items-center gap-2">
-                        <i class="fa-solid fa-bolt text-amber-400"></i>
-                        Respaldo Eléctrico con UPS de Grado Online
+                        <i class="fa-solid fa-chair text-emerald-400"></i>
+                        2. Orden Absoluto en Puertas y Pasillos
                     </h4>
                     <p class="text-slate-400 text-[11px] leading-relaxed">
-                        Toda la mesa de streaming, switches de video, encoders y servidores locales operan conectados a bancos de baterías UPS con onda senoidal pura, absorbiendo fluctuaciones de voltaje y garantizando autonomía en caso de cambio de planta eléctrica.
+                        Al tener cada asistente su zona, fila y asiento asignado con antelación, se elimina la necesidad de hacer filas de horas para "conseguir buen puesto", garantizando un acceso escalonado y civilizado.
                     </p>
                 </div>
 
                 <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
                     <h4 class="font-display font-bold text-white mb-1 flex items-center gap-2">
-                        <i class="fa-solid fa-user-lock text-amber-400"></i>
-                        Blindaje del Sistema de Votación contra Bots
+                        <i class="fa-solid fa-id-badge text-emerald-400"></i>
+                        3. Trazabilidad & Padrón de Asistentes
                     </h4>
                     <p class="text-slate-400 text-[11px] leading-relaxed">
-                        Protección con Cloudflare Enterprise, Rate Limiting estricto por IP, bloqueo de granjas de bots mediante huella digital del navegador y validación de número de teléfono con código OTP único.
+                        Permite a los cuerpos de seguridad y al comité organizador conocer con nombre, cédula y teléfono quién está dentro del recinto en todo momento, facilitando evacuaciones de emergencia en caso de contingencia.
                     </p>
                 </div>
             </div>
 
-            <button onclick="toggleModal('modalTechDetails')" class="w-full mt-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs uppercase transition-colors">
+            <button onclick="toggleModal('modalRiskDetails')" class="w-full mt-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs uppercase transition-colors">
                 Entendido
             </button>
         </div>
@@ -914,7 +818,7 @@
 
 
     <!-- ========================================================================= -->
-    <!-- MODAL 2: FORMULARIO DE APROBACIÓN & CONTACTO EJECUTIVO -->
+    <!-- MODAL 2: FORMULARIO DE FORMALIZACIÓN -->
     <!-- ========================================================================= -->
     <div id="modalApproval" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="relative w-full max-w-lg bg-fest-surface border border-fest-border rounded-3xl p-6 md:p-8 shadow-2xl">
@@ -927,12 +831,12 @@
                 <span class="text-xs font-mono uppercase text-amber-400 tracking-wider">Aprobación de Proyecto</span>
             </div>
             <h3 class="text-xl md:text-2xl font-display font-bold text-white mb-2">Registro de Formalización</h3>
-            <p class="text-xs text-slate-400 mb-6">Complete los datos del comité organizador para emitir el contrato de prestación de servicios.</p>
+            <p class="text-xs text-slate-400 mb-6">Complete los datos de la entidad organizadora para emitir el contrato de prestación de servicios.</p>
 
             <form id="formApproval" onsubmit="handleFormSubmit(event)" class="space-y-3.5">
                 <div>
                     <label class="block text-[10px] font-mono uppercase text-slate-400 mb-1">Comité Organizador / Empresa Productora</label>
-                    <input required type="text" placeholder="Ej. Productora de Eventos Festival C.A." class="w-full px-3.5 py-2.5 bg-black/60 border border-slate-800 rounded-xl text-xs text-white placeholder-slate-600 focus:outline-none focus:border-amber-400">
+                    <input required type="text" placeholder="Ej. Festival de la Música C.A." class="w-full px-3.5 py-2.5 bg-black/60 border border-slate-800 rounded-xl text-xs text-white placeholder-slate-600 focus:outline-none focus:border-amber-400">
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
@@ -942,14 +846,14 @@
                     <div>
                         <label class="block text-[10px] font-mono uppercase text-slate-400 mb-1">Escala Seleccionada</label>
                         <select id="selectScaleForm" class="w-full px-3.5 py-2.5 bg-black/60 border border-slate-800 rounded-xl text-xs text-white focus:outline-none focus:border-amber-400">
-                            <option value="16">16 Finalistas ($26.730 USD)</option>
-                            <option value="32">32 Finalistas ($33.984 USD)</option>
+                            <option value="16">16 Finalistas ($26.730 USD Total)</option>
+                            <option value="32">32 Finalistas ($33.980 USD Total)</option>
                         </select>
                     </div>
                 </div>
                 <div>
                     <label class="block text-[10px] font-mono uppercase text-slate-400 mb-1">Correo Electrónico Oficial</label>
-                    <input required type="email" placeholder="produccion@festival.com" class="w-full px-3.5 py-2.5 bg-black/60 border border-slate-800 rounded-xl text-xs text-white placeholder-slate-600 focus:outline-none focus:border-amber-400">
+                    <input required type="email" placeholder="direccion@festival.com" class="w-full px-3.5 py-2.5 bg-black/60 border border-slate-800 rounded-xl text-xs text-white placeholder-slate-600 focus:outline-none focus:border-amber-400">
                 </div>
 
                 <button type="submit" class="w-full py-3.5 rounded-xl bg-amber-400 text-black font-display font-extrabold text-xs uppercase tracking-wider hover:bg-amber-300 transition-all flex items-center justify-center gap-2 mt-4 shadow-glow-gold cursor-pointer">
@@ -968,39 +872,30 @@
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
             <div class="flex items-center gap-2.5">
                 <img src="https://i.postimg.cc/d0cgNdjq/logo-color.png" alt="mini" class="h-5 w-auto object-contain">
-                <span>Dossier Técnico Oficial de Producción y Event-Tech</span>
+                <span>Festival Oficial · Barquisimeto, Capital Musical de Venezuela</span>
             </div>
-            <span>Venezuela · Documento Confidencial</span>
+            <span>Documento Técnico Confidencial</span>
         </div>
     </footer>
 
 
     <!-- ========================================================================= -->
-    <!-- CONTROL JAVASCRIPT: ESCALADO DINÁMICO (16 VS 32 PARTICIPANTES) -->
+    <!-- JAVASCRIPT: CONTROL DINÁMICO 16 VS 32 (SOLO TOTALES CON DESCUENTO) -->
     <!-- ========================================================================= -->
     <script>
-        const PRICING_DATA = {
+        // DATOS DE LAS DOS ESCALAS (PRECIOS TOTALES CON 10% DE DESCUENTO)
+        const SCALE_DATA = {
             16: {
                 participants: 16,
                 badgeText: "16 Finalistas",
-                capsulesText: "16 Videos de Antesala",
-                capsulesQty: "16 Videos",
-                capsulesUnitPrice: "$300 USD c/u (16 uds)",
-                capsulesPrice: "$4.800 USD",
-                capsulesDesc: "Perfiles individuales cinematográficos (16 participantes): entrevista íntima, planos de belleza artística y demostración de talento para reproducir antes de que cada finalista suba al escenario.",
-                musicVideoBadge: "16 Artistas en Set",
-                musicVideoDesc: "Videoclip musical oficial con la participación de los 16 finalistas interpretando el tema himno del festival. 2 jornadas completas de rodaje con iluminación robótica y playback.",
-                musicVideoDays: "2 Jornadas",
-                musicVideoPrice: "$4.500 USD",
-                aftermoviePrice: "$1.800 USD",
-                photoDesc: "Sesión fotográfica editorial en estudio para los 16 finalistas (fotos oficiales para web de votación) + cobertura en vivo de la gala.",
-                photoQty: "16 Retratos + Gala",
-                photoPrice: "$1.000 USD",
-                streamingPrice: "$5.000 USD",
-                subtotalAv: "$14.800 USD",
-                subtotalNominal: 29700,
-                discount: 2970,
-                finalTotal: 26730,
+                packageScaleLabel: "16 Finalistas",
+                capsulesCount: "16 Perfiles Cine 4K",
+                musicVideoParticipants: "16 Artistas en Set",
+                descBeforeVideos: "Cápsulas cinematográficas individuales para proyectar antes de que cada uno de los 16 finalistas suba al escenario.",
+                badgeBeforeVideosCount: "✓ 16 Perfiles Cinematográficos",
+                checkListMusicVideo: "Videoclip coral con 16 finalistas en Manto de María, La Flor, Teatro Juares y Obelisco.",
+                checkListBeforeVideos: "16 cápsulas cinematográficas de antesala para la gala.",
+                finalPriceStr: "$26.730",
                 milestone1: "$13.365 USD",
                 milestone2: "$8.019 USD",
                 milestone3: "$5.346 USD"
@@ -1008,27 +903,17 @@
             32: {
                 participants: 32,
                 badgeText: "32 Finalistas",
-                capsulesText: "32 Videos de Antesala",
-                capsulesQty: "32 Videos",
-                capsulesUnitPrice: "$280 USD c/u (tarifa de escala)",
-                capsulesPrice: "$8.960 USD",
-                capsulesDesc: "Perfiles individuales cinematográficos (32 participantes): entrevista íntima, planos de belleza artística y demostración de talento para reproducir antes de cada presentación en tarima.",
-                musicVideoBadge: "32 Artistas en Set",
-                musicVideoDesc: "Videoclip musical oficial de mayor escala coral con los 32 finalistas en set. 3 jornadas intensivas de rodaje, múltiples configuraciones escenográficas y edición polifónica.",
-                musicVideoDays: "3 Jornadas",
-                musicVideoPrice: "$7.500 USD",
-                aftermoviePrice: "$2.200 USD",
-                photoDesc: "Sesión fotográfica editorial en estudio para los 32 finalistas (fotos oficiales para web de votación) + cobertura ampliada de la gala en vivo.",
-                photoQty: "32 Retratos + Gala",
-                photoPrice: "$1.500 USD",
-                streamingPrice: "$5.500 USD",
-                subtotalAv: "$22.360 USD",
-                subtotalNominal: 37760,
-                discount: 3776,
-                finalTotal: 33984,
-                milestone1: "$16.992 USD",
-                milestone2: "$10.195 USD",
-                milestone3: "$6.797 USD"
+                packageScaleLabel: "32 Finalistas",
+                capsulesCount: "32 Perfiles Cine 4K",
+                musicVideoParticipants: "32 Artistas en Set",
+                descBeforeVideos: "Cápsulas cinematográficas individuales para proyectar antes de que cada uno de los 32 finalistas suba al escenario.",
+                badgeBeforeVideosCount: "✓ 32 Perfiles Cinematográficos",
+                checkListMusicVideo: "Videoclip coral con 32 finalistas en Manto de María, La Flor, Teatro Juares y Obelisco (3 jornadas de rodaje).",
+                checkListBeforeVideos: "32 cápsulas cinematográficas de antesala para la gala.",
+                finalPriceStr: "$33.980",
+                milestone1: "$16.990 USD",
+                milestone2: "$10.194 USD",
+                milestone3: "$6.796 USD"
             }
         };
 
@@ -1036,76 +921,49 @@
 
         function setScale(scale) {
             currentScale = scale;
-            const data = PRICING_DATA[scale];
+            const data = SCALE_DATA[scale];
 
-            // 1. Botones de Cabecera y Tabla
+            // 1. Botones de Selector
             const btn16 = document.getElementById('btnScale16');
             const btn32 = document.getElementById('btnScale32');
-            const tab16 = document.getElementById('tabTable16');
-            const tab32 = document.getElementById('tabTable32');
+            const tab16 = document.getElementById('tabEconomic16');
+            const tab32 = document.getElementById('tabEconomic32');
 
             if (scale === 16) {
                 btn16.className = "px-3.5 py-1.5 rounded-xl text-xs font-display font-bold uppercase tracking-wider transition-all bg-amber-400 text-black shadow-glow-gold flex items-center gap-1.5 cursor-pointer";
                 btn32.className = "px-3.5 py-1.5 rounded-xl text-xs font-display font-bold uppercase tracking-wider transition-all text-slate-400 hover:text-white hover:bg-white/5 flex items-center gap-1.5 cursor-pointer";
-                tab16.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all bg-amber-400 text-black";
-                tab32.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all text-slate-400 hover:text-white";
+                tab16.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all bg-amber-400 text-black cursor-pointer";
+                tab32.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all text-slate-400 hover:text-white cursor-pointer";
             } else {
                 btn32.className = "px-3.5 py-1.5 rounded-xl text-xs font-display font-bold uppercase tracking-wider transition-all bg-amber-400 text-black shadow-glow-gold flex items-center gap-1.5 cursor-pointer";
                 btn16.className = "px-3.5 py-1.5 rounded-xl text-xs font-display font-bold uppercase tracking-wider transition-all text-slate-400 hover:text-white hover:bg-white/5 flex items-center gap-1.5 cursor-pointer";
-                tab32.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all bg-amber-400 text-black";
-                tab16.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all text-slate-400 hover:text-white";
+                tab32.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all bg-amber-400 text-black cursor-pointer";
+                tab16.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all text-slate-400 hover:text-white cursor-pointer";
             }
 
-            // 2. Actualización de Resumen Ejecutivo
+            // 2. Resumen Hero
             document.getElementById('heroParticipantsBadge').textContent = `${data.participants} Participantes`;
             document.getElementById('summaryBadge').textContent = data.badgeText;
-            document.getElementById('summaryCapsulesCount').textContent = data.capsulesText;
-            document.getElementById('summaryMusicVideo').textContent = data.musicVideoBadge;
-            document.getElementById('summaryFinalPrice').textContent = `$${data.finalTotal.toLocaleString()}`;
-            document.getElementById('summaryRegularPrice').textContent = `Subtotal: $${data.subtotalNominal.toLocaleString()} USD`;
+            document.getElementById('summaryCapsulesCount').textContent = data.capsulesCount;
+            document.getElementById('summaryFinalPrice').textContent = data.finalPriceStr;
 
-            // 3. Módulo Audiovisual Dinámico
-            document.getElementById('badgeDynamicCapsules').textContent = data.capsulesQty;
-            document.getElementById('descDynamicCapsules').textContent = data.capsulesDesc;
-            document.getElementById('unitPriceCapsules').textContent = data.capsulesUnitPrice;
-            document.getElementById('totalPriceCapsules').textContent = data.capsulesPrice;
+            // 3. Producción Audiovisual (Barquisimeto)
+            document.getElementById('badgeMusicVideoParticipants').textContent = data.musicVideoParticipants;
+            document.getElementById('descBeforeVideos').textContent = data.descBeforeVideos;
+            document.getElementById('badgeBeforeVideosCount').textContent = data.badgeBeforeVideosCount;
 
-            document.getElementById('badgeDynamicMusicVideo').textContent = data.musicVideoBadge;
-            document.getElementById('descDynamicMusicVideo').textContent = data.musicVideoDesc;
-            document.getElementById('daysMusicVideo').textContent = data.musicVideoDays;
-            document.getElementById('totalPriceMusicVideo').textContent = data.musicVideoPrice;
-
-            document.getElementById('descDynamicPhoto').textContent = data.photoDesc;
-            document.getElementById('totalPricePhotos').textContent = data.photoPrice;
-            document.getElementById('totalPriceAftermovie').textContent = data.aftermoviePrice;
-
-            document.getElementById('subtotalAvLabel').textContent = `${data.participants} Participantes`;
-            document.getElementById('subtotalAvPrice').textContent = data.subtotalAv;
-            document.getElementById('subtotalStreamingPrice').textContent = data.streamingPrice;
-
-            // 4. Tabla de Presupuesto Dinámica
-            document.getElementById('tableRowCapsulesQty').textContent = data.capsulesQty;
-            document.getElementById('tableRowCapsulesPrice').textContent = data.capsulesPrice;
-            document.getElementById('tableRowMusicVideoDesc').textContent = data.musicVideoDesc;
-            document.getElementById('tableRowMusicVideoDays').textContent = data.musicVideoDays;
-            document.getElementById('tableRowMusicVideoPrice').textContent = data.musicVideoPrice;
-            document.getElementById('tableRowAftermoviePrice').textContent = data.aftermoviePrice;
-            document.getElementById('tableRowPhotoDesc').textContent = data.photoDesc;
-            document.getElementById('tableRowPhotoQty').textContent = data.photoQty;
-            document.getElementById('tableRowPhotoPrice').textContent = data.photoPrice;
-            document.getElementById('tableRowStreamingPrice').textContent = data.streamingPrice;
-
-            document.getElementById('tableSubtotalNominal').textContent = `$${data.subtotalNominal.toLocaleString()}`;
-            document.getElementById('tableDiscountAmount').textContent = `-$${data.discount.toLocaleString()}`;
-            document.getElementById('tableFooterScaleLabel').textContent = `${data.participants} FINALISTAS`;
-            document.getElementById('tableFinalTotal').textContent = `$${data.finalTotal.toLocaleString()}`;
+            // 4. Bloque Económico (Sin desgloses individuales)
+            document.getElementById('labelPackageScale').textContent = data.packageScaleLabel;
+            document.getElementById('displayFinalPrice').textContent = data.finalPriceStr;
+            document.getElementById('checkListMusicVideo').textContent = data.checkListMusicVideo;
+            document.getElementById('checkListBeforeVideos').textContent = data.checkListBeforeVideos;
 
             // 5. Hitos de Pago
             document.getElementById('milestone1Amount').textContent = data.milestone1;
             document.getElementById('milestone2Amount').textContent = data.milestone2;
             document.getElementById('milestone3Amount').textContent = data.milestone3;
 
-            // Sincronizar select del formulario modal
+            // Sincronizar select del formulario
             document.getElementById('selectScaleForm').value = String(scale);
         }
 
@@ -1124,11 +982,11 @@
         function handleFormSubmit(e) {
             e.preventDefault();
             toggleModal('modalApproval');
-            alert(`Solicitud registrada formalmente para la escala de ${currentScale} finalistas. Nuestro equipo técnico emitirá el contrato de servicios correspondiente.`);
+            alert(`Solicitud formal registrada para la escala de ${currentScale} finalistas en honor a Barquisimeto.`);
             e.target.reset();
         }
 
-        // Carga inicial configurada en 16 participantes
+        // Carga inicial
         document.addEventListener('DOMContentLoaded', () => {
             setScale(16);
         });
