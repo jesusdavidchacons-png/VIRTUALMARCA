@@ -8,7 +8,7 @@
     <!-- Framework Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Tipografías: Space Grotesk (Editorial refinado) e Inter (Lectura ejecutiva) -->
+    <!-- Tipografías: Space Grotesk e Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -28,9 +28,9 @@
                         vzla: {
                             gold: '#F59E0B',      // Amarillo sol / calidez institucional
                             'gold-soft': '#FEF3C7',
-                            blue: '#2563EB',      // Azul tricolor sereno
+                            blue: '#3B82F6',      // Azul tricolor sereno
                             'blue-soft': '#DBEAFE',
-                            rose: '#E11D48',      // Rojo carmín orquídea / toque cálido femenino
+                            rose: '#E11D48',      // Rosa orquídea carmín / toque femenino
                             'rose-soft': '#FFE4E6',
                             dark: '#08090E',
                             card: '#0E1118',
@@ -39,7 +39,8 @@
                     },
                     boxShadow: {
                         'glow-gold': '0 0 35px -5px rgba(245, 158, 11, 0.25)',
-                        'glow-tricolor': '0 0 45px -10px rgba(37, 99, 235, 0.25)'
+                        'glow-rose': '0 0 35px -5px rgba(225, 29, 72, 0.25)',
+                        'glow-blue': '0 0 35px -5px rgba(59, 130, 246, 0.25)'
                     }
                 }
             }
@@ -60,7 +61,7 @@
             border: 1px solid rgba(255, 255, 255, 0.07);
         }
 
-        /* Línea sutil tricolor venezolano (Amarillo, Azul y Rojo refinados) */
+        /* Cinta tricolor venezolana sutil (Amarillo cálido, Azul índigo, Rosa orquídea) */
         .tricolor-ribbon {
             background: linear-gradient(90deg, #F59E0B 0%, #3B82F6 50%, #E11D48 100%);
             height: 2px;
@@ -82,13 +83,13 @@
 
 <body class="bg-[#08090E] text-slate-100 font-sans min-h-screen flex flex-col selection:bg-amber-400 selection:text-black">
 
-    <!-- Línea superior con sutil acento tricolor -->
+    <!-- Cinta superior tricolor venezolana -->
     <div class="tricolor-ribbon w-full"></div>
 
     <!-- ========================================================================= -->
-    <!-- BARRA SUPERIOR INSTITUCIONAL (MINIMALISTA & ELEGANTE) -->
+    <!-- BARRA SUPERIOR INSTITUCIONAL (SIN PRECIOS) -->
     <!-- ========================================================================= -->
-    <header class="sticky top-0 z-50 w-full glass-panel border-b border-vzla-border px-4 md:px-8 py-3 transition-all">
+    <header class="sticky top-0 z-40 w-full glass-panel border-b border-vzla-border px-4 md:px-8 py-3 transition-all">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
             
             <!-- Identidad Oficial del Festival -->
@@ -106,9 +107,9 @@
                 </div>
             </div>
 
-            <!-- Selector de Escala Táctil (16 vs 32 Finalistas) -->
+            <!-- Selector de Escala (16 vs 32 Finalistas) -->
             <div class="flex items-center gap-2 bg-black/60 p-1 rounded-2xl border border-vzla-border">
-                <span class="text-[10px] font-mono uppercase text-slate-400 px-2 hidden lg:inline">Escenario del Evento:</span>
+                <span class="text-[10px] font-mono uppercase text-slate-400 px-2 hidden lg:inline">Escala:</span>
                 
                 <button id="btnScale16" onclick="setScale(16)" class="px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all bg-amber-400 text-black shadow-glow-gold flex items-center gap-1.5 cursor-pointer">
                     <i class="fa-solid fa-microphone-lines text-[10px]"></i>
@@ -121,14 +122,12 @@
                 </button>
             </div>
 
-            <!-- Accesos sutiles -->
-            <div class="hidden md:flex items-center gap-4">
-                <a href="#modulo-proteccion" class="text-xs text-slate-300 hover:text-amber-300 transition-colors">Protección Familiar</a>
-                <a href="#modulo-audiovisual" class="text-xs text-slate-300 hover:text-rose-400 transition-colors">Ruta Barquisimeto</a>
-                <a href="#modulo-streaming" class="text-xs text-slate-300 hover:text-blue-400 transition-colors">Transmisión 4K</a>
-                <a href="#inversion-total" class="px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-amber-400 hover:text-black border border-white/20 text-xs font-mono font-bold transition-all text-white">
-                    Inversión Total ↓
-                </a>
+            <!-- Navegación Temática (Sin botones de precio) -->
+            <div class="hidden md:flex items-center gap-5">
+                <a href="#modulo-activo" class="text-xs text-slate-300 hover:text-amber-300 transition-colors">Activo Heredable</a>
+                <a href="#modulo-proteccion" class="text-xs text-slate-300 hover:text-blue-300 transition-colors">Plataforma Digital</a>
+                <a href="#modulo-audiovisual" class="text-xs text-slate-300 hover:text-rose-300 transition-colors">Ruta Barquisimeto</a>
+                <a href="#modulo-streaming" class="text-xs text-slate-300 hover:text-amber-300 transition-colors">Transmisión 4K</a>
             </div>
 
         </div>
@@ -136,10 +135,9 @@
 
 
     <!-- ========================================================================= -->
-    <!-- HERO SECTION: CALIDEZ, DIGNIDAD & IDENTIDAD NACIONAL -->
+    <!-- HERO SECTION: CALIDEZ, DIGNIDAD & PROPÓSITO INSTITUCIONAL (SIN PRECIOS) -->
     <!-- ========================================================================= -->
     <section class="relative pt-12 pb-16 md:pt-20 md:pb-24 px-4 md:px-8 overflow-hidden">
-        <!-- Atmósfera sutil tricolor (Dorado, Azul Índigo y Rosa Carmín suaves) -->
         <div class="absolute -top-40 left-1/4 w-[500px] h-[400px] bg-amber-500/10 blur-[140px] rounded-full pointer-events-none"></div>
         <div class="absolute -top-32 right-1/4 w-[500px] h-[400px] bg-blue-500/10 blur-[140px] rounded-full pointer-events-none"></div>
         <div class="absolute top-20 right-1/3 w-[400px] h-[350px] bg-rose-500/10 blur-[130px] rounded-full pointer-events-none"></div>
@@ -164,63 +162,77 @@
                         Un diseño de producción concebido para dignificar el talento infantil y brindar tranquilidad absoluta a sus familias. Integra un protocolo digital de boletos gratuitos para garantizar orden y asientos reservados, una producción cinematográfica rodada en los monumentos de Barquisimeto y transmisión en vivo multicámara con conexión satelital propia.
                     </p>
 
-                    <!-- Botones de Acción -->
+                    <!-- Botones de Acción (Enfocados en contenido y familia) -->
                     <div class="flex flex-wrap items-center gap-3.5">
-                        <a href="#inversion-total" class="px-7 py-3.5 rounded-xl bg-amber-400 text-black font-display font-bold text-xs uppercase tracking-wider hover:bg-amber-300 hover:scale-105 active:scale-95 transition-all shadow-glow-gold flex items-center gap-2">
-                            <i class="fa-solid fa-file-invoice-dollar text-sm"></i>
-                            <span>Ver Propuesta Económica (<span id="heroParticipantsBadge">16 Participantes</span>)</span>
+                        <a href="#modulo-proteccion" class="px-7 py-3.5 rounded-xl bg-amber-400 text-black font-display font-bold text-xs uppercase tracking-wider hover:bg-amber-300 hover:scale-105 active:scale-95 transition-all shadow-glow-gold flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group text-sm"></i>
+                            <span>Explorar Ecosistema Digital</span>
                         </a>
 
-                        <button onclick="toggleModal('modalFamilia')" class="px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-200 text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer">
+                        <button onclick="toggleModal('modalFamilia')" class="px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-rose-400/50 text-slate-200 text-xs font-mono uppercase tracking-wider transition-all flex items-center gap-2 cursor-pointer">
                             <i class="fa-solid fa-heart text-rose-400"></i>
-                            <span>Protocolo de Cuidado a las Familias</span>
+                            <span>Protocolo de Cuidado Familiar</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Tarjeta Resumen con Total Cerrado -->
+                <!-- Tarjeta de Arquitectura Institucional (Sin precios) -->
                 <div class="w-full lg:w-[380px] shrink-0">
                     <div class="tricolor-border">
                         <div class="bg-vzla-card rounded-[1.45rem] p-6 text-left relative overflow-hidden">
                             <div class="flex items-center justify-between pb-4 border-b border-vzla-border">
-                                <span class="text-xs font-mono uppercase text-slate-400">Escenario Activo:</span>
+                                <span class="text-xs font-mono uppercase text-slate-400">Estructura del Proyecto:</span>
                                 <span id="summaryBadge" class="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-amber-400/15 text-amber-300 border border-amber-400/30">
                                     16 Finalistas
                                 </span>
                             </div>
 
-                            <div class="py-5 space-y-3.5">
-                                <div class="flex items-center justify-between text-xs">
-                                    <span class="text-slate-400">Boletería de Cuidado Familiar:</span>
-                                    <span class="font-mono font-semibold text-emerald-400">100% Gratuita & Numerada</span>
+                            <div class="py-5 space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xs shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-ticket"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-semibold text-white block">Boletería de Cuidado Familiar</span>
+                                        <span class="text-[11px] text-slate-400">100% gratuita, numerada y con control anti-estampidas.</span>
+                                    </div>
                                 </div>
-                                <div class="flex items-center justify-between text-xs">
-                                    <span class="text-slate-400">Ruta Musical Barquisimeto:</span>
-                                    <span class="font-mono font-semibold text-rose-300">Monumento a Monumento</span>
+
+                                <div class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 text-xs shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-music"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-semibold text-white block">Ruta Coral Barquisimeto</span>
+                                        <span class="text-[11px] text-slate-400">Videoclip infantil grabado en 4 monumentos de la ciudad.</span>
+                                    </div>
                                 </div>
-                                <div class="flex items-center justify-between text-xs">
-                                    <span class="text-slate-400">Cápsulas de Antesala:</span>
-                                    <span id="summaryCapsulesCount" class="font-mono font-semibold text-amber-300">16 Retratos 4K</span>
+
+                                <div class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xs shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-id-card-clip"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-semibold text-white block">Cápsulas de Antesala 4K</span>
+                                        <span id="summaryCapsulesCount" class="text-[11px] text-slate-400">16 retratos cinematográficos de los niños.</span>
+                                    </div>
                                 </div>
-                                <div class="flex items-center justify-between text-xs">
-                                    <span class="text-slate-400">Transmisión Satelital:</span>
-                                    <span class="font-mono font-semibold text-blue-300">4 Cámaras + Starlink</span>
+
+                                <div class="flex items-start gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xs shrink-0 mt-0.5">
+                                        <i class="fa-solid fa-satellite"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-semibold text-white block">Transmisión Satelital Starlink</span>
+                                        <span class="text-[11px] text-slate-400">Circuito cerrado de 4 cámaras sin depender de la red del teatro.</span>
+                                    </div>
                                 </div>
                             </div>
 
-                            <!-- Total Cerrado -->
-                            <div class="pt-4 border-t border-vzla-border bg-black/50 -mx-6 -mb-6 p-6">
-                                <div class="flex items-center justify-between mb-1">
-                                    <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400">Inversión Total Integral:</span>
-                                    <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded font-bold">
-                                        Beneficio 10% Incluido
-                                    </span>
-                                </div>
-                                <div class="text-3xl sm:text-4xl font-display font-bold text-amber-400">
-                                    <span id="summaryFinalPrice">$26.730</span> <span class="text-xs font-mono text-slate-400 font-normal">USD</span>
-                                </div>
-                                <span class="text-[10px] font-mono text-slate-500 block mt-1">
-                                    Diseño de producción llave en mano
+                            <div class="pt-4 border-t border-vzla-border bg-black/40 -mx-6 -mb-6 p-5 text-center">
+                                <span class="text-[11px] font-mono text-slate-400 flex items-center justify-center gap-1.5">
+                                    <i class="fa-solid fa-shield-check text-emerald-400"></i>
+                                    <span>Ecosistema Diseñado a la Medida de la Fundación</span>
                                 </span>
                             </div>
                         </div>
@@ -233,132 +245,201 @@
 
 
     <!-- ========================================================================= -->
-    <!-- MÓDULO 1: PROTOCOLO DE CUIDADO FAMILIAR, AFORO & SEGURIDAD DIGITAL -->
+    <!-- SECCIÓN: EL VALOR ESTRATÉGICO · INFRAESTRUCTURA HEREDABLE -->
     <!-- ========================================================================= -->
-    <section id="modulo-proteccion" class="py-16 px-4 md:px-8 border-t border-vzla-border bg-[#0B0E14]">
+    <section id="modulo-activo" class="py-16 px-4 md:px-8 border-t border-vzla-border bg-[#0B0E14]">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="max-w-3xl mb-12">
+                <div class="flex items-center gap-2 text-amber-400 text-xs font-mono tracking-widest uppercase mb-1">
+                    <i class="fa-solid fa-chess-rook"></i> Visión Institucional de Largo Alcance
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
+                    Una Infraestructura Creada Hoy, Heredable para Siempre
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed font-light">
+                    La institución no contrata un servicio pasajero. Incorpora el <strong>Diseño de Producción Fundacional</strong> del festival: software propietario, flujos de seguridad y estándares visuales que quedarán como patrimonio operativo de la organización.
+                </p>
+            </div>
+
+            <!-- Comparativa: Fase Fundacional vs Futuras Ediciones -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-4">
+                
+                <div class="p-6 md:p-8 rounded-3xl bg-vzla-card border border-amber-400/30 relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-[10px] font-mono uppercase px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-300 font-bold">
+                            Fase Fundacional
+                        </span>
+                        <i class="fa-solid fa-compass-drafting text-amber-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-display font-bold text-white mb-2">
+                        Desarrollo & Configuración del Ecosistema
+                    </h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light mb-4">
+                        Creación desde cero de la plataforma web, servidores, código QR de boletos gratuitos, protocolos de aforo con seat mapping, línea gráfica 3D y dirección cinematográfica en Barquisimeto.
+                    </p>
+                    <span class="text-[11px] font-mono text-amber-300 flex items-center gap-1.5">
+                        <i class="fa-solid fa-check"></i> Montaje completo de la arquitectura fundacional
+                    </span>
+                </div>
+
+                <div class="p-6 md:p-8 rounded-3xl bg-vzla-card border border-emerald-500/30 relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-[10px] font-mono uppercase px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-bold">
+                            Próximas Ediciones
+                        </span>
+                        <i class="fa-solid fa-arrows-rotate text-emerald-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-display font-bold text-white mb-2">
+                        Solo Revisión, Adaptación & Rodaje
+                    </h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light mb-4">
+                        Al ser propietarios de la plataforma y de las plantillas de transmisión, las próximas ediciones no requieren inversiones de desarrollo de software ni diseños desde cero; únicamente ajustes operativos de fecha y producción en set.
+                    </p>
+                    <span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
+                        <i class="fa-solid fa-shield-halved"></i> Autonomía institucional garantizada
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================================================= -->
+    <!-- MÓDULO 1: LOS 6 COMPONENTES DIGITALES (CON SIMULADORES INTERACTIVOS) -->
+    <!-- ========================================================================= -->
+    <section id="modulo-proteccion" class="py-16 px-4 md:px-8 border-t border-vzla-border bg-[#08090E]">
         <div class="max-w-7xl mx-auto">
             
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
                 <div>
                     <div class="flex items-center gap-2 text-blue-400 text-xs font-mono tracking-widest uppercase mb-1">
-                        <i class="fa-solid fa-hands-holding-child"></i> Dignidad & Orden Logístico
+                        <i class="fa-solid fa-laptop-code"></i> Innovación & Mitigación de Riesgos
                     </div>
                     <h2 class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
-                        1. Protección Familiar, Aforo & Plataforma Digital
+                        1. Módulos Digitales de Gestión & Cuidado Familiar
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-400 max-w-2xl mt-1.5 font-light">
-                        El sistema de boletos es <strong>100% gratuito</strong>. Se implementa como una medida de protección a los niños y sus familias: evita aglomeraciones, asegura una butaca asignada sin filas bajo el sol y brinda a las autoridades el control exacto de aforo.
+                        Cada módulo cuenta con un demostrador interactivo para experimentar su funcionamiento real, su impacto en la seguridad del teatro y el orden de la gala.
                     </p>
                 </div>
 
                 <div class="px-4 py-2 rounded-xl bg-blue-950/40 border border-blue-500/30 text-blue-300 text-xs font-mono">
-                    <i class="fa-solid fa-shield-heart mr-1.5"></i> Cero Filas · Acceso Seguro
+                    <i class="fa-solid fa-eye mr-1.5"></i> Toque cada botón para abrir el simulador
                 </div>
             </div>
 
-            <!-- Grilla de los Sistemas -->
+            <!-- Grilla de los 6 Módulos con Botón Interactivo de Demostración -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- 1. Inscripción & Cuidado de Datos -->
-                <div class="p-6 rounded-2xl bg-vzla-card border border-vzla-border flex flex-col justify-between">
+                <!-- 1. Inscripción -->
+                <div class="p-6 rounded-2xl bg-vzla-card border border-vzla-border flex flex-col justify-between hover:border-blue-500/40 transition-all">
                     <div>
                         <div class="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg mb-4">
                             <i class="fa-solid fa-child-reaching"></i>
                         </div>
                         <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">MÓDULO DIGITAL 01</span>
-                        <h3 class="font-display font-bold text-base text-white mb-2">Portal de Inscripción & Selección</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed font-light">
-                            Recepción segura de recaudos, pistas musicales, consentimientos de representantes y material de audición. Panel privado y transparente para el jurado calificador.
+                        <h3 class="font-display font-bold text-base text-white mb-2">Inscripción & Validación de Datos</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light mb-5">
+                            Recepción segura de recaudos infantiles, pistas musicales y autorizaciones de representantes con panel privado para el jurado.
                         </p>
                     </div>
-                    <div class="pt-4 mt-4 border-t border-slate-800/80 text-[11px] font-mono text-blue-400">
-                        ✓ Entorno Institucional Seguro
-                    </div>
+                    <button onclick="openDemo('inscripcion')" class="w-full py-2.5 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 text-blue-300 font-mono text-xs flex items-center justify-center gap-2 transition-all cursor-pointer">
+                        <i class="fa-solid fa-desktop text-xs"></i>
+                        <span>Ver Simulador de Inscripción</span>
+                    </button>
                 </div>
 
-                <!-- 2. Boletería Gratuita & Protección -->
-                <div class="p-6 rounded-2xl bg-vzla-card border border-emerald-500/40 flex flex-col justify-between">
+                <!-- 2. Boletería Gratuita -->
+                <div class="p-6 rounded-2xl bg-vzla-card border-2 border-emerald-500/40 flex flex-col justify-between hover:border-emerald-400 transition-all">
                     <div>
                         <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg mb-4">
                             <i class="fa-solid fa-ticket"></i>
                         </div>
                         <span class="text-[10px] font-mono uppercase text-emerald-400 tracking-widest block mb-1">MÓDULO DIGITAL 02 · GRATUITO</span>
-                        <h3 class="font-display font-bold text-base text-white mb-2">Pases Digitales con QR (Sin Cobro)</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed font-light">
-                            Pases gratuitos generados con código QR nominativo para cada representante e invitado. Limita el ingreso estrictamente a la capacidad del teatro, garantizando paz y orden público.
+                        <h3 class="font-display font-bold text-base text-white mb-2">Boletería de Mitigación de Riesgos</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light mb-5">
+                            Pases digitales gratuitos con QR encriptado para cada familia. Limita la emisión al aforo exacto autorizado por los bomberos.
                         </p>
                     </div>
-                    <div class="pt-4 mt-4 border-t border-slate-800/80 text-[11px] font-mono text-emerald-400">
-                        ✓ Mitigación Preventiva de Riesgos
-                    </div>
+                    <button onclick="openDemo('boleto')" class="w-full py-2.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 font-mono text-xs flex items-center justify-center gap-2 transition-all cursor-pointer">
+                        <i class="fa-solid fa-qrcode text-xs"></i>
+                        <span>Ver Ejemplo de Boleto Digital</span>
+                    </button>
                 </div>
 
                 <!-- 3. Asignación de Puestos -->
-                <div class="p-6 rounded-2xl bg-vzla-card border border-vzla-border flex flex-col justify-between">
+                <div class="p-6 rounded-2xl bg-vzla-card border border-vzla-border flex flex-col justify-between hover:border-blue-500/40 transition-all">
                     <div>
                         <div class="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg mb-4">
                             <i class="fa-solid fa-chair"></i>
                         </div>
                         <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">MÓDULO DIGITAL 03</span>
-                        <h3 class="font-display font-bold text-base text-white mb-2">Asignación Exacta de Butacas</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed font-light">
-                            Mapa visual de la sala. Las familias de los niños finalistas tienen sus asientos preferenciales asegurados desde el primer momento, evitando incertidumbre o desorden al abrir puertas.
+                        <h3 class="font-display font-bold text-base text-white mb-2">Seat Mapping 2D Interactivo</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light mb-5">
+                            Mapeo de butacas del teatro con reserva preferencial para familiares de los niños, evitando desorden y disputas de asientos.
                         </p>
                     </div>
-                    <div class="pt-4 mt-4 border-t border-slate-800/80 text-[11px] font-mono text-blue-400">
-                        ✓ Butaca Asignada con Antelación
-                    </div>
+                    <button onclick="openDemo('mapa')" class="w-full py-2.5 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 text-blue-300 font-mono text-xs flex items-center justify-center gap-2 transition-all cursor-pointer">
+                        <i class="fa-solid fa-map-location-dot text-xs"></i>
+                        <span>Ver Simulador de Asientos</span>
+                    </button>
                 </div>
 
-                <!-- 4. Check-in Fluido en Puertas -->
-                <div class="p-6 rounded-2xl bg-vzla-card border border-vzla-border flex flex-col justify-between">
+                <!-- 4. Check-in de Alta Velocidad -->
+                <div class="p-6 rounded-2xl bg-vzla-card border border-vzla-border flex flex-col justify-between hover:border-blue-500/40 transition-all">
                     <div>
                         <div class="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg mb-4">
-                            <i class="fa-solid fa-qrcode"></i>
+                            <i class="fa-solid fa-barcode-read"></i>
                         </div>
                         <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">MÓDULO DIGITAL 04</span>
-                        <h3 class="font-display font-bold text-base text-white mb-2">Recepción & Check-In Ágil</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed font-light">
-                            Validación de boletos en menos de un segundo por el equipo de protocolo en puertas. Sistema autónomo con sincronización offline para que el acceso jamás se detenga.
+                        <h3 class="font-display font-bold text-base text-white mb-2">Check-In en Puertas (Offline Ready)</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light mb-5">
+                            Lectura óptica en 0.8 segundos con cámara móvil. Funciona sin internet para evitar filas bajo el sol si falla la cobertura local.
                         </p>
                     </div>
-                    <div class="pt-4 mt-4 border-t border-slate-800/80 text-[11px] font-mono text-blue-400">
-                        ✓ Acceso Rápido & Respetuoso
-                    </div>
+                    <button onclick="openDemo('checkin')" class="w-full py-2.5 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 text-blue-300 font-mono text-xs flex items-center justify-center gap-2 transition-all cursor-pointer">
+                        <i class="fa-solid fa-mobile-screen-button text-xs"></i>
+                        <span>Ver Simulador de Escáner</span>
+                    </button>
                 </div>
 
-                <!-- 5. Votación Popular Blindada -->
-                <div class="p-6 rounded-2xl bg-vzla-card border border-vzla-border flex flex-col justify-between">
+                <!-- 5. Votación Blindada -->
+                <div class="p-6 rounded-2xl bg-vzla-card border border-vzla-border flex flex-col justify-between hover:border-amber-500/40 transition-all">
                     <div>
                         <div class="w-11 h-11 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-lg mb-4">
                             <i class="fa-solid fa-award"></i>
                         </div>
                         <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">MÓDULO DIGITAL 05</span>
-                        <h3 class="font-display font-bold text-base text-white mb-2">Votación Online Transparente</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed font-light">
-                            Mecanismo protegido para la elección del premio favorito del público (1 voto por persona con verificación). Genera gráficos en vivo para la pantalla grande de la gala.
+                        <h3 class="font-display font-bold text-base text-white mb-2">Votación Popular Protegida</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light mb-5">
+                            Voto único con verificación contra bots. Muestra porcentajes en tiempo real con salida gráfica directa a pantallas gigantes.
                         </p>
                     </div>
-                    <div class="pt-4 mt-4 border-t border-slate-800/80 text-[11px] font-mono text-amber-400">
-                        ✓ Certeza & Transparencia en Resultados
-                    </div>
+                    <button onclick="openDemo('votacion')" class="w-full py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 font-mono text-xs flex items-center justify-center gap-2 transition-all cursor-pointer">
+                        <i class="fa-solid fa-square-poll-vertical text-xs"></i>
+                        <span>Ver Sistema de Votación</span>
+                    </button>
                 </div>
 
-                <!-- 6. Canal de Transmisión -->
-                <div class="p-6 rounded-2xl bg-vzla-card border border-vzla-border flex flex-col justify-between">
+                <!-- 6. Streaming Oficial -->
+                <div class="p-6 rounded-2xl bg-vzla-card border border-vzla-border flex flex-col justify-between hover:border-blue-500/40 transition-all">
                     <div>
                         <div class="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-lg mb-4">
                             <i class="fa-solid fa-globe"></i>
                         </div>
                         <span class="text-[10px] font-mono uppercase text-slate-400 tracking-widest block mb-1">MÓDULO DIGITAL 06</span>
-                        <h3 class="font-display font-bold text-base text-white mb-2">Portal Oficial de Transmisión</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed font-light">
-                            Página web oficial para que los familiares que están fuera del país sigan la gala en tiempo real en alta definición, con reproductor CDN optimizado y chat con moderación.
+                        <h3 class="font-display font-bold text-base text-white mb-2">Canal Oficial & Landing Familiar</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light mb-5">
+                            Transmisión sin cortes con servidor CDN y chat con moderación para que los familiares fuera del país envíen mensajes de apoyo.
                         </p>
                     </div>
-                    <div class="pt-4 mt-4 border-t border-slate-800/80 text-[11px] font-mono text-blue-400">
-                        ✓ Enlace con los Hogares en el Exterior
-                    </div>
+                    <button onclick="openDemo('streaming')" class="w-full py-2.5 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 text-blue-300 font-mono text-xs flex items-center justify-center gap-2 transition-all cursor-pointer">
+                        <i class="fa-solid fa-tower-broadcast text-xs"></i>
+                        <span>Ver Interfaz de Streaming</span>
+                    </button>
                 </div>
 
             </div>
@@ -370,7 +451,7 @@
     <!-- ========================================================================= -->
     <!-- MÓDULO 2: PRODUCCIÓN CINEMATOGRÁFICA · HOMENAJE A BARQUISIMETO -->
     <!-- ========================================================================= -->
-    <section id="modulo-audiovisual" class="py-16 px-4 md:px-8 border-t border-vzla-border bg-[#08090E]">
+    <section id="modulo-audiovisual" class="py-16 px-4 md:px-8 border-t border-vzla-border bg-[#0B0E14]">
         <div class="max-w-7xl mx-auto">
             
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
@@ -434,7 +515,7 @@
                         </div>
                         <h4 class="font-display font-bold text-white text-base mb-1">Campaña de Intriga</h4>
                         <p class="text-xs text-slate-400 leading-relaxed font-light">
-                            3 cápsulas dinámicas (15-20s) diseñadas para redes sociales (Reels, TikTok) para despertar ternura, expectativa y orgullo colectivo.
+                            3 cápsulas dinámicas (15-20s) diseñadas para redes sociales (Reels, TikTok) para despertar ternura y expectativa familiar.
                         </p>
                     </div>
                     <div class="pt-3 mt-3 border-t border-slate-800 text-[10px] font-mono text-rose-400">
@@ -496,7 +577,7 @@
     <!-- ========================================================================= -->
     <!-- MÓDULO 3: TRANSMISIÓN EN VIVO MULTICÁMARA CON ENLACE STARLINK -->
     <!-- ========================================================================= -->
-    <section id="modulo-streaming" class="py-16 px-4 md:px-8 border-t border-vzla-border bg-[#0B0E14]">
+    <section id="modulo-streaming" class="py-16 px-4 md:px-8 border-t border-vzla-border bg-[#08090E]">
         <div class="max-w-7xl mx-auto">
             
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
@@ -566,7 +647,7 @@
 
 
     <!-- ========================================================================= -->
-    <!-- INVERSIÓN TOTAL CERRADA (ELEGANCIA & VALOR INSTITUCIONAL) -->
+    <!-- INVERSIÓN TOTAL CERRADA (SOLO VISIBLE AL FINAL TRAS EXPLICAR TODO) -->
     <!-- ========================================================================= -->
     <section id="inversion-total" class="py-20 px-4 md:px-8 border-t border-vzla-border bg-[#08090E]">
         <div class="max-w-7xl mx-auto">
@@ -580,7 +661,7 @@
                         Inversión Total del Proyecto
                     </h2>
                     <p class="text-xs sm:text-sm text-slate-400 max-w-2xl mt-1.5 font-light">
-                        Propuesta formal llave en mano con el beneficio institucional del 10% ya aplicado. Elija la escala de finalistas para consultar la inversión definitiva.
+                        Tras detallar cada componente técnico, cinematográfico y de mitigación de aforo, se presenta la inversión única y cerrada con el beneficio institucional del 10% ya aplicado.
                     </p>
                 </div>
 
@@ -595,10 +676,9 @@
                 </div>
             </div>
 
-            <!-- Gran Tarjeta Institucional (Sin Precios Unitarios Fragmentados) -->
+            <!-- Gran Tarjeta Institucional de Cierre -->
             <div class="rounded-3xl bg-vzla-card border border-vzla-border overflow-hidden shadow-2xl mb-10">
                 
-                <!-- Encabezado de la Tarjeta -->
                 <div class="p-6 md:p-8 bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border-b border-vzla-border flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div>
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-amber-300 text-[10px] font-mono uppercase mb-2">
@@ -626,7 +706,7 @@
                     </div>
                 </div>
 
-                <!-- Lista de Alcance Incluido (Checklist Ejecutivo) -->
+                <!-- Checklist Completo de Entregables -->
                 <div class="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-black/40 text-xs font-light">
                     
                     <div class="space-y-3">
@@ -639,7 +719,7 @@
                         </div>
                         <div class="flex items-start gap-2.5 text-slate-300">
                             <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Boletería digital gratuita con QR cifrado para control estricto de aforo.</span>
+                            <span>Boletería digital gratuita con QR cifrado para control de aforo.</span>
                         </div>
                         <div class="flex items-start gap-2.5 text-slate-300">
                             <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
@@ -717,7 +797,6 @@
 
                 </div>
 
-                <!-- Nota sutil sobre la permanencia de la plataforma (Persuasión elegante) -->
                 <div class="p-5 bg-gradient-to-r from-amber-400/5 via-blue-500/5 to-rose-500/5 border-t border-vzla-border flex items-center justify-between text-xs text-slate-400 font-mono">
                     <span class="flex items-center gap-2">
                         <i class="fa-solid fa-key text-amber-400"></i>
@@ -785,7 +864,51 @@
 
 
     <!-- ========================================================================= -->
-    <!-- MODAL 1: CUIDADO Y PROTECCIÓN A LAS FAMILIAS (ENFOQUE CÁLIDO) -->
+    <!-- MODAL DE DEMOSTRACIONES INTERACTIVAS DINÁMICAS (LOS 6 MÓDULOS) -->
+    <!-- ========================================================================= -->
+    <div id="modalDemoContainer" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-3 sm:p-5">
+        <div class="relative w-full max-w-2xl bg-vzla-card border border-vzla-border rounded-3xl p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
+            <button onclick="closeDemo()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-900 border border-slate-800 text-slate-400 hover:text-white flex items-center justify-center cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- Encabezado dinámico del modal -->
+            <div class="flex items-center gap-2.5 mb-2">
+                <span id="demoBadge" class="text-xs font-mono uppercase px-2.5 py-0.5 rounded bg-blue-500/15 border border-blue-500/30 text-blue-300 font-bold">
+                    Módulo Digital
+                </span>
+                <span class="text-slate-400 text-xs font-mono">Entorno de Prueba</span>
+            </div>
+            
+            <h3 id="demoTitle" class="text-xl sm:text-2xl font-display font-bold text-white mb-2">
+                Título del Módulo
+            </h3>
+            
+            <p id="demoDescription" class="text-xs text-slate-400 mb-6 font-light">
+                Descripción detallada de la función de seguridad y valor para el festival.
+            </p>
+
+            <!-- Contenedor del Simulador Interactivo Específico -->
+            <div id="demoContent" class="rounded-2xl bg-black/80 border border-slate-800 p-4 sm:p-5">
+                <!-- Se inyecta por JavaScript -->
+            </div>
+
+            <!-- Footer explicativo del modal -->
+            <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-slate-400">
+                <span class="flex items-center gap-1.5 text-emerald-400">
+                    <i class="fa-solid fa-shield-check"></i>
+                    <span>Solución de Grado Institucional</span>
+                </span>
+                <button onclick="closeDemo()" class="px-4 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white transition-colors cursor-pointer">
+                    Cerrar Simulador
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================================================================= -->
+    <!-- MODAL: CUIDADO Y PROTECCIÓN A LAS FAMILIAS -->
     <!-- ========================================================================= -->
     <div id="modalFamilia" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="relative w-full max-w-2xl bg-vzla-card border border-vzla-border rounded-3xl p-6 md:p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
@@ -842,7 +965,7 @@
 
 
     <!-- ========================================================================= -->
-    <!-- MODAL 2: FORMULARIO DE FORMALIZACIÓN INSTITUCIONAL -->
+    <!-- MODAL: FORMULARIO DE FORMALIZACIÓN INSTITUCIONAL -->
     <!-- ========================================================================= -->
     <div id="modalApproval" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="relative w-full max-w-lg bg-vzla-card border border-vzla-border rounded-3xl p-6 md:p-8 shadow-2xl">
@@ -904,7 +1027,7 @@
 
 
     <!-- ========================================================================= -->
-    <!-- JAVASCRIPT: CONTROL DINÁMICO 16 VS 32 FINALISTAS -->
+    <!-- JAVASCRIPT: CONTROL DE ESCALA Y LOS 6 SIMULADORES INTERACTIVOS -->
     <!-- ========================================================================= -->
     <script>
         const SCALE_DATA = {
@@ -946,7 +1069,6 @@
             currentScale = scale;
             const data = SCALE_DATA[scale];
 
-            // 1. Botones de Selector
             const btn16 = document.getElementById('btnScale16');
             const btn32 = document.getElementById('btnScale32');
             const tab16 = document.getElementById('tabEconomic16');
@@ -964,30 +1086,313 @@
                 tab16.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all text-slate-400 hover:text-white cursor-pointer";
             }
 
-            // 2. Resumen Hero
             document.getElementById('heroParticipantsBadge').textContent = `${data.participants} Participantes`;
             document.getElementById('summaryBadge').textContent = data.badgeText;
             document.getElementById('summaryCapsulesCount').textContent = data.capsulesCount;
-            document.getElementById('summaryFinalPrice').textContent = data.finalPriceStr;
 
-            // 3. Producción Audiovisual (Barquisimeto)
             document.getElementById('badgeMusicVideoParticipants').textContent = data.musicVideoParticipants;
             document.getElementById('descBeforeVideos').textContent = data.descBeforeVideos;
             document.getElementById('badgeBeforeVideosCount').textContent = data.badgeBeforeVideosCount;
 
-            // 4. Bloque Económico (Sin desgloses individuales)
             document.getElementById('labelPackageScale').textContent = data.packageScaleLabel;
             document.getElementById('displayFinalPrice').textContent = data.finalPriceStr;
             document.getElementById('checkListMusicVideo').textContent = data.checkListMusicVideo;
             document.getElementById('checkListBeforeVideos').textContent = data.checkListBeforeVideos;
 
-            // 5. Hitos de Pago
             document.getElementById('milestone1Amount').textContent = data.milestone1;
             document.getElementById('milestone2Amount').textContent = data.milestone2;
             document.getElementById('milestone3Amount').textContent = data.milestone3;
 
-            // Sincronizar select del formulario
             document.getElementById('selectScaleForm').value = String(scale);
+        }
+
+        // =========================================================================
+        // CONTENIDOS DE LOS 6 SIMULADORES INTERACTIVOS
+        // =========================================================================
+        const DEMO_TEMPLATES = {
+            inscripcion: {
+                badge: "Módulo 01 · Recepción Segura",
+                title: "Portal de Inscripción & Panel Calificador",
+                desc: "Plataforma blindada para recepción de recaudos infantiles, audiciones y tabulación objetiva del jurado.",
+                html: `
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-800 text-xs">
+                            <span class="text-slate-400">Expediente Digital del Postulante:</span>
+                            <span class="font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Consentimiento Validado ✓</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3 text-xs">
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                                <span class="text-slate-400 text-[10px] block mb-1">Nombre del Niño/Niña:</span>
+                                <span class="font-semibold text-white">Camila V. Sánchez (10 años)</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+                                <span class="text-slate-400 text-[10px] block mb-1">Municipio / Parroquia:</span>
+                                <span class="font-semibold text-white">Iribarren · Barquisimeto</span>
+                            </div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2 text-xs">
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-file-audio text-blue-400"></i> Pista Musical (WAV 48kHz)
+                                </span>
+                                <span class="text-[10px] font-mono text-emerald-400">Audición Aprobada</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-slate-300 flex items-center gap-2">
+                                    <i class="fa-solid fa-id-card text-blue-400"></i> Cédula Representante + Partida
+                                </span>
+                                <span class="text-[10px] font-mono text-emerald-400">Verificado</span>
+                            </div>
+                        </div>
+                        <div class="p-3 rounded-xl bg-blue-950/30 border border-blue-500/30 flex items-center justify-between text-xs">
+                            <span class="text-blue-200">Puntaje Jurado Tabulado:</span>
+                            <span class="font-mono font-bold text-blue-300 text-sm">9.6 / 10.0</span>
+                        </div>
+                    </div>
+                `
+            },
+
+            boleto: {
+                badge: "Módulo 02 · Boletería Gratuita",
+                title: "Pase Digital de Acceso & Mitigación de Riesgos",
+                desc: "Boleto numerado sin costo comercial. Garantiza aforo exacto y previene aglomeraciones en las puertas del teatro.",
+                html: `
+                    <div class="max-w-md mx-auto rounded-2xl bg-gradient-to-b from-slate-900 to-black border-2 border-emerald-500/50 p-5 relative overflow-hidden shadow-2xl">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-800">
+                            <div class="flex items-center gap-2">
+                                <img src="https://i.postimg.cc/d0cgNdjq/logo-color.png" alt="Logo" class="h-6 w-auto object-contain">
+                                <span class="text-xs font-display font-bold text-white">Festival Niño Simón</span>
+                            </div>
+                            <span class="text-[9px] font-mono uppercase bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/30 font-bold">
+                                Pase Gratuito Oficial
+                            </span>
+                        </div>
+                        
+                        <div class="py-4 text-center">
+                            <span class="text-[10px] font-mono uppercase text-slate-400 block">Titular del Pase Familiar:</span>
+                            <h4 class="text-base font-display font-bold text-white mt-0.5">Familia Sánchez Márquez</h4>
+                            <span class="text-xs text-amber-300 font-mono block mt-1">Representante de: Camila V. Sánchez (Finalista)</span>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-slate-950 border border-slate-800 text-center text-xs font-mono my-2">
+                            <div>
+                                <span class="text-slate-500 text-[9px] block">Zona</span>
+                                <span class="font-bold text-emerald-400">Familia VIP</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 text-[9px] block">Fila</span>
+                                <span class="font-bold text-white">Fila B</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 text-[9px] block">Butaca</span>
+                                <span class="font-bold text-white">Asiento 14</span>
+                            </div>
+                        </div>
+
+                        <div class="pt-3 flex flex-col items-center">
+                            <div class="w-32 h-32 rounded-xl bg-white p-2 flex items-center justify-center shadow-lg">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=FESTIVAL-NINO-SIMON-PASE-FAMILIA-014" alt="QR Pase" class="w-full h-full">
+                            </div>
+                            <span class="text-[9px] font-mono text-slate-500 mt-2">Código Cifrado Único · Intransferible</span>
+                        </div>
+                    </div>
+                `
+            },
+
+            mapa: {
+                badge: "Módulo 03 · Seat Mapping 2D",
+                title: "Simulador de Asientos (Teatro Juares)",
+                desc: "Asignación visual de butacas. Cada asistente y familiar conoce su ubicación con antelación, eliminando disputas en pasillos.",
+                html: `
+                    <div class="space-y-4">
+                        <div class="p-2.5 rounded-xl bg-amber-400/10 border border-amber-400/30 text-amber-300 text-center text-xs font-mono font-bold uppercase">
+                            Tarima & Escenario Principal
+                        </div>
+
+                        <!-- Mini mapa interactivo de asientos -->
+                        <div class="space-y-2 py-2">
+                            <span class="text-[10px] font-mono uppercase text-slate-400 block text-center">Fila A (Familiares Directos):</span>
+                            <div class="flex justify-center gap-1.5 flex-wrap">
+                                <button onclick="selectSeat('A-01', 'Familia Concursante')" class="w-7 h-7 rounded bg-rose-500/30 hover:bg-rose-500 border border-rose-500/50 text-[10px] font-mono flex items-center justify-center text-white" title="Familia">A1</button>
+                                <button onclick="selectSeat('A-02', 'Familia Concursante')" class="w-7 h-7 rounded bg-rose-500/30 hover:bg-rose-500 border border-rose-500/50 text-[10px] font-mono flex items-center justify-center text-white" title="Familia">A2</button>
+                                <button onclick="selectSeat('A-03', 'Reservado Directiva')" class="w-7 h-7 rounded bg-amber-500/30 hover:bg-amber-500 border border-amber-500/50 text-[10px] font-mono flex items-center justify-center text-white" title="Directiva">A3</button>
+                                <button onclick="selectSeat('A-04', 'Reservado Directiva')" class="w-7 h-7 rounded bg-amber-500/30 hover:bg-amber-500 border border-amber-500/50 text-[10px] font-mono flex items-center justify-center text-white" title="Directiva">A4</button>
+                                <button onclick="selectSeat('A-05', 'Familia Concursante')" class="w-7 h-7 rounded bg-rose-500/30 hover:bg-rose-500 border border-rose-500/50 text-[10px] font-mono flex items-center justify-center text-white" title="Familia">A5</button>
+                                <button onclick="selectSeat('A-06', 'Familia Concursante')" class="w-7 h-7 rounded bg-rose-500/30 hover:bg-rose-500 border border-rose-500/50 text-[10px] font-mono flex items-center justify-center text-white" title="Familia">A6</button>
+                            </div>
+
+                            <span class="text-[10px] font-mono uppercase text-slate-400 block text-center pt-2">Fila B (Invitados Generales):</span>
+                            <div class="flex justify-center gap-1.5 flex-wrap">
+                                <button onclick="selectSeat('B-01', 'Público Registrado')" class="w-7 h-7 rounded bg-blue-500/20 hover:bg-blue-500 border border-blue-500/40 text-[10px] font-mono flex items-center justify-center text-slate-300">B1</button>
+                                <button onclick="selectSeat('B-02', 'Público Registrado')" class="w-7 h-7 rounded bg-blue-500/20 hover:bg-blue-500 border border-blue-500/40 text-[10px] font-mono flex items-center justify-center text-slate-300">B2</button>
+                                <button onclick="selectSeat('B-03', 'Público Registrado')" class="w-7 h-7 rounded bg-blue-500/20 hover:bg-blue-500 border border-blue-500/40 text-[10px] font-mono flex items-center justify-center text-slate-300">B3</button>
+                                <button onclick="selectSeat('B-04', 'Público Registrado')" class="w-7 h-7 rounded bg-blue-500/20 hover:bg-blue-500 border border-blue-500/40 text-[10px] font-mono flex items-center justify-center text-slate-300">B4</button>
+                                <button onclick="selectSeat('B-05', 'Público Registrado')" class="w-7 h-7 rounded bg-blue-500/20 hover:bg-blue-500 border border-blue-500/40 text-[10px] font-mono flex items-center justify-center text-slate-300">B5</button>
+                                <button onclick="selectSeat('B-06', 'Público Registrado')" class="w-7 h-7 rounded bg-blue-500/20 hover:bg-blue-500 border border-blue-500/40 text-[10px] font-mono flex items-center justify-center text-slate-300">B6</button>
+                            </div>
+                        </div>
+
+                        <div id="seatDetailsOutput" class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-300 text-center font-mono">
+                            Toque cualquier butaca arriba para validar la reserva.
+                        </div>
+                    </div>
+                `
+            },
+
+            checkin: {
+                badge: "Módulo 04 · Recepción en Puertas",
+                title: "Simulador de Escáner Táctico (0.8s)",
+                desc: "Herramienta móvil para operadores de acceso. Monitorea aforo y opera de forma autónoma con sincronización offline.",
+                html: `
+                    <div class="max-w-sm mx-auto space-y-4">
+                        <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-center">
+                            <span class="text-[10px] font-mono uppercase text-slate-400 block mb-1">Aforo en Tiempo Real (Teatro Juares):</span>
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="text-2xl font-mono font-bold text-emerald-400">412</span>
+                                <span class="text-xs text-slate-500">/ 650 butacas ocupadas (63%)</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden mt-2">
+                                <div class="bg-emerald-400 h-full w-[63%]"></div>
+                            </div>
+                        </div>
+
+                        <!-- Cuadro de simulación de cámara -->
+                        <div class="relative h-44 rounded-2xl bg-black border-2 border-emerald-500/40 flex flex-col items-center justify-center overflow-hidden p-4">
+                            <div class="absolute inset-x-8 top-1/2 -translate-y-1/2 h-0.5 bg-emerald-400 animate-pulse shadow-glow-emerald"></div>
+                            <i class="fa-solid fa-qrcode text-5xl text-slate-600 mb-2"></i>
+                            <span class="text-[11px] font-mono text-emerald-300 font-bold bg-black/80 px-3 py-1 rounded-full border border-emerald-500/30">
+                                ✓ LECTURA EN 0.4 SEGUNDOS
+                            </span>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-xs text-center font-mono text-emerald-300">
+                            <strong>PASE VÁLIDO:</strong> Familia Sánchez · Butaca B-14
+                        </div>
+                    </div>
+                `
+            },
+
+            votacion: {
+                badge: "Módulo 05 · Votación Popular",
+                title: "Votación Online Blindada contra Bots",
+                desc: "1 voto por persona con verificación y generación automática de gráficos de porcentaje para la pantalla gigante del show.",
+                html: `
+                    <div class="space-y-4">
+                        <span class="text-xs text-slate-400 block text-center font-light">
+                            Selección de la "Voz Popular Infantil del Año":
+                        </span>
+
+                        <div class="space-y-2.5">
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between text-xs">
+                                <div>
+                                    <span class="font-bold text-white block">1. Camila Sánchez</span>
+                                    <span class="text-[10px] text-slate-400">Tema: Venezuela Tierra Amada</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-mono font-bold text-amber-300 text-sm">48.2%</span>
+                                    <span class="text-[10px] text-slate-500 block">3.120 votos</span>
+                                </div>
+                            </div>
+
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between text-xs">
+                                <div>
+                                    <span class="font-bold text-white block">2. Daniel Mendoza</span>
+                                    <span class="text-[10px] text-slate-400">Tema: Canto a Lara</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-mono font-bold text-slate-300 text-sm">31.5%</span>
+                                    <span class="text-[10px] text-slate-500 block">2.040 votos</span>
+                                </div>
+                            </div>
+
+                            <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between text-xs">
+                                <div>
+                                    <span class="font-bold text-white block">3. Valentina Rivas</span>
+                                    <span class="text-[10px] text-slate-400">Tema: Barquisimeto Querido</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="font-mono font-bold text-slate-300 text-sm">20.3%</span>
+                                    <span class="text-[10px] text-slate-500 block">1.314 votos</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-black border border-amber-500/30 text-[11px] font-mono text-center text-amber-300">
+                            <i class="fa-solid fa-signal mr-1.5"></i> Salida gráfica NDI/vMix lista para pantalla LED en tarima
+                        </div>
+                    </div>
+                `
+            },
+
+            streaming: {
+                badge: "Módulo 06 · Streaming Global",
+                title: "Canal Oficial & Chat Moderado para Familias",
+                desc: "Señal CDN de alta velocidad para que la diáspora familiar en España, Chile o EE.UU. viva el show en directo.",
+                html: `
+                    <div class="space-y-4">
+                        <!-- Marco simulador de reproductor de video -->
+                        <div class="relative aspect-video rounded-2xl bg-black border border-slate-800 flex flex-col justify-between p-4 overflow-hidden">
+                            <div class="flex items-center justify-between z-10">
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-600 text-white text-[10px] font-mono font-bold uppercase">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                                    EN VIVO 4K
+                                </span>
+                                <span class="text-[10px] font-mono text-slate-300 bg-black/70 px-2 py-0.5 rounded">
+                                    Enlace Satelital Starlink Activo
+                                </span>
+                            </div>
+
+                            <div class="text-center my-auto">
+                                <i class="fa-solid fa-play text-3xl text-amber-400/80"></i>
+                                <span class="text-xs text-slate-300 font-display block mt-2">Gala Final en Directo · Teatro Juares</span>
+                            </div>
+
+                            <div class="flex items-center justify-between z-10 text-[10px] font-mono text-slate-400">
+                                <span>1080p60 · Audio Stereo Matriz</span>
+                                <span>3.420 espectadores conectados</span>
+                            </div>
+                        </div>
+
+                        <!-- Chat familiar simulado -->
+                        <div class="rounded-xl bg-slate-900/80 border border-slate-800 p-3 space-y-1.5 text-xs">
+                            <span class="text-[10px] font-mono uppercase text-slate-500 block mb-1">Comentarios en Tiempo Real (Moderados):</span>
+                            <div class="text-slate-300 text-[11px]">
+                                <strong class="text-blue-300">Tía Elena (Madrid):</strong> "¡Dios bendiga a Camila! Viéndote con toda la familia."
+                            </div>
+                            <div class="text-slate-300 text-[11px]">
+                                <strong class="text-amber-300">Abuelo Ramón (Santiago):</strong> "¡Qué orgullo tan grande por nuestra tierra larense!"
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function openDemo(moduleId) {
+            const template = DEMO_TEMPLATES[moduleId];
+            if (!template) return;
+
+            document.getElementById('demoBadge').textContent = template.badge;
+            document.getElementById('demoTitle').textContent = template.title;
+            document.getElementById('demoDescription').textContent = template.desc;
+            document.getElementById('demoContent').innerHTML = template.html;
+
+            const modal = document.getElementById('modalDemoContainer');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeDemo() {
+            const modal = document.getElementById('modalDemoContainer');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function selectSeat(seatCode, seatType) {
+            const output = document.getElementById('seatDetailsOutput');
+            if (output) {
+                output.innerHTML = `Butaca <strong class="text-white">${seatCode}</strong> seleccionada: <span class="text-amber-300">${seatType}</span> (Reserva confirmada en el padrón).`;
+            }
         }
 
         function toggleModal(modalId) {
@@ -1005,7 +1410,7 @@
         function handleFormSubmit(e) {
             e.preventDefault();
             toggleModal('modalApproval');
-            alert(`Solicitud formal registrada para la escala de ${currentScale} finalistas del Festival de la Voz Niño Simón.`);
+            alert(`Solicitud registrada formalmente para la escala de ${currentScale} finalistas del Festival de la Voz Niño Simón.`);
             e.target.reset();
         }
 
