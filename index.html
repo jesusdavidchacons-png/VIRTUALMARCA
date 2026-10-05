@@ -116,23 +116,8 @@
                 </div>
             </div>
 
-            <!-- Selector de Escala (16 vs 32 Finalistas) -->
-            <div class="flex items-center gap-2 bg-black/60 p-1 rounded-2xl border border-vzla-border">
-                <span class="text-[10px] font-mono uppercase text-slate-400 px-2 hidden lg:inline">Escala:</span>
-                
-                <button id="btnScale16" onclick="setScale(16)" class="px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all bg-amber-400 text-black shadow-glow-gold flex items-center gap-1.5 cursor-pointer">
-                    <i class="fa-solid fa-microphone-lines text-[10px]"></i>
-                    <span>16 Finalistas</span>
-                </button>
-
-                <button id="btnScale32" onclick="setScale(32)" class="px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all text-slate-400 hover:text-white hover:bg-white/5 flex items-center gap-1.5 cursor-pointer">
-                    <i class="fa-solid fa-users text-[10px]"></i>
-                    <span>32 Finalistas</span>
-                </button>
-            </div>
-
             <!-- Navegación Temática -->
-            <div class="hidden md:flex items-center gap-5">
+            <div class="hidden md:flex items-center gap-6">
                 <a href="#modulo-activo" class="text-xs text-slate-300 hover:text-amber-300 transition-colors">Activo Heredable</a>
                 <a href="#modulo-proteccion" class="text-xs text-slate-300 hover:text-blue-300 transition-colors">Acreditación & Control</a>
                 <a href="#modulo-audiovisual" class="text-xs text-slate-300 hover:text-rose-300 transition-colors">Ruta Barquisimeto</a>
@@ -191,8 +176,8 @@
                         <div class="bg-vzla-card rounded-[1.45rem] p-6 text-left relative overflow-hidden">
                             <div class="flex items-center justify-between pb-4 border-b border-vzla-border">
                                 <span class="text-xs font-mono uppercase text-slate-400">Estructura del Proyecto:</span>
-                                <span id="summaryBadge" class="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-amber-400/15 text-amber-300 border border-amber-400/30">
-                                    16 Finalistas
+                                <span class="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-amber-400/15 text-amber-300 border border-amber-400/30">
+                                    Nacional Federativo
                                 </span>
                             </div>
 
@@ -223,7 +208,7 @@
                                     </div>
                                     <div>
                                         <span class="text-xs font-semibold text-white block">Ruta Coral Barquisimeto</span>
-                                        <span id="summaryMusicVideoText" class="text-[11px] text-slate-400">Videoclip grabado con 16 niños en 4 monumentos de la ciudad.</span>
+                                        <span class="text-[11px] text-slate-400">Videoclip grabado con los niños en 4 monumentos de la ciudad.</span>
                                     </div>
                                 </div>
 
@@ -271,7 +256,6 @@
                 </p>
             </div>
 
-            <!-- Comparativa: Fase Fundacional vs Futuras Ediciones -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-4">
                 
                 <div class="p-6 md:p-8 rounded-3xl bg-vzla-card border border-amber-400/30 relative overflow-hidden">
@@ -343,7 +327,7 @@
             <!-- Grilla de los 6 Módulos con Acceso Interactivo -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- 1. Acreditación de Ganadores Estadales (ACTUALIZADO) -->
+                <!-- 1. Acreditación de Ganadores Estadales -->
                 <div class="p-6 rounded-2xl bg-vzla-card border border-vzla-border flex flex-col justify-between hover:border-blue-500/40 transition-all group">
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl mb-4 group-hover:scale-110 transition-transform">
@@ -504,11 +488,11 @@
 
                     <div class="shrink-0 p-5 rounded-2xl bg-black/80 border border-vzla-border text-center min-w-[240px]">
                         <span class="text-[10px] font-mono uppercase text-slate-400 block mb-1">Elenco Infantil:</span>
-                        <span id="badgeMusicVideoParticipants" class="text-2xl font-display font-bold text-rose-300 block">
-                            16 Voces en Set
+                        <span class="text-2xl font-display font-bold text-rose-300 block">
+                            Voces de Toda Venezuela
                         </span>
-                        <span id="musicVideoDaysText" class="text-[11px] font-mono text-slate-400 block mt-1">
-                            2 Jornadas de Rodaje en Locación
+                        <span class="text-[11px] font-mono text-slate-400 block mt-1">
+                            Plan de Rodaje Completo en Locación
                         </span>
                     </div>
                 </div>
@@ -553,12 +537,12 @@
                             <i class="fa-solid fa-id-card-clip"></i>
                         </div>
                         <h4 class="font-display font-bold text-white text-base mb-1">Videos de Antesala</h4>
-                        <p id="descBeforeVideos" class="text-xs text-slate-400 leading-relaxed font-light">
+                        <p class="text-xs text-slate-400 leading-relaxed font-light">
                             Retratos íntimos y cinematográficos de cada finalista y su vocación, proyectados en pantalla antes de su presentación en tarima.
                         </p>
                     </div>
                     <div class="pt-3 mt-3 border-t border-slate-800 text-[10px] font-mono text-amber-400">
-                        <span id="badgeBeforeVideosCount">✓ 16 Perfiles Cinematográficos</span>
+                        ✓ Perfiles Cinematográficos 4K
                     </div>
                 </div>
 
@@ -656,216 +640,158 @@
 
 
     <!-- ========================================================================= -->
-    <!-- INVERSIÓN TOTAL CERRADA (SOLO VISIBLE AL FINAL TRAS EXPLICAR TODO) -->
+    <!-- INVERSIÓN TOTAL CERRADA (AMBAS ESCALAS CLARAMENTE VISIBLES LADO A LADO) -->
     <!-- ========================================================================= -->
     <section id="inversion-total" class="py-20 px-4 md:px-8 border-t border-vzla-border bg-[#08090E]">
         <div class="max-w-7xl mx-auto">
             
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-                <div>
-                    <div class="flex items-center gap-2 text-amber-400 text-xs font-mono tracking-widest uppercase mb-1">
-                        <i class="fa-solid fa-receipt"></i> Propuesta Económica Unificada
-                    </div>
-                    <h2 class="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
-                        Inversión Total del Proyecto
-                    </h2>
-                    <p class="text-xs sm:text-sm text-slate-400 max-w-2xl mt-1.5 font-light">
-                        Tras detallar cada componente técnico, cinematográfico y de mitigación de aforo, se presenta la inversión única y cerrada con el beneficio institucional del 10% ya aplicado.
-                    </p>
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <div class="inline-flex items-center gap-2 text-amber-400 text-xs font-mono tracking-widest uppercase mb-2">
+                    <i class="fa-solid fa-receipt"></i> Propuesta Económica Unificada
                 </div>
-
-                <!-- Selector de Escala de la Sección Económica -->
-                <div class="flex items-center gap-2 bg-slate-900 p-1.5 rounded-2xl border border-vzla-border self-start md:self-auto">
-                    <button onclick="setScale(16)" id="tabEconomic16" class="px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all bg-amber-400 text-black cursor-pointer">
-                        16 Finalistas
-                    </button>
-                    <button onclick="setScale(32)" id="tabEconomic32" class="px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all text-slate-400 hover:text-white cursor-pointer">
-                        32 Finalistas
-                    </button>
-                </div>
+                <h2 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight">
+                    Inversión Total del Proyecto
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-400 mt-2 font-light">
+                    Tras detallar la infraestructura digital, el cuidado familiar y el rodaje en Barquisimeto, presentamos ambas opciones de escala con el <strong>10% de descuento institucional ya aplicado</strong>:
+                </p>
             </div>
 
-            <!-- Gran Tarjeta Institucional de Cierre -->
-            <div class="rounded-3xl bg-vzla-card border border-vzla-border overflow-hidden shadow-2xl mb-10">
+            <!-- COMPARATIVA LADO A LADO DE AMBAS ESCALAS: 16 Y 32 FINALISTAS -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
                 
-                <div class="p-6 md:p-8 bg-gradient-to-r from-zinc-950 via-zinc-900 to-zinc-950 border-b border-vzla-border flex flex-col md:flex-row md:items-center justify-between gap-6">
-                    <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-amber-300 text-[10px] font-mono uppercase mb-2">
-                            <span>Patrimonio Operativo Institucional</span>
-                        </div>
-                        <h3 class="text-2xl sm:text-3xl font-display font-bold text-white">
-                            Diseño de Producción & Gala: <span id="labelPackageScale">16 Finalistas</span>
-                        </h3>
-                        <p id="labelPackageDescription" class="text-xs text-slate-400 mt-1 max-w-xl font-light">
-                            Comprende la totalidad del desarrollo digital de acreditación y aforo, 2 jornadas de rodaje en Barquisimeto, 16 antesalas cinematográficas, cobertura fotográfica y transmisión satelital.
-                        </p>
-                    </div>
-
-                    <!-- Gran Caja de Precio Total (Con Descuento ya Aplicado) -->
-                    <div class="p-6 rounded-2xl bg-black border border-amber-400/40 text-left md:text-right shrink-0 min-w-[280px]">
-                        <span class="text-[10px] font-mono uppercase text-emerald-400 font-bold block mb-1">
-                            ✓ Incluye 10% Descuento Institucional
-                        </span>
-                        <div class="text-3xl sm:text-5xl font-display font-bold text-amber-400">
-                            <span id="displayFinalPrice">$26.730</span> <span class="text-xs font-mono text-slate-400 font-normal">USD</span>
-                        </div>
-                        <span class="text-[11px] font-mono text-slate-500 block mt-1">
-                            Inversión Final Llave en Mano
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Checklist Completo de Entregables -->
-                <div class="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-black/40 text-xs font-light">
+                <!-- TARJETA ESCALA 1: 16 FINALISTAS -->
+                <div class="rounded-3xl bg-vzla-card border-2 border-slate-800 hover:border-amber-400/50 p-6 sm:p-8 flex flex-col justify-between shadow-xl transition-all relative overflow-hidden">
+                    <div class="absolute top-0 right-0 tricolor-ribbon w-32"></div>
                     
-                    <div class="space-y-3">
-                        <span class="font-mono text-blue-400 font-semibold text-xs uppercase block tracking-wider pb-1 border-b border-slate-800">
-                            <i class="fa-solid fa-stamp mr-1.5"></i> Acreditación & Sistemas Web
-                        </span>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Portal oficial de acreditación para los ganadores de cada estado.</span>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-mono uppercase px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/30 font-bold">
+                                Escala A · 16 Finalistas
+                            </span>
+                            <span class="text-[10px] font-mono text-emerald-400 font-bold bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20">
+                                10% Descuento Incluido
+                            </span>
                         </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Auditoría de recaudos LOPNNA, ficha médica y master de pista sin fallas.</span>
+
+                        <h3 class="text-xl sm:text-2xl font-display font-bold text-white mb-2">
+                            Paquete Maestro: 16 Niños en Escenario
+                        </h3>
+                        <p class="text-xs text-slate-400 font-light mb-6">
+                            Diseñado para 16 delegaciones estadales. Incluye 16 expedientes auditados, 16 antesalas cinematográficas y 2 jornadas de rodaje coral en los monumentos de Barquisimeto.
+                        </p>
+
+                        <!-- Precio Gigante Visible -->
+                        <div class="p-5 rounded-2xl bg-black border border-slate-800 mb-6">
+                            <span class="text-[10px] font-mono uppercase text-slate-500 block mb-0.5">Inversión Final Llave en Mano:</span>
+                            <div class="text-3xl sm:text-4xl font-display font-extrabold text-amber-400">
+                                $26.730 <span class="text-xs font-mono text-slate-400 font-normal">USD</span>
+                            </div>
+                            <span class="text-[11px] font-mono text-slate-500 block mt-1">Costo neto cerrado sin cargos ocultos</span>
                         </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Boletería digital gratuita con QR cifrado para control de aforo familiar.</span>
+
+                        <!-- Esquema de Pagos por Hitos -->
+                        <div class="space-y-2.5 text-xs font-mono pb-6 border-b border-slate-800/80 mb-6">
+                            <div class="flex justify-between text-slate-300">
+                                <span class="text-slate-400">50% Anticipo & Inicio Web:</span>
+                                <span class="font-bold text-white">$13.365 USD</span>
+                            </div>
+                            <div class="flex justify-between text-slate-300">
+                                <span class="text-slate-400">30% Rodajes Culminados (2 Días):</span>
+                                <span class="font-bold text-white">$8.019 USD</span>
+                            </div>
+                            <div class="flex justify-between text-slate-300">
+                                <span class="text-slate-400">20% Gala & Transmisión Final:</span>
+                                <span class="font-bold text-white">$5.346 USD</span>
+                            </div>
                         </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Seat Mapping 2D interactivo con asignación de butacas para familias.</span>
-                        </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>App táctica de check-in en puertas (0.8s) con soporte offline.</span>
-                        </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Votación popular online transparente y landing oficial CDN.</span>
-                        </div>
+
+                        <!-- Entregables clave -->
+                        <ul class="space-y-2 text-xs text-slate-300 font-light mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> 16 Expedientes de Ganadores Estadales Auditados</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Boletería Gratuita Numerada (Seat Map Teatro Juares)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Videoclip Coral (16 niños en 4 monumentos de Lara)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> 16 Cápsulas de Antesala 4K + Spot Promocional Master</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Transmisión 4K Multicámara con Enlace Satelital Starlink</li>
+                        </ul>
                     </div>
 
-                    <div class="space-y-3">
-                        <span class="font-mono text-rose-400 font-semibold text-xs uppercase block tracking-wider pb-1 border-b border-slate-800">
-                            <i class="fa-solid fa-film mr-1.5"></i> Producción en Barquisimeto
-                        </span>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span id="checkListMusicVideo">Videoclip coral con 16 niños en Manto de María, La Flor, Teatro Juares y Obelisco.</span>
-                        </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Campaña de intriga con 3 piezas para redes sociales (9:16 y 16:9).</span>
-                        </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Spot promocional master oficial con locución y animación 3D.</span>
-                        </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span id="checkListBeforeVideos">16 cápsulas cinematográficas de antesala para la gala.</span>
-                        </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Aftermovie cinematográfico oficial de la noche final (3-4 min) en 4K.</span>
-                        </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span id="checkListPhotos">Sesión fotográfica editorial para los 16 niños + cobertura de prensa.</span>
-                        </div>
-                    </div>
-
-                    <div class="space-y-3">
-                        <span class="font-mono text-amber-400 font-semibold text-xs uppercase block tracking-wider pb-1 border-b border-slate-800">
-                            <i class="fa-solid fa-satellite-dish mr-1.5"></i> Transmisión Multicámara 4K
-                        </span>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Circuito de 4 cámaras de cine digital en vivo para la gala.</span>
-                        </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Mesa de conmutación vMix con inserción gráfica y menciones.</span>
-                        </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Audio estéreo directo desde la consola de sala del show.</span>
-                        </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Enlace satelital Starlink dedicado para emisión continua.</span>
-                        </div>
-                        <div class="flex items-start gap-2.5 text-slate-300">
-                            <i class="fa-solid fa-check text-emerald-400 mt-0.5 text-xs shrink-0"></i>
-                            <span>Respaldo eléctrico con baterías UPS de grado online.</span>
-                        </div>
-                    </div>
-
+                    <button onclick="selectScaleForContract(16)" class="w-full py-3.5 rounded-xl bg-slate-900 hover:bg-amber-400 hover:text-black border border-slate-700 hover:border-amber-400 text-white font-display font-bold text-xs uppercase tracking-wider transition-all cursor-pointer">
+                        Seleccionar Propuesta (16 Finalistas)
+                    </button>
                 </div>
 
-                <div class="p-5 bg-gradient-to-r from-amber-400/5 via-blue-500/5 to-rose-500/5 border-t border-vzla-border flex items-center justify-between text-xs text-slate-400 font-mono">
-                    <span class="flex items-center gap-2">
-                        <i class="fa-solid fa-key text-amber-400"></i>
-                        <span>Propiedad Institucional Plena: La arquitectura digital y las plantillas son transferidas como activo propio de la organización.</span>
-                    </span>
-                    <span class="hidden md:inline text-slate-500">Sin dependencias externas</span>
-                </div>
 
-            </div>
+                <!-- TARJETA ESCALA 2: 32 FINALISTAS -->
+                <div class="rounded-3xl bg-vzla-card border-2 border-amber-400/60 p-6 sm:p-8 flex flex-col justify-between shadow-2xl transition-all relative overflow-hidden bg-gradient-to-b from-amber-400/[0.03] to-transparent">
+                    <div class="absolute top-0 right-0 tricolor-ribbon w-32"></div>
+                    
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-mono uppercase px-3 py-1 rounded-full bg-amber-400/15 text-amber-300 border border-amber-400/30 font-bold">
+                                Escala B · 32 Finalistas (Cobertura Nacional Total)
+                            </span>
+                            <span class="text-[10px] font-mono text-emerald-400 font-bold bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20">
+                                10% Descuento Incluido
+                            </span>
+                        </div>
 
-            <!-- Esquema de Pagos en 3 Hitos -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10 text-xs">
-                
-                <div class="p-5 rounded-2xl bg-vzla-card border border-vzla-border">
-                    <span class="text-[10px] font-mono text-amber-400 uppercase tracking-widest block font-bold mb-1">
-                        Hito 1 · 50% Inicio & Preproducción
-                    </span>
-                    <div id="milestone1Amount" class="text-xl font-display font-bold text-white mb-1">
-                        $13.365 USD
+                        <h3 class="text-xl sm:text-2xl font-display font-bold text-white mb-2">
+                            Paquete Maestro Extendido: 32 Niños en Escenario
+                        </h3>
+                        <p class="text-xs text-slate-400 font-light mb-6">
+                            Cobertura integral para todos los estados de Venezuela. Incluye 32 expedientes auditados, 32 antesalas cinematográficas y 3 jornadas intensivas de rodaje en los monumentos de Barquisimeto.
+                        </p>
+
+                        <!-- Precio Gigante Visible -->
+                        <div class="p-5 rounded-2xl bg-black border border-amber-400/40 mb-6 shadow-glow-gold">
+                            <span class="text-[10px] font-mono uppercase text-slate-500 block mb-0.5">Inversión Final Llave en Mano:</span>
+                            <div class="text-3xl sm:text-4xl font-display font-extrabold text-amber-400">
+                                $33.980 <span class="text-xs font-mono text-slate-400 font-normal">USD</span>
+                            </div>
+                            <span class="text-[11px] font-mono text-slate-500 block mt-1">Costo neto cerrado sin cargos ocultos</span>
+                        </div>
+
+                        <!-- Esquema de Pagos por Hitos -->
+                        <div class="space-y-2.5 text-xs font-mono pb-6 border-b border-slate-800/80 mb-6">
+                            <div class="flex justify-between text-slate-300">
+                                <span class="text-slate-400">50% Anticipo & Inicio Web:</span>
+                                <span class="font-bold text-white">$16.990 USD</span>
+                            </div>
+                            <div class="flex justify-between text-slate-300">
+                                <span class="text-slate-400">30% Rodajes Culminados (3 Días):</span>
+                                <span class="font-bold text-white">$10.194 USD</span>
+                            </div>
+                            <div class="flex justify-between text-slate-300">
+                                <span class="text-slate-400">20% Gala & Transmisión Final:</span>
+                                <span class="font-bold text-white">$6.796 USD</span>
+                            </div>
+                        </div>
+
+                        <!-- Entregables clave -->
+                        <ul class="space-y-2 text-xs text-slate-300 font-light mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> 32 Expedientes de Ganadores Estadales Auditados</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Boletería Gratuita Numerada (Seat Map Teatro Juares)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Videoclip Coral Extendido (32 niños en 4 monumentos de Lara)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> 32 Cápsulas de Antesala 4K + Spot Promocional Master</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> Transmisión 4K Multicámara con Enlace Satelital Starlink</li>
+                        </ul>
                     </div>
-                    <p class="text-slate-400 text-[11px] leading-relaxed font-light">
-                        Despliegue del portal de acreditación estadal, emisión de boletos gratuitos, mapeo del teatro y guiones de los rodajes en Barquisimeto.
-                    </p>
-                </div>
 
-                <div class="p-5 rounded-2xl bg-vzla-card border border-vzla-border">
-                    <span class="text-[10px] font-mono text-amber-400 uppercase tracking-widest block font-bold mb-1">
-                        Hito 2 · 30% Rodajes Culminados
-                    </span>
-                    <div id="milestone2Amount" class="text-xl font-display font-bold text-white mb-1">
-                        $8.019 USD
-                    </div>
-                    <p class="text-slate-400 text-[11px] leading-relaxed font-light">
-                        Al finalizar las jornadas de filmación del videoclip coral en los monumentos de Barquisimeto y las cápsulas de los niños.
-                    </p>
-                </div>
-
-                <div class="p-5 rounded-2xl bg-vzla-card border border-vzla-border">
-                    <span class="text-[10px] font-mono text-amber-400 uppercase tracking-widest block font-bold mb-1">
-                        Hito 3 · 20% Gala & Entrega Final
-                    </span>
-                    <div id="milestone3Amount" class="text-xl font-display font-bold text-white mb-1">
-                        $5.346 USD
-                    </div>
-                    <p class="text-slate-400 text-[11px] leading-relaxed font-light">
-                        Operación del streaming en vivo, acompañamiento en puertas, soporte de votación y entrega del aftermovie y fotografías.
-                    </p>
+                    <button onclick="selectScaleForContract(32)" class="w-full py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-display font-extrabold text-xs uppercase tracking-wider transition-all shadow-glow-gold cursor-pointer">
+                        Seleccionar Propuesta (32 Finalistas)
+                    </button>
                 </div>
 
             </div>
 
-            <!-- Botón de Aprobación -->
-            <div class="text-center">
-                <button onclick="toggleModal('modalApproval')" class="px-10 py-4 rounded-2xl bg-amber-400 text-black font-display font-bold text-xs uppercase tracking-widest hover:bg-amber-300 hover:scale-105 active:scale-95 transition-all shadow-glow-gold cursor-pointer inline-flex items-center gap-3">
-                    <i class="fa-solid fa-signature text-sm"></i>
-                    <span>Formalizar Propuesta & Coordinar Inicio</span>
-                </button>
-                <span class="text-[11px] font-mono text-slate-500 block mt-2.5">
-                    Cotización formal con validez de 30 días continuos · Facturación fiscal disponible
+            <!-- Nota de Transferencia de Propiedad Institucional -->
+            <div class="p-5 rounded-2xl bg-black border border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-mono gap-3 text-center sm:text-left">
+                <span class="flex items-center gap-2.5">
+                    <i class="fa-solid fa-key text-amber-400 text-base"></i>
+                    <span><strong>Activo Permanente:</strong> En cualquiera de las dos escalas, el software de acreditación, el sistema de boletos y las plantillas de streaming quedan como propiedad definitiva de la fundación.</span>
                 </span>
+                <span class="text-emerald-400 font-bold shrink-0">Heredable para Próximas Ediciones</span>
             </div>
 
         </div>
@@ -881,7 +807,6 @@
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <!-- Encabezado dinámico del modal -->
             <div class="flex items-center gap-2.5 mb-2">
                 <span id="demoBadge" class="text-xs font-mono uppercase px-2.5 py-0.5 rounded bg-blue-500/15 border border-blue-500/30 text-blue-300 font-bold">
                     Módulo Digital
@@ -897,12 +822,10 @@
                 Descripción detallada de la función de seguridad y valor para el festival.
             </p>
 
-            <!-- Contenedor del Simulador Específico -->
             <div id="demoContent" class="rounded-2xl bg-black/80 border border-slate-800 p-4 sm:p-5">
                 <!-- Inyectado dinámicamente -->
             </div>
 
-            <!-- Footer explicativo del modal -->
             <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs font-mono text-slate-400">
                 <span class="flex items-center gap-1.5 text-emerald-400">
                     <i class="fa-solid fa-shield-check"></i>
@@ -1036,106 +959,14 @@
 
 
     <!-- ========================================================================= -->
-    <!-- JAVASCRIPT: ESCALADO 16 VS 32 Y LOS 6 SIMULADORES INTERACTIVOS -->
+    <!-- JAVASCRIPT: ESCALADO Y SIMULADORES INTERACTIVOS -->
     <!-- ========================================================================= -->
     <script>
-        // CONFIGURACIÓN DE ESCALAS (COSTOS AL FINAL CON 10% DESCUENTO YA INCLUIDO)
-        const SCALE_DATA = {
-            16: {
-                participants: 16,
-                badgeText: "16 Finalistas",
-                packageScaleLabel: "16 Finalistas",
-                packageDescription: "Comprende la totalidad del desarrollo digital de aforo y acreditación estadal, 2 jornadas de rodaje en Barquisimeto, 16 antesalas cinematográficas, cobertura fotográfica y transmisión satelital.",
-                capsulesCount: "16 retratos cinematográficos de los niños.",
-                musicVideoParticipants: "16 Voces en Set",
-                musicVideoDaysText: "2 Jornadas de Rodaje en Locación",
-                musicVideoHeroText: "Videoclip grabado con 16 niños en 4 monumentos de la ciudad.",
-                descBeforeVideos: "Retratos íntimos y cinematográficos de cada uno de los 16 finalistas y su vocación, proyectados en pantalla antes de su presentación en tarima.",
-                badgeBeforeVideosCount: "✓ 16 Perfiles Cinematográficos",
-                checkListMusicVideo: "Videoclip coral con 16 niños en Manto de María, La Flor, Teatro Juares y Obelisco (2 jornadas de rodaje).",
-                checkListBeforeVideos: "16 cápsulas cinematográficas de antesala para la gala.",
-                checkListPhotos: "Sesión fotográfica editorial para los 16 niños + cobertura de prensa.",
-                finalPriceStr: "$26.730",
-                milestone1: "$13.365 USD",
-                milestone2: "$8.019 USD",
-                milestone3: "$5.346 USD"
-            },
-            32: {
-                participants: 32,
-                badgeText: "32 Finalistas",
-                packageScaleLabel: "32 Finalistas",
-                packageDescription: "Comprende la totalidad del desarrollo digital de aforo y acreditación estadal, 3 jornadas intensivas de rodaje en Barquisimeto, 32 antesalas cinematográficas, cobertura fotográfica ampliada y transmisión satelital.",
-                capsulesCount: "32 retratos cinematográficos de los niños.",
-                musicVideoParticipants: "32 Voces en Set",
-                musicVideoDaysText: "3 Jornadas de Rodaje en Locación",
-                musicVideoHeroText: "Videoclip grabado con 32 niños en 4 monumentos de la ciudad (elenco coral extendido).",
-                descBeforeVideos: "Retratos íntimos y cinematográficos de cada uno de los 32 finalistas y su vocación, proyectados en pantalla antes de su presentación en tarima.",
-                badgeBeforeVideosCount: "✓ 32 Perfiles Cinematográficos",
-                checkListMusicVideo: "Videoclip coral con 32 niños en Manto de María, La Flor, Teatro Juares y Obelisco (3 jornadas de filmación ampliada).",
-                checkListBeforeVideos: "32 cápsulas cinematográficas de antesala para la gala.",
-                checkListPhotos: "Sesión fotográfica editorial para los 32 niños + cobertura de prensa extendida.",
-                finalPriceStr: "$33.980",
-                milestone1: "$16.990 USD",
-                milestone2: "$10.194 USD",
-                milestone3: "$6.796 USD"
-            }
-        };
-
-        let currentScale = 16;
-
-        function setScale(scale) {
-            currentScale = scale;
-            const data = SCALE_DATA[scale];
-
-            // Botones de Selector
-            const btn16 = document.getElementById('btnScale16');
-            const btn32 = document.getElementById('btnScale32');
-            const tab16 = document.getElementById('tabEconomic16');
-            const tab32 = document.getElementById('tabEconomic32');
-
-            if (scale === 16) {
-                btn16.className = "px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all bg-amber-400 text-black shadow-glow-gold flex items-center gap-1.5 cursor-pointer";
-                btn32.className = "px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all text-slate-400 hover:text-white hover:bg-white/5 flex items-center gap-1.5 cursor-pointer";
-                tab16.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all bg-amber-400 text-black cursor-pointer";
-                tab32.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all text-slate-400 hover:text-white cursor-pointer";
-            } else {
-                btn32.className = "px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all bg-amber-400 text-black shadow-glow-gold flex items-center gap-1.5 cursor-pointer";
-                btn16.className = "px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all text-slate-400 hover:text-white hover:bg-white/5 flex items-center gap-1.5 cursor-pointer";
-                tab32.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all bg-amber-400 text-black cursor-pointer";
-                tab16.className = "px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase transition-all text-slate-400 hover:text-white cursor-pointer";
-            }
-
-            // Textos en Hero y Tarjeta Resumen
-            document.getElementById('summaryBadge').textContent = data.badgeText;
-            document.getElementById('summaryCapsulesCount').textContent = data.capsulesCount;
-            document.getElementById('summaryMusicVideoText').textContent = data.musicVideoHeroText;
-
-            // Producción Audiovisual (Barquisimeto)
-            document.getElementById('badgeMusicVideoParticipants').textContent = data.musicVideoParticipants;
-            document.getElementById('musicVideoDaysText').textContent = data.musicVideoDaysText;
-            document.getElementById('descBeforeVideos').textContent = data.descBeforeVideos;
-            document.getElementById('badgeBeforeVideosCount').textContent = data.badgeBeforeVideosCount;
-
-            // Bloque Económico al final
-            document.getElementById('labelPackageScale').textContent = data.packageScaleLabel;
-            document.getElementById('labelPackageDescription').textContent = data.packageDescription;
-            document.getElementById('displayFinalPrice').textContent = data.finalPriceStr;
-            document.getElementById('checkListMusicVideo').textContent = data.checkListMusicVideo;
-            document.getElementById('checkListBeforeVideos').textContent = data.checkListBeforeVideos;
-            document.getElementById('checkListPhotos').textContent = data.checkListPhotos;
-
-            // Hitos
-            document.getElementById('milestone1Amount').textContent = data.milestone1;
-            document.getElementById('milestone2Amount').textContent = data.milestone2;
-            document.getElementById('milestone3Amount').textContent = data.milestone3;
-
-            // Sincronizar formulario
-            document.getElementById('selectScaleForm').value = String(scale);
+        function selectScaleForContract(scaleNumber) {
+            document.getElementById('selectScaleForm').value = String(scaleNumber);
+            toggleModal('modalApproval');
         }
 
-        // =========================================================================
-        // SONIDO SINTETIZADO (WEB AUDIO API) PARA EL ESCÁNER Y CONFIRMACIÓN
-        // =========================================================================
         function playBeepSound(type = 'success') {
             try {
                 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -1146,15 +977,15 @@
 
                 if (type === 'success') {
                     osc.type = 'sine';
-                    osc.frequency.setValueAtTime(880, audioCtx.currentTime); // La5
-                    osc.frequency.setValueAtTime(1760, audioCtx.currentTime + 0.08); // La6
+                    osc.frequency.setValueAtTime(880, audioCtx.currentTime);
+                    osc.frequency.setValueAtTime(1760, audioCtx.currentTime + 0.08);
                     gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
                     gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.25);
                     osc.start();
                     osc.stop(audioCtx.currentTime + 0.25);
                 } else {
                     osc.type = 'triangle';
-                    osc.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+                    osc.frequency.setValueAtTime(523.25, audioCtx.currentTime);
                     gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
                     gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
                     osc.start();
@@ -1165,14 +996,11 @@
             }
         }
 
-        // =========================================================================
-        // CONTENIDOS DE LOS 6 SIMULADORES INTERACTIVOS Y VIVOS
-        // =========================================================================
         const STATE_WINNERS = {
-            lara: { name: "Camila V. Sánchez (10 años)", song: "Canto a Barquisimeto", rep: "Elena Sánchez", status: "100% Completo" },
-            zulia: { name: "Santiago Alarcón (11 años)", song: "Gaita con Sentimiento", rep: "María Alarcón", status: "100% Completo" },
-            miranda: { name: "Valeria Morillo (9 años)", song: "Venezuela de Esperanza", rep: "Carmen Morillo", status: "100% Completo" },
-            bolivar: { name: "Diego Carvajal (12 años)", song: "Río Orinoco Majestuoso", rep: "Rosa Carvajal", status: "100% Completo" }
+            lara: { name: "Camila V. Sánchez (10 años)", song: "Canto a Barquisimeto", rep: "Elena Sánchez" },
+            zulia: { name: "Santiago Alarcón (11 años)", song: "Gaita con Sentimiento", rep: "María Alarcón" },
+            miranda: { name: "Valeria Morillo (9 años)", song: "Venezuela de Esperanza", rep: "Carmen Morillo" },
+            bolivar: { name: "Diego Carvajal (12 años)", song: "Río Orinoco Majestuoso", rep: "Rosa Carvajal" }
         };
 
         const DEMO_TEMPLATES = {
@@ -1182,7 +1010,6 @@
                 desc: "Plataforma formal para que cada delegación regional inscriba a su niño ganador. Garantiza recaudos completos, pista técnica auditada y cero pendientes.",
                 html: `
                     <div class="space-y-4">
-                        <!-- Selector de delegación regional -->
                         <div class="flex items-center justify-between pb-3 border-b border-slate-800 text-xs">
                             <span class="text-slate-400 font-mono">Seleccione Delegación Estadal:</span>
                             <select onchange="changeStateWinner(this.value)" class="bg-black border border-blue-500/40 text-blue-300 rounded-lg px-2.5 py-1 text-xs focus:outline-none font-mono">
@@ -1193,7 +1020,6 @@
                             </select>
                         </div>
 
-                        <!-- Ficha de la delegación y participante -->
                         <div class="p-3.5 rounded-2xl bg-slate-950 border border-slate-800 grid grid-cols-2 gap-3 text-xs">
                             <div>
                                 <span class="text-slate-500 text-[10px] block font-mono">Niño Ganador Estadal:</span>
@@ -1207,7 +1033,6 @@
                             </div>
                         </div>
 
-                        <!-- Checklist interactivo de 4 recaudos obligatorios -->
                         <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-2 text-xs">
                             <span class="text-[10px] font-mono uppercase text-slate-400 block font-bold">
                                 Auditoría de Recaudos (El sistema bloquea inconsistencias):
@@ -1246,7 +1071,6 @@
                             </div>
                         </div>
 
-                        <!-- Dictamen de Cierre: Cero pendientes -->
                         <div class="p-3.5 rounded-xl bg-emerald-950/30 border border-emerald-500/40 flex items-center justify-between text-xs font-mono">
                             <span class="text-slate-300 flex items-center gap-2">
                                 <i class="fa-solid fa-check-double text-emerald-400"></i>
@@ -1536,10 +1360,6 @@
             modal.classList.remove('flex');
         }
 
-        // =========================================================================
-        // ACCIONES INTERACTIVAS DENTRO DE CADA SIMULADOR
-        // =========================================================================
-        // 1. Selector de Delegación Estadal
         function changeStateWinner(stateKey) {
             playBeepSound('click');
             const data = STATE_WINNERS[stateKey];
@@ -1549,14 +1369,12 @@
             document.getElementById('stateWinnerRep').textContent = data.rep;
         }
 
-        // 3. Asientos
         function selectSeat(seatCode, seatType, color) {
             playBeepSound('click');
             const output = document.getElementById('seatDetailsOutput');
             output.innerHTML = `Butaca <strong class="text-white text-sm">${seatCode}</strong> seleccionada: <span class="text-${color}-400 font-bold">${seatType}</span> (Asignada en el padrón familiar).`;
         }
 
-        // 4. Check-in
         let simulatedGuests = 412;
         function triggerScanSimulation() {
             playBeepSound('success');
@@ -1570,7 +1388,6 @@
             box.innerHTML = `<strong>✓ ACCESO CONCEDIDO (0.38s):</strong> Familia Sánchez Márquez · Butaca B-14 (Aforo: ${pct}%)`;
         }
 
-        // 5. Votación
         let voteCounts = { 1: 48, 2: 32, 3: 20 };
         function castVote(candidateId) {
             playBeepSound('success');
@@ -1593,7 +1410,6 @@
             feedback.innerHTML = `<strong>✓ VOTO VERIFICADO POR OTP:</strong> Conteo actualizado y transmitido a la pantalla LED de tarima.`;
         }
 
-        // 6. Conmutador Multicámara
         function switchLiveCam(camNum) {
             playBeepSound('click');
             const titles = {
@@ -1623,7 +1439,6 @@
             input.value = "";
         }
 
-        // Modales de Aprobación y Familia
         function toggleModal(modalId) {
             const modal = document.getElementById(modalId);
             if (!modal) return;
@@ -1639,14 +1454,9 @@
         function handleFormSubmit(e) {
             e.preventDefault();
             toggleModal('modalApproval');
-            alert(`Solicitud formal registrada para la escala de ${currentScale} finalistas del Festival de la Voz Niño Simón.`);
+            alert(`Solicitud formal registrada para la escala del Festival de la Voz Niño Simón.`);
             e.target.reset();
         }
-
-        // Carga inicial
-        document.addEventListener('DOMContentLoaded', () => {
-            setScale(16);
-        });
     </script>
 </body>
 </html>
