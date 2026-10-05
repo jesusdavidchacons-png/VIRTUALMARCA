@@ -26,11 +26,11 @@
                     },
                     colors: {
                         vzla: {
-                            gold: '#F59E0B',      // Amarillo cálido institucional
+                            gold: '#F59E0B',
                             'gold-soft': '#FEF3C7',
-                            blue: '#3B82F6',      // Azul tricolor sereno
+                            blue: '#3B82F6',
                             'blue-soft': '#DBEAFE',
-                            rose: '#E11D48',      // Rosa carmín orquídea / toque femenino
+                            rose: '#E11D48',
                             'rose-soft': '#FFE4E6',
                             dark: '#08090E',
                             card: '#0E1118',
@@ -92,7 +92,7 @@
 
 <body class="bg-[#08090E] text-slate-100 font-sans min-h-screen flex flex-col selection:bg-amber-400 selection:text-black">
 
-    <!-- Cinta superior tricolor venezolana -->
+    <!-- Cinta superior tricolor -->
     <div class="tricolor-ribbon w-full"></div>
 
     <!-- ========================================================================= -->
@@ -101,7 +101,7 @@
     <header class="sticky top-0 z-40 w-full glass-panel border-b border-vzla-border px-4 md:px-8 py-3 transition-all">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
             
-            <!-- Identidad Oficial del Festival -->
+            <!-- Identidad Oficial -->
             <div class="flex items-center gap-3.5">
                 <div class="h-12 w-auto flex items-center justify-center p-1 rounded-xl bg-white/5 border border-white/10 shadow-sm">
                     <img src="https://i.postimg.cc/d0cgNdjq/logo-color.png" alt="Festival de la Voz Niño Simón" class="h-10 w-auto object-contain">
@@ -114,6 +114,21 @@
                         Diseño de Producción & Ecosistema Institucional
                     </span>
                 </div>
+            </div>
+
+            <!-- Selector de Escala Táctil -->
+            <div class="flex items-center gap-2 bg-black/60 p-1 rounded-2xl border border-vzla-border">
+                <span class="text-[10px] font-mono uppercase text-slate-400 px-2 hidden lg:inline">Escala:</span>
+                
+                <button id="btnScale16" onclick="setScale(16)" class="px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all bg-amber-400 text-black shadow-glow-gold flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-microphone-lines text-[10px]"></i>
+                    <span>16 Finalistas</span>
+                </button>
+
+                <button id="btnScale32" onclick="setScale(32)" class="px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all text-slate-400 hover:text-white hover:bg-white/5 flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-users text-[10px]"></i>
+                    <span>32 Finalistas</span>
+                </button>
             </div>
 
             <!-- Navegación Temática -->
@@ -156,7 +171,6 @@
                         Un diseño de producción concebido para dignificar el talento infantil y brindar tranquilidad absoluta a sus familias. Integra un protocolo digital de acreditación federativa para los ganadores de cada estado, control de aforo familiar con boletos gratuitos, producción cinematográfica rodada en los monumentos de Barquisimeto y transmisión satelital multicámara propia.
                     </p>
 
-                    <!-- Botones de Acción -->
                     <div class="flex flex-wrap items-center gap-3.5">
                         <a href="#modulo-proteccion" class="px-7 py-3.5 rounded-xl bg-amber-400 text-black font-display font-bold text-xs uppercase tracking-wider hover:bg-amber-300 hover:scale-105 active:scale-95 transition-all shadow-glow-gold flex items-center gap-2">
                             <i class="fa-solid fa-layer-group text-sm"></i>
@@ -176,8 +190,8 @@
                         <div class="bg-vzla-card rounded-[1.45rem] p-6 text-left relative overflow-hidden">
                             <div class="flex items-center justify-between pb-4 border-b border-vzla-border">
                                 <span class="text-xs font-mono uppercase text-slate-400">Estructura del Proyecto:</span>
-                                <span class="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-amber-400/15 text-amber-300 border border-amber-400/30">
-                                    Nacional Federativo
+                                <span id="summaryBadge" class="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-amber-400/15 text-amber-300 border border-amber-400/30">
+                                    16 Finalistas
                                 </span>
                             </div>
 
@@ -208,7 +222,7 @@
                                     </div>
                                     <div>
                                         <span class="text-xs font-semibold text-white block">Ruta Coral Barquisimeto</span>
-                                        <span class="text-[11px] text-slate-400">Videoclip grabado con los niños en 4 monumentos de la ciudad.</span>
+                                        <span id="summaryMusicVideoText" class="text-[11px] text-slate-400">Videoclip grabado con 16 niños en 4 monumentos de la ciudad.</span>
                                     </div>
                                 </div>
 
@@ -640,7 +654,7 @@
 
 
     <!-- ========================================================================= -->
-    <!-- INVERSIÓN TOTAL CERRADA (AMBAS ESCALAS CLARAMENTE VISIBLES LADO A LADO) -->
+    <!-- INVERSIÓN TOTAL CERRADA (AMBAS ESCALAS VISIBLES LADO A LADO) -->
     <!-- ========================================================================= -->
     <section id="inversion-total" class="py-20 px-4 md:px-8 border-t border-vzla-border bg-[#08090E]">
         <div class="max-w-7xl mx-auto">
@@ -661,7 +675,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
                 
                 <!-- TARJETA ESCALA 1: 16 FINALISTAS -->
-                <div class="rounded-3xl bg-vzla-card border-2 border-slate-800 hover:border-amber-400/50 p-6 sm:p-8 flex flex-col justify-between shadow-xl transition-all relative overflow-hidden">
+                <div id="cardPlan16" class="rounded-3xl bg-vzla-card border-2 border-slate-800 p-6 sm:p-8 flex flex-col justify-between shadow-xl transition-all relative overflow-hidden">
                     <div class="absolute top-0 right-0 tricolor-ribbon w-32"></div>
                     
                     <div>
@@ -681,7 +695,7 @@
                             Diseñado para 16 delegaciones estadales. Incluye 16 expedientes auditados, 16 antesalas cinematográficas y 2 jornadas de rodaje coral en los monumentos de Barquisimeto.
                         </p>
 
-                        <!-- Precio Gigante Visible -->
+                        <!-- Precio Visible Opción A -->
                         <div class="p-5 rounded-2xl bg-black border border-slate-800 mb-6">
                             <span class="text-[10px] font-mono uppercase text-slate-500 block mb-0.5">Inversión Final Llave en Mano:</span>
                             <div class="text-3xl sm:text-4xl font-display font-extrabold text-amber-400">
@@ -723,7 +737,7 @@
 
 
                 <!-- TARJETA ESCALA 2: 32 FINALISTAS -->
-                <div class="rounded-3xl bg-vzla-card border-2 border-amber-400/60 p-6 sm:p-8 flex flex-col justify-between shadow-2xl transition-all relative overflow-hidden bg-gradient-to-b from-amber-400/[0.03] to-transparent">
+                <div id="cardPlan32" class="rounded-3xl bg-vzla-card border-2 border-amber-400/60 p-6 sm:p-8 flex flex-col justify-between shadow-2xl transition-all relative overflow-hidden bg-gradient-to-b from-amber-400/[0.03] to-transparent">
                     <div class="absolute top-0 right-0 tricolor-ribbon w-32"></div>
                     
                     <div>
@@ -743,7 +757,7 @@
                             Cobertura integral para todos los estados de Venezuela. Incluye 32 expedientes auditados, 32 antesalas cinematográficas y 3 jornadas intensivas de rodaje en los monumentos de Barquisimeto.
                         </p>
 
-                        <!-- Precio Gigante Visible -->
+                        <!-- Precio Visible Opción B -->
                         <div class="p-5 rounded-2xl bg-black border border-amber-400/40 mb-6 shadow-glow-gold">
                             <span class="text-[10px] font-mono uppercase text-slate-500 block mb-0.5">Inversión Final Llave en Mano:</span>
                             <div class="text-3xl sm:text-4xl font-display font-extrabold text-amber-400">
@@ -959,11 +973,75 @@
 
 
     <!-- ========================================================================= -->
-    <!-- JAVASCRIPT: ESCALADO Y SIMULADORES INTERACTIVOS -->
+    <!-- JAVASCRIPT: CONTROL ROBUSTO DE ESCALAS Y SIMULADORES INTERACTIVOS -->
     <!-- ========================================================================= -->
     <script>
+        // Asegurar que la página inicie siempre desde arriba
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
+        const SCALE_CONFIG = {
+            16: {
+                participants: 16,
+                badgeText: "16 Finalistas",
+                capsulesCount: "16 retratos cinematográficos de los niños.",
+                musicVideoHeroText: "Videoclip grabado con 16 niños en 4 monumentos de la ciudad.",
+                priceText: "$26.730 USD"
+            },
+            32: {
+                participants: 32,
+                badgeText: "32 Finalistas",
+                capsulesCount: "32 retratos cinematográficos de los niños.",
+                musicVideoHeroText: "Videoclip grabado con 32 niños en 4 monumentos de la ciudad.",
+                priceText: "$33.980 USD"
+            }
+        };
+
+        function setScale(scale) {
+            const data = SCALE_CONFIG[scale];
+            if (!data) return;
+
+            // Actualizar botones de selector superior
+            const btn16 = document.getElementById('btnScale16');
+            const btn32 = document.getElementById('btnScale32');
+
+            if (scale === 16) {
+                if (btn16) btn16.className = "px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all bg-amber-400 text-black shadow-glow-gold flex items-center gap-1.5 cursor-pointer";
+                if (btn32) btn32.className = "px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all text-slate-400 hover:text-white hover:bg-white/5 flex items-center gap-1.5 cursor-pointer";
+                
+                // Resaltar visualmente tarjeta 16
+                const card16 = document.getElementById('cardPlan16');
+                const card32 = document.getElementById('cardPlan32');
+                if (card16) card16.className = "rounded-3xl bg-vzla-card border-2 border-amber-400/80 p-6 sm:p-8 flex flex-col justify-between shadow-2xl transition-all relative overflow-hidden bg-gradient-to-b from-amber-400/[0.04] to-transparent";
+                if (card32) card32.className = "rounded-3xl bg-vzla-card border-2 border-slate-800 hover:border-amber-400/50 p-6 sm:p-8 flex flex-col justify-between shadow-xl transition-all relative overflow-hidden";
+            } else {
+                if (btn32) btn32.className = "px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all bg-amber-400 text-black shadow-glow-gold flex items-center gap-1.5 cursor-pointer";
+                if (btn16) btn16.className = "px-3.5 py-1.5 rounded-xl text-xs font-display font-semibold uppercase tracking-wider transition-all text-slate-400 hover:text-white hover:bg-white/5 flex items-center gap-1.5 cursor-pointer";
+                
+                // Resaltar visualmente tarjeta 32
+                const card16 = document.getElementById('cardPlan16');
+                const card32 = document.getElementById('cardPlan32');
+                if (card32) card32.className = "rounded-3xl bg-vzla-card border-2 border-amber-400/80 p-6 sm:p-8 flex flex-col justify-between shadow-2xl transition-all relative overflow-hidden bg-gradient-to-b from-amber-400/[0.04] to-transparent";
+                if (card16) card16.className = "rounded-3xl bg-vzla-card border-2 border-slate-800 hover:border-amber-400/50 p-6 sm:p-8 flex flex-col justify-between shadow-xl transition-all relative overflow-hidden";
+            }
+
+            // Actualizar referencias dinámicas del Hero si existen
+            const summaryBadge = document.getElementById('summaryBadge');
+            const summaryCapsulesCount = document.getElementById('summaryCapsulesCount');
+            const summaryMusicVideoText = document.getElementById('summaryMusicVideoText');
+            const selectScaleForm = document.getElementById('selectScaleForm');
+
+            if (summaryBadge) summaryBadge.textContent = data.badgeText;
+            if (summaryCapsulesCount) summaryCapsulesCount.textContent = data.capsulesCount;
+            if (summaryMusicVideoText) summaryMusicVideoText.textContent = data.musicVideoHeroText;
+            if (selectScaleForm) selectScaleForm.value = String(scale);
+        }
+
         function selectScaleForContract(scaleNumber) {
-            document.getElementById('selectScaleForm').value = String(scaleNumber);
+            const selectScaleForm = document.getElementById('selectScaleForm');
+            if (selectScaleForm) selectScaleForm.value = String(scaleNumber);
             toggleModal('modalApproval');
         }
 
@@ -992,7 +1070,7 @@
                     osc.stop(audioCtx.currentTime + 0.15);
                 }
             } catch (e) {
-                // Audio no disponible
+                // Audio silenciado
             }
         }
 
@@ -1454,9 +1532,15 @@
         function handleFormSubmit(e) {
             e.preventDefault();
             toggleModal('modalApproval');
-            alert(`Solicitud formal registrada para la escala del Festival de la Voz Niño Simón.`);
+            alert(`Solicitud formal registrada para el Festival de la Voz Niño Simón.`);
             e.target.reset();
         }
+
+        // Inicializar en 16 participantes y asegurar vista arriba
+        document.addEventListener('DOMContentLoaded', () => {
+            window.scrollTo(0, 0);
+            setScale(16);
+        });
     </script>
 </body>
 </html>
